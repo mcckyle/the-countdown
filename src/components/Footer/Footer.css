@@ -2,18 +2,35 @@
 
 .footer
 {
-    margin-top: 3rem;
+    margin-top: 4rem;
+    padding: 1.5rem 1rem;
     text-align: center;
-    font-size: 0.9rem;
-    color: var(--color-highlight);
-    opacity: 0.75;
+
+    border-top: 2px solid transparent;
+    border-image: linear-gradient(
+        90deg,
+        var(--color-accent),
+        var(--color-highlight)
+    );
+    border-image-slice: 1;
 
     animation: fadeInUp 1.2s ease-in-out;
 }
 
-.footer p
+.footer-text
 {
     margin: 0;
+    font-size: clamp(0.85rem, 1vw + 0.4rem, 1rem);
+    font-weight: 400;
+    color: var(--color-highlight);
+    opacity: 0.85;
+    letter-spacing: 0.3px;
+}
+
+.footer-text .highlight
+{
+    color: var(--color-accent);
+    font-weight: 500;
 }
 
 /* Fade-in Animation Styles. */
@@ -22,7 +39,7 @@
     from
     {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(18px);
     }
     to
     {
