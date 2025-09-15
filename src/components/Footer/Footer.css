@@ -1,0 +1,32 @@
+/* Filename: Footer.css */
+
+.footer
+{
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-highlight);
+    opacity: 0.75;
+
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+.footer p
+{
+    margin: 0;
+}
+
+/* Fade-in Animation Styles. */
+@keyframes fadeInUp
+{
+    from
+    {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to
+    {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

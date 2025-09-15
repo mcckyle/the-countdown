@@ -1,0 +1,76 @@
+/* Filename: index.css */
+
+/* Root Variables Styles. */
+:root
+{
+    --color-bg: #120019; /* Color: Midnight Background. */
+    --color-text: #fdf6e3; /* Color: Warm Light Text. */
+    --color-accent: #ff7518; /* Color: Pumpkin Orange. */
+    --color-secondary: #6a0dad; /* Color: Witch Purple. */
+    --color-highlight: #ffd700; /* Color: Sunset Gold. */
+
+    font-family: "Poppins", system-ui, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global Reset / Layout Styles. */
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    min-height: 100vh;
+    background: var(--color-bg);
+    color: var(--color-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Links Styles. */
+a
+{
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.25s ease-in-out;
+}
+
+a:hover
+{
+    color: var(--color-highlight);
+}
+
+h1, h2, h3
+{
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+button
+{
+    padding: 0.6em 1.2em;
+    border-radius: 0.5em;
+    border: none;
+    background: var(--color-accent);
+    color: #fff;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover
+{
+    background: var(--color-secondary);
+}

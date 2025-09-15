@@ -1,0 +1,46 @@
+/* Filename: Countdown.css */
+
+.countdown
+{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.time-box
+{
+    background: rgba(0, 0, 0, 0.35);
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 12px var(--color-accent);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.time-box:hover
+{
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px var(--color-highlight);
+}
+
+.time-value
+{
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color-accent);
+
+    text-shadow: 0 0 8px var(--color-accent), 0 0 15px var(--color-secondary);
+}
+
+.time-label
+{
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-highlight);
+}
