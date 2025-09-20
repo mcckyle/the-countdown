@@ -1,12 +1,13 @@
 /* Filename: Footer.css */
 
+/* Footer Container Styles. */
 .footer
 {
-    margin-top: 4rem;
+    margin-top: 3rem;
     padding: 1.5rem 1rem;
     text-align: center;
 
-    border-top: 2px solid transparent;
+    border-top: 1.5px solid transparent;
     border-image: linear-gradient(
         90deg,
         var(--color-accent),
@@ -14,22 +15,34 @@
     );
     border-image-slice: 1;
 
-    animation: fadeInUp 1.2s ease-in-out;
+    animation: fadeInUp 1s ease both;
 }
 
+/* Footer Text Styles. */
 .footer-text
 {
     margin: 0;
-    font-size: clamp(0.85rem, 1vw + 0.4rem, 1rem);
+    font-size: clamp(0.85rem, 0.9vw + 0.4rem, 1rem);
     font-weight: 400;
-    color: var(--color-highlight);
-    opacity: 0.85;
-    letter-spacing: 0.3px;
+    color: var(--color-text);
+    opacity: 0.75;
+    letter-spacing: 0.5px;
+
+    animation: fadeInUp 1.2s ease both;
+    animation-delay: 0.2s;
 }
 
+/* Footer Highlights Styles. */
 .footer-text .highlight
 {
     color: var(--color-accent);
+    font-weight: 500;
+    text-shadow: 0 0 6px rgba(255, 117, 24, 0.4);
+}
+
+.footer-text .year
+{
+    color: var(--color-highlight);
     font-weight: 500;
 }
 
@@ -39,7 +52,7 @@
     from
     {
         opacity: 0;
-        transform: translateY(18px);
+        transform: translateY(15px);
     }
     to
     {

@@ -29,6 +29,7 @@
     padding: 0;
 }
 
+/* Base Layout Styles. */
 body
 {
     min-height: 100vh;
@@ -41,6 +42,20 @@ body
     text-align: center;
 
     transition: background var(--transition), color var(--transition);
+}
+
+h1, h2, h3
+{
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+
+p
+{
+    margin-bottom: 1em;
+    font-size: 1.1rem;
+    color: var(--color-text);
 }
 
 /* Links Styles. */
@@ -56,19 +71,7 @@ a:hover
     color: var(--color-highlight);
 }
 
-h1, h2, h3
-{
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 0.5em;
-}
-
-p
-{
-    margin-bottom: 1em;
-    font-size: 1.1rem;
-}
-
+/* Buttons Styles. */
 button
 {
     padding: 0.6em 1.2em;

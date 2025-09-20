@@ -1,50 +1,77 @@
 /* Filename: Countdown.css */
 
+/* Countdown Container Styles. */
 .countdown
 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-
-    gap: 2rem;
-    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    margin: 2.5rem auto;
+    width: 100%;
+    max-width: 700px;
+    justify-items: center;
 }
 
+/* Time Box Styles. */
 .time-box
 {
-    background: rgba(0, 0, 0, 0.35);
-    padding: 1.5rem 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem 1.2rem;
     border-radius: var(--radius);
-    box-shadow: 0 0 12px var(--color-accent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+    text-align: center;
 
     transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .time-box:hover
 {
-    transform: translateY(-6px);
-    box-shadow: 0 0 20px var(--color-highlight);
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 6px 18px rgba(255, 117, 24, 0.5);
 }
 
+/* Time Value Styles. */
 .time-value
 {
     display: block;
-    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
     font-weight: 700;
     color: var(--color-accent);
 
     text-shadow:
-      0 0 8px var(--color-accent),
-      0 0 15px var(--color-secondary);
+      0 0 10px var(--color-accent),
+      0 0 20px rgba(106, 13, 173, 0.6);
 }
 
+/* Time Label Styles. */
 .time-label
 {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     color: var(--color-highlight);
-    opacity: 0.9;
+    opacity: 0.85;
+}
+
+/* Past Date Message Styling. */
+.countdown.past
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 180px;
+}
+
+.past-message
+{
+    font-size: clamp(1.3rem, 2.2vw, 1.6rem);
+    font-weight: 600;
+    color: var(--color-highlight);
+
+    text-shadow:
+      0 0 6px var(--color-accent),
+      0 0 14px var(--color-secondary);
 }

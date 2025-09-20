@@ -1,7 +1,7 @@
 /* Filename: App.css */
 
-/* Root Layout Styles. */
-#root
+/* App Container Styles. */
+.app
 {
     display: flex;
     flex-direction: column;
@@ -19,8 +19,90 @@ main
 {
     flex: 1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     padding: 2rem 0;
+    gap: 2rem;
 }
+
+/* Countdown Date Picker Styles. */
+.date-picker
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.25rem 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+    animation: fadeIn 1s ease-in-out;
+}
+
+.date-label
+{
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--color-highlight);
+}
+
+/* Custom Date Input Styles. */
+.date-input
+{
+    padding: 0.6rem 1rem;
+    border: 2px solid var(--color-accent);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    color: var(--color-bg);
+    background: var(--color-text);
+    cursor: pointer;
+
+    transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+
+.date-input:hover
+{
+    border-color: var(--color-highlight);
+    transform: translateY(-2px);
+}
+
+.date-input:focus
+{
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 8px var(--color-secondary);
+}
+
+/* Fade-in Animation Styles. */
+@keyframes fadeIn
+{
+    from
+    {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Root Layout Styles. */
+/* #root
+{
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+
+ max-width: 960px;
+ margin: 0 auto;
+ padding: 2rem;
+
+ text-align: center;
+} */
