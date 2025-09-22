@@ -9,7 +9,7 @@
 
     max-width: 960px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2rem 1rem;
 
     text-align: center;
 }
@@ -22,9 +22,10 @@ main
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 2.5rem;
 
     padding: 2rem 0;
-    gap: 2rem;
+    animation: fadeInScale 1s ease both;
 }
 
 /* Countdown Date Picker Styles. */
@@ -35,19 +36,21 @@ main
     align-items: center;
     gap: 0.75rem;
 
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.06);
     padding: 1.25rem 1.5rem;
     border-radius: var(--radius);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeInUp 1s ease both;
 }
 
 .date-label
 {
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 500;
     color: var(--color-highlight);
+    letter-spacing: 0.5px;
 }
 
 /* Custom Date Input Styles. */
@@ -57,11 +60,14 @@ main
     border: 2px solid var(--color-accent);
     border-radius: var(--radius);
     font-size: 1rem;
+
     color: var(--color-bg);
     background: var(--color-text);
     cursor: pointer;
 
-    transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+    transition: border-color var(--transition),
+                box-shadow var(--transition),
+                transform var(--transition);
 }
 
 .date-input:hover
@@ -77,13 +83,13 @@ main
     box-shadow: 0 0 8px var(--color-secondary);
 }
 
-/* Fade-in Animation Styles. */
-@keyframes fadeIn
+/* Animation Styles. */
+@keyframes fadeInUp
 {
     from
     {
         opacity: 0;
-        transform: translateY(8px);
+        transform: translateY(12px);
     }
 
     to
@@ -93,16 +99,17 @@ main
     }
 }
 
-/* Root Layout Styles. */
-/* #root
+@keyframes fadeInScale
 {
- display: flex;
- flex-direction: column;
- min-height: 100vh;
+    from
+    {
+        opacity: 0;
+        transform: scale(0.98);
+    }
 
- max-width: 960px;
- margin: 0 auto;
- padding: 2rem;
-
- text-align: center;
-} */
+    to
+    {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
