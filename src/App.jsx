@@ -1,12 +1,13 @@
 //Filename: App.jsx
 //Author: Kyle McColgan
-//Date: 21 September 2025
+//Date: 25 September 2025
 //Description: This file contains the entry component for the Countdown React project.
 
 import { useState } from "react";
 import Countdown from "./components/Countdown/Countdown.jsx";
 import Header from "./components/Header/Header.jsx";
 import Footer from "./components/Footer/Footer.jsx";
+
 import './App.css';
 
 function App()

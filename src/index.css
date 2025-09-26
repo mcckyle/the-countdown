@@ -1,6 +1,6 @@
 /* Filename: index.css */
 
-/* Root Variables Styles. */
+/* Root Variables. */
 :root
 {
     --color-bg: #120019; /* Color: Midnight Background. */
@@ -89,4 +89,17 @@ button:hover
 {
     background: var(--color-secondary);
     transform: translateY(-2px);
+}
+
+/* Shared Animations Styles. */
+@keyframes fadeIn
+{
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp
+{
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
 }

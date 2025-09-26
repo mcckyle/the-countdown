@@ -4,7 +4,7 @@
 .header
 {
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 
     animation: fadeIn 0.8s ease both;
 }
@@ -13,38 +13,23 @@
 .header-title
 {
     font-family: "Creepster", cursive;
-    font-size: clamp(2.5rem, 6vw, 3.8rem);
+    font-size: clamp(2.5rem, 6vw, 3.6rem);
     color: var(--color-accent);
-    margin: 0 0 0.6rem;
+    margin-bottom: 0.5rem;
     letter-spacing: 1px;
 
     text-shadow:
-      0 0 8px var(--color-accent),
-      0 0 18px rgba(106, 13, 173, 0.6);
+      0 0 6px var(--color-accent),
+      0 0 14px rgba(106, 13, 173, 0.5);
 }
 
 /* Header Subtitle Styles. */
 .header-subtitle
 {
-    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-size: clamp(1rem, 2vw, 1.25rem);
     color: var(--color-highlight);
-    letter-spacing: 1.2px;
+    letter-spacing: 0.8px;
     opacity: 0.85;
 
-    animation: fadeIn 1s ease both 0.2s;
-}
-
-/* Shared Fade-in Animation Style. */
-@keyframes fadeIn
-{
-    from
-    {
-        opacity: 0;
-        transform: translateY(8px);
-    }
-    to
-    {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    animation: fadeInUp 0.9s ease both 0.15s;
 }
