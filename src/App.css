@@ -9,7 +9,7 @@
 
     max-width: 960px;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
 }
 
 /* Main Content Area Styles. */
@@ -45,10 +45,10 @@ main
 
 .date-label
 {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 500;
     color: var(--color-highlight);
-    letter-spacing: 0.5px;
+    letter-spacing: 0.6px;
 }
 
 /* Custom Date Input Styles. */
@@ -79,5 +79,5 @@ main
 {
     outline: none;
     border-color: var(--color-secondary);
-    box-shadow: 0 0 8px var(--color-secondary);
+    box-shadow: 0 0 6px var(--color-secondary);
 }

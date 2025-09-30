@@ -36,7 +36,7 @@
 {
     color: var(--color-accent);
     font-weight: 500;
-    text-shadow: 0 0 5px rgba(255, 117, 24, 0.35);
+    text-shadow: 0 0 6px rgba(255, 117, 24, 0.4);
 }
 
 .footer-text .year

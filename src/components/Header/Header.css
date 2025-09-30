@@ -18,9 +18,7 @@
     margin-bottom: 0.5rem;
     letter-spacing: 1px;
 
-    text-shadow:
-      0 0 6px var(--color-accent),
-      0 0 14px rgba(106, 13, 173, 0.5);
+    text-shadow: 0 0 8px rgba(255, 117, 24, 0.6);
 }
 
 /* Header Subtitle Styles. */
@@ -28,7 +26,6 @@
 {
     font-size: clamp(1rem, 2vw, 1.25rem);
     color: var(--color-highlight);
-    letter-spacing: 0.8px;
     opacity: 0.85;
 
     animation: fadeInUp 0.9s ease both 0.15s;
