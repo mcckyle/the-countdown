@@ -12,7 +12,7 @@ import './App.css';
 
 function App()
 {
-  //Default date = Halloween 🎃
+  //Default date = Halloween 🎃.
   const [targetDate, setTargetDate] = useState("2025-10-31T00:00:00");
   const today = new Date().toISOString().split("T")[0];
 
@@ -31,7 +31,11 @@ function App()
 
        <main>
          <section className="date-picker" aria-labelledby="date-picker-label">
-           <label id="date-picker-label" htmlFor="countdown-date" className="date-label">
+           <label
+             id="date-picker-label"
+             htmlFor="countdown-date"
+             className="date-label"
+            >
              Pick a target date:
            </label>
            <input

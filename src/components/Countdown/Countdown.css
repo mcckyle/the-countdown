@@ -24,7 +24,7 @@
     text-align: center;
     backdrop-filter: blur(8px);
 
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
 
     transition: transform var(--transition), box-shadow var(--transition);
 }
@@ -43,9 +43,7 @@
     font-weight: 700;
     color: var(--color-accent);
 
-    text-shadow:
-      0 0 8px var(--color-accent),
-      0 0 16px rgba(106, 13, 173, 0.5);
+    text-shadow: 0 0 8px var(--color-accent);
 }
 
 /* Time Label Styles. */
@@ -54,7 +52,7 @@
     margin-top: 0.4rem;
     font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 1.3px;
+    letter-spacing: 1.2px;
     color: var(--color-highlight);
     opacity: 0.85;
 }
@@ -74,7 +72,6 @@
     font-weight: 600;
     color: var(--color-highlight);
 
-    text-shadow:
-      0 0 5px var(--color-accent),
-      0 0 12px var(--color-secondary);
+    text-shadow: 0 0 5px var(--color-accent),
+                 0 0 10px var(--color-secondary);
 }

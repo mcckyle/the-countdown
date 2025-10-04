@@ -4,7 +4,13 @@
 .header
 {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    padding: 1.5rem 1rem;
+
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(6px);
 
     animation: fadeIn 0.8s ease both;
 }
@@ -13,20 +19,21 @@
 .header-title
 {
     font-family: "Creepster", cursive;
-    font-size: clamp(2.5rem, 6vw, 3.6rem);
+    font-size: clamp(2.6rem, 6vw, 3.8rem);
     color: var(--color-accent);
     margin-bottom: 0.5rem;
     letter-spacing: 1px;
 
-    text-shadow: 0 0 8px rgba(255, 117, 24, 0.6);
+    text-shadow: 0 0 10px rgba(255, 117, 24, 0.65);
 }
 
 /* Header Subtitle Styles. */
 .header-subtitle
 {
-    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-size: clamp(1rem, 2vw, 1.3rem);
     color: var(--color-highlight);
-    opacity: 0.85;
+    opacity: 0.9;
+    letter-spacing: 0.6px;
 
     animation: fadeInUp 0.9s ease both 0.15s;
 }

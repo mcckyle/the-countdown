@@ -12,7 +12,7 @@
     padding: 1.5rem 1rem;
 }
 
-/* Main Content Area Styles. */
+/* Main Content Styles. */
 main
 {
     flex: 1;
@@ -48,7 +48,7 @@ main
     font-size: 0.95rem;
     font-weight: 500;
     color: var(--color-highlight);
-    letter-spacing: 0.6px;
+    letter-spacing: 0.5px;
 }
 
 /* Custom Date Input Styles. */
