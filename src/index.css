@@ -1,12 +1,12 @@
 /* Filename: index.css */
 
-/* Root Variables. */
+/* Theme Variables. */
 :root
 {
-    --color-bg: #120019; /* Color: Midnight Background. */
+    --color-bg: #0f0014; /* Color: Midnight Background. */
     --color-text: #fdf6e3; /* Color: Warm Light Text. */
     --color-accent: #ff7518; /* Color: Pumpkin Orange. */
-    --color-secondary: #6a0dad; /* Color: Witch Purple. */
+    --color-secondary: #7b2cbf; /* Color: Witch Purple. */
     --color-highlight: #ffd700; /* Color: Sunset Gold. */
 
     --radius: 0.75rem;
@@ -15,13 +15,9 @@
     font-family: "Poppins", system-ui, sans-serif;
     line-height: 1.5;
     font-weight: 400;
-
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Global Reset / Layout Styles. */
+/* Reset Styles. */
 *
 {
     box-sizing: border-box;
@@ -33,7 +29,7 @@
 body
 {
     min-height: 100vh;
-    background: var(--color-bg);
+    background: radial-gradient(circle at top, #1b0023 0%, #0f0014 100%);
     color: var(--color-text);
 
     display: flex;

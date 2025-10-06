@@ -5,14 +5,22 @@
 {
     text-align: center;
     margin-bottom: 2.5rem;
-    padding: 1.5rem 1rem;
+    padding: 1.75rem 1.25rem;
 
     background: rgba(255, 255, 255, 0.05);
     border-radius: var(--radius);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
 
     animation: fadeIn 0.8s ease both;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.header:hover
+{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(255, 117, 0, 0.25);
 }
 
 /* Header Title Styles. */
@@ -21,19 +29,40 @@
     font-family: "Creepster", cursive;
     font-size: clamp(2.6rem, 6vw, 3.8rem);
     color: var(--color-accent);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
     letter-spacing: 1px;
+    position: relative;
 
     text-shadow: 0 0 10px rgba(255, 117, 24, 0.65);
+    background: linear-gradient(90deg, var(--color-accent), var(--color-highlight));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Subtle Bounce Effect For The Emoji Styles. */
+.emoji
+{
+    display: inline-block;
+    margin-right: 0.3rem;
+
+    animation: float 2.4s ease-in-out infinite;
 }
 
 /* Header Subtitle Styles. */
 .header-subtitle
 {
-    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-size: clamp(1rem, 2vw, 1.25rem);
     color: var(--color-highlight);
     opacity: 0.9;
     letter-spacing: 0.6px;
+    font-weight: 500;
 
     animation: fadeInUp 0.9s ease both 0.15s;
+}
+
+/* Floating Emoji Animation Styles. */
+@keyframes float
+{
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
 }

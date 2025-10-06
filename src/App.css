@@ -9,21 +9,21 @@
 
     max-width: 960px;
     margin: 0 auto;
-    padding: 1.5rem 1rem;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+
+    animation: fadeIn 1s ease both;
 }
 
-/* Main Content Styles. */
-main
+/* Main Area Styles. */
+.main-content
 {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 2.5rem;
-    padding: 2rem 0;
-
-    animation: fadeIn 1s ease both;
+    gap: 3rem;
+    width: 100%;
 }
 
 /* Date Picker Styles. */
@@ -34,18 +34,26 @@ main
     align-items: center;
     gap: 0.75rem;
 
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.08);
     padding: 1.25rem 1.5rem;
     border-radius: var(--radius);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 
+    transition: box-shadow var(--transition), transform var(--transition);
     animation: fadeInUp 1s ease both 0.15s;
+}
+
+.date-picker:hover
+{
+    box-shadow: 0 8px 24px rgba(255, 117, 24, 0.3);
+    transform: translateY(-3px);
 }
 
 .date-label
 {
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 500;
     color: var(--color-highlight);
     letter-spacing: 0.5px;
@@ -54,7 +62,7 @@ main
 /* Custom Date Input Styles. */
 .date-input
 {
-    padding: 0.65rem 1rem;
+    padding: 0.7rem 1.1rem;
     border: 2px solid var(--color-accent);
     border-radius: var(--radius);
     font-size: 1rem;
@@ -80,4 +88,23 @@ main
     outline: none;
     border-color: var(--color-secondary);
     box-shadow: 0 0 6px var(--color-secondary);
+}
+
+@media (max-width: 480px)
+{
+    .date-picker
+    {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .date-label
+    {
+        font-size: 0.9rem;
+    }
+
+    .date-input
+    {
+        font-size: 0.95rem;
+    }
 }
