@@ -6,16 +6,15 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-
     max-width: 960px;
     margin: 0 auto;
     padding: 2rem 1.5rem;
-    gap: 2rem;
+    gap: 2.5rem;
 
     animation: fadeIn 1s ease both;
 }
 
-/* Main Area Styles. */
+/* Main Section Styles. */
 .main-content
 {
     flex: 1;
@@ -26,7 +25,7 @@
     width: 100%;
 }
 
-/* Date Picker Styles. */
+/* Date Picker Card Styles. */
 .date-picker
 {
     display: flex;
@@ -34,35 +33,36 @@
     align-items: center;
     gap: 0.75rem;
 
-    background: rgba(255, 255, 255, 0.08);
-    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 1.6rem 1.8rem;
     border-radius: var(--radius);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 
-    transition: box-shadow var(--transition), transform var(--transition);
+    transition: transform var(--transition), box-shadow var(--transition);
     animation: fadeInUp 1s ease both 0.15s;
 }
 
 .date-picker:hover
 {
-    box-shadow: 0 8px 24px rgba(255, 117, 24, 0.3);
-    transform: translateY(-3px);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(255, 117, 24, 0.35);
 }
 
+/* Label Styles. */
 .date-label
 {
     font-size: 1rem;
     font-weight: 500;
     color: var(--color-highlight);
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
 }
 
 /* Custom Date Input Styles. */
 .date-input
 {
-    padding: 0.7rem 1.1rem;
+    padding: 0.75rem 1.2rem;
     border: 2px solid var(--color-accent);
     border-radius: var(--radius);
     font-size: 1rem;
@@ -87,7 +87,7 @@
 {
     outline: none;
     border-color: var(--color-secondary);
-    box-shadow: 0 0 6px var(--color-secondary);
+    box-shadow: 0 0 10px var(--color-secondary);
 }
 
 @media (max-width: 480px)
@@ -95,7 +95,7 @@
     .date-picker
     {
         width: 90%;
-        padding: 1rem;
+        padding: 1.25rem;
     }
 
     .date-label

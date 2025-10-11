@@ -4,12 +4,13 @@
 .countdown
 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1.5rem;
-    margin: 2rem auto;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 2rem;
+    margin: 2.8rem auto;
     width: 100%;
-    max-width: 700px;
+    max-width: 720px;
     justify-items: center;
+    padding: 1rem 0;
 
     animation: fadeIn 1s ease both;
 }
@@ -17,40 +18,40 @@
 /* Time Box Styles. */
 .time-box
 {
-    background: rgba(255, 255, 255, 0.06);
-    padding: 1.5rem 1.2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: var(--radius);
-    border: 1px solid rgba(255, 255, 255, 0.12);
     text-align: center;
-    backdrop-filter: blur(8px);
-
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    padding: 1.75rem 1.4rem;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 
     transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .time-box:hover
 {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 6px 16px rgba(255, 117, 24, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 117, 24, 0.35);
 }
 
 /* Time Value Styles. */
 .time-value
 {
     display: block;
-    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    font-size: clamp(2.7rem, 5.5vw, 3.8rem);
     font-weight: 700;
     color: var(--color-accent);
+    letter-spacing: 0.5px;
 
-    text-shadow: 0 0 8px var(--color-accent);
+    text-shadow: 0 0 10px rgba(255, 117, 24, 0.65);
 }
 
 /* Time Label Styles. */
 .time-label
 {
-    margin-top: 0.4rem;
-    font-size: 0.85rem;
+    margin-top: 0.65rem;
+    font-size: 0.95rem;
     text-transform: uppercase;
     letter-spacing: 1.2px;
     color: var(--color-highlight);
@@ -63,15 +64,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 180px;
+    min-height: 200px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: var(--radius);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
 }
 
 .past-message
 {
-    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-size: clamp(1.3rem, 2vw, 1.6rem);
     font-weight: 600;
     color: var(--color-highlight);
 
-    text-shadow: 0 0 5px var(--color-accent),
-                 0 0 10px var(--color-secondary);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6),
+                 0 0 14px rgba(255, 117, 24, 0.5);
+
+    animation: fadeIn 0.9s ease both;
 }

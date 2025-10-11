@@ -1,6 +1,6 @@
 //Filename: Countdown.jsx
 //Author: Kyle McColgan
-//Date: 21 September 2025
+//Date: 7 October 2025
 //Description: This file contains the parent component for the Countdown React project.
 
 import { useEffect, useState } from "react";
