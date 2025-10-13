@@ -6,10 +6,10 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    max-width: 960px;
+    max-width: 880px;
     margin: 0 auto;
-    padding: 2rem 1.5rem;
-    gap: 2.5rem;
+    padding: 2.5rem 1.5rem;
+    gap: 2.8rem;
 
     animation: fadeIn 1s ease both;
 }
@@ -33,12 +33,12 @@
     align-items: center;
     gap: 0.75rem;
 
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.05);
     padding: 1.6rem 1.8rem;
     border-radius: var(--radius);
     border: 1px solid rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.25);
 
     transition: transform var(--transition), box-shadow var(--transition);
     animation: fadeInUp 1s ease both 0.15s;
@@ -47,7 +47,7 @@
 .date-picker:hover
 {
     transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(255, 117, 24, 0.35);
+    box-shadow: 0 10px 30px rgba(255, 117, 24, 0.3);
 }
 
 /* Label Styles. */
@@ -96,15 +96,5 @@
     {
         width: 90%;
         padding: 1.25rem;
-    }
-
-    .date-label
-    {
-        font-size: 0.9rem;
-    }
-
-    .date-input
-    {
-        font-size: 0.95rem;
     }
 }

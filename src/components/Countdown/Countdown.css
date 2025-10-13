@@ -4,9 +4,9 @@
 .countdown
 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 2rem;
-    margin: 2.8rem auto;
+    margin: 2.5rem auto 3rem;
     width: 100%;
     max-width: 720px;
     justify-items: center;
@@ -19,11 +19,11 @@
 .time-box
 {
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius);
     text-align: center;
-    padding: 1.75rem 1.4rem;
-    backdrop-filter: blur(12px);
+    padding: 1.6rem 1.3rem;
+    backdrop-filter: blur(14px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 
     transition: transform var(--transition), box-shadow var(--transition);
@@ -32,17 +32,16 @@
 .time-box:hover
 {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(255, 117, 24, 0.35);
+    box-shadow: 0 10px 28px rgba(255, 117, 24, 0.35);
 }
 
 /* Time Value Styles. */
 .time-value
 {
     display: block;
-    font-size: clamp(2.7rem, 5.5vw, 3.8rem);
+    font-size: clamp(2.6rem, 5vw, 3.6rem);
     font-weight: 700;
     color: var(--color-accent);
-    letter-spacing: 0.5px;
 
     text-shadow: 0 0 10px rgba(255, 117, 24, 0.65);
 }
@@ -50,8 +49,8 @@
 /* Time Label Styles. */
 .time-label
 {
-    margin-top: 0.65rem;
-    font-size: 0.95rem;
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1.2px;
     color: var(--color-highlight);
@@ -64,22 +63,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 200px;
-    background: rgba(255, 255, 255, 0.04);
+    min-height: 180px;
+    background: rgba(255, 255, 255, 0.05);
     border-radius: var(--radius);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 6px 222px rgba(0, 0, 0, 0.25);
+
+    animation: fadeIn 1s ease both;
 }
 
 .past-message
 {
-    font-size: clamp(1.3rem, 2vw, 1.6rem);
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
     font-weight: 600;
     color: var(--color-highlight);
 
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6),
-                 0 0 14px rgba(255, 117, 24, 0.5);
-
-    animation: fadeIn 0.9s ease both;
+    text-shadow: 0 0 12px rgba(255, 215, 0, 0.6),
+                 0 0 18px rgba(255, 117, 24, 0.45);
 }

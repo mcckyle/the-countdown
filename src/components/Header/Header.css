@@ -13,7 +13,7 @@
     backdrop-filter: blur(12px);
     box-shadow: 0 8px 26px rgba(0, 0, 0, 0.25);
 
-    animation: fadeIn 0.8s ease both;
+    animation: fadeIn 0.9s ease both;
     transition: transform var(--transition), box-shadow var(--transition);
 }
 
@@ -27,8 +27,8 @@
 .header-title
 {
     font-family: "Creepster", cursive;
-    font-size: clamp(2.8rem, 6vw, 3.9rem);
-    margin-bottom: 0.4rem;
+    font-size: clamp(2.8rem, 6vw, 3.8rem);
+    margin-bottom: 0.5rem;
     letter-spacing: 1px;
 
     background: linear-gradient(90deg, var(--color-accent), var(--color-highlight));
@@ -44,7 +44,7 @@
     display: inline-block;
     margin-right: 0.4rem;
 
-    animation: float 2.8s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite;
 }
 
 /* Header Subtitle Styles. */
@@ -56,12 +56,12 @@
     letter-spacing: 0.5px;
     font-weight: 500;
 
-    animation: fadeInUp 0.9s ease both 0.15s;
+    animation: fadeIn 1s ease both 0.2s;
 }
 
 /* Floating Emoji Animation Styles. */
 @keyframes float
 {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
+    50% { transform: translateY(-6px); }
 }
