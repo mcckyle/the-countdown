@@ -68,7 +68,7 @@
     border-radius: var(--radius);
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(14px);
-    box-shadow: 0 6px 222px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.25);
 
     animation: fadeIn 1s ease both;
 }

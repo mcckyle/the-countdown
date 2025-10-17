@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎃 Halloween Countdown</title>
+    <meta
+      name="description"
+      content="A simple, modern, and spooky countdown to Halloween built with React and Vite."
+    />
 
     <!-- External Fonts Imports. -->
     <link
@@ -11,23 +16,25 @@
       rel="stylesheet"
     />
 
-    <title>🎃 Halloween Countdown</title>
-    <meta
-      name="description"
-      content="A simple, modern, and spooky countdown built with React and Vite."
-    />
-
     <style>
       body {
         margin: 0;
-        background: radial-gradient(circle at top, #1a0022 0%, #0b0011 100%);
+        background: radial-gradient(circle at 50% 20%, #14001b 0%, #050009 100%);
         color: #fdf6e3;
         font-family: "Poppins", system-ui, sans-serif;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        font-smooth: always;
+      }
+
+      ::selection {
+        background-color: #ff7518;
+        color: #0b0011;
       }
     </style>
   </head>
   <body>
-    <noscript>Please enable JavaScript in order to run this app!</noscript>
+    <noscript>This site requires JavaScript to run properly!</noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

@@ -35,7 +35,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    text-shadow: 0 0 12px rgba(255, 117, 24, 0.65);
+    text-shadow: 0 0 10px rgba(255, 117, 24, 0.55);
 }
 
 /* Emoji Animation Styles. */
@@ -52,7 +52,7 @@
 {
     font-size: clamp(1rem, 2vw, 1.25rem);
     color: var(--color-highlight);
-    opacity: 0.92;
+    opacity: 0.9;
     letter-spacing: 0.5px;
     font-weight: 500;
 
