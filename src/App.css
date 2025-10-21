@@ -1,46 +1,59 @@
 /* Filename: App.css */
 
-/* Layout Container Styles. */
+/* App Layout Container Styles. */
 .app
 {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 
     min-height: 100vh;
-    max-width: 880px;
-    margin: 0 auto;
-    padding: 2.5rem 1.5rem;
-    gap: 3rem;
+    width: 100%;
+    padding: 2rem 2.5rem;
+    overflow: hidden;
 
     animation: fadeIn 1s ease both;
 }
 
-/* Main Section Styles. */
+/* Main Landscape Layout Styles. */
 .main-content
 {
     flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 3rem;
+
     width: 100%;
+    text-align: center;
+    gap: 3rem;
+    padding: 2rem 0;
 }
 
-/* Date Picker Card Styles. */
+/* The Countdown Section Dominates the Viewport. */
+.countdown
+{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    transform: scale(1.15);
+}
+
+/* Date Picker Compact Card Styles. */
 .date-picker
 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.8rem;
+    gap: 1rem;
 
-    background: rgba(255, 255, 255, 0.06);
-    padding: 1.8rem 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.4rem 1.8rem;
     border-radius: var(--radius);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.25);
 
     transition: transform var(--transition), box-shadow var(--transition);
 }
@@ -48,7 +61,7 @@
 .date-picker:hover
 {
     transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(255, 117, 24, 0.3);
+    box-shadow: 0 10px 28px rgba(255, 117, 24, 0.3);
 }
 
 /* Label Styles. */
@@ -63,7 +76,7 @@
 /* Custom Date Input Styles. */
 .date-input
 {
-    padding: 0.75rem 1.2rem;
+    padding: 0.9rem 1.4rem;
     border: 2px solid var(--color-accent);
     border-radius: var(--radius);
     font-size: 1rem;
@@ -89,11 +102,30 @@
     box-shadow: 0 0 10px var(--color-secondary);
 }
 
-@media (max-width: 480px)
+@media (max-width: 900px)
 {
+    .countdown
+    {
+        transform: scale(1.05);
+        max-width: 90%;
+    }
+
+    .main-content
+    {
+        gap: 2rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .countdown
+    {
+        transform: scale(1);
+    }
+
     .date-picker
     {
         width: 90%;
-        padding: 1.25rem;
     }
 }

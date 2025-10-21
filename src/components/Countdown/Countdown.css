@@ -4,12 +4,12 @@
 .countdown
 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 2rem;
-    margin: 2.5rem auto 3rem;
-    width: 100%;
-    max-width: 720px;
+    grid-template-columns: repeat(4, 1fr);
     justify-items: center;
+    align-items: center;
+    gap: 2.5rem;
+    width: 100%;
+    margin: 3rem auto 2rem;
     padding: 1rem 0;
 
     animation: fadeIn 1s ease both;
@@ -18,43 +18,47 @@
 /* Time Box Styles. */
 .time-box
 {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--radius);
+    padding: 2.5rem 1.5rem;
     text-align: center;
-    padding: 1.6rem 1.3rem;
+    width: 100%;
+    max-width: 220px;
+
     backdrop-filter: blur(14px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 
     transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .time-box:hover
 {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 28px rgba(255, 117, 24, 0.35);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(255, 117, 24, 0.35);
 }
 
 /* Time Value Styles. */
 .time-value
 {
     display: block;
-    font-size: clamp(2.6rem, 5vw, 3.6rem);
+    font-size: clamp(4rem, 10vw, 8rem);
     font-weight: 700;
     color: var(--color-accent);
+    line-height: 1;
 
-    text-shadow: 0 0 10px rgba(255, 117, 24, 0.65);
+    text-shadow: 0 0 14px rgba(255, 117, 24, 0.7);
 }
 
 /* Time Label Styles. */
 .time-label
 {
-    margin-top: 0.6rem;
-    font-size: 0.9rem;
+    margin-top: 0.8rem;
+    font-size: clamp(1rem, 1.4vw, 1.2rem);
     text-transform: uppercase;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.5px;
     color: var(--color-highlight);
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
 /* Past Date Message Styling. */
@@ -63,10 +67,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 180px;
+    min-height: 200px;
+
     background: rgba(255, 255, 255, 0.05);
-    border-radius: var(--radius);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius);
     backdrop-filter: blur(14px);
     box-shadow: 0 6px 22px rgba(0, 0, 0, 0.25);
 
@@ -75,10 +80,30 @@
 
 .past-message
 {
-    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
     font-weight: 600;
     color: var(--color-highlight);
 
-    text-shadow: 0 0 12px rgba(255, 215, 0, 0.6),
-                 0 0 18px rgba(255, 117, 24, 0.45);
+    text-shadow: 0 0 14px rgba(255, 215, 0, 0.6),
+                 0 0 20px rgba(255, 117, 24, 0.45);
+}
+
+@media (max-width: 768px)
+{
+    .countdown
+    {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.8rem;
+    }
+
+    .time-box
+    {
+        max-width: 180px;
+        padding: 1.8rem 1.2rem;
+    }
+
+    .time-value
+    {
+        font-size: clamp(3rem, 8vw, 5rem);
+    }
 }
