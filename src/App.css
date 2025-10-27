@@ -6,12 +6,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
 
     min-height: 100vh;
     width: 100%;
-    padding: 2rem 2.5rem;
-    overflow: hidden;
+    padding: 2rem 4rem;
 
     animation: fadeIn 1s ease both;
 }
@@ -26,18 +25,34 @@
     align-items: center;
 
     width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
     text-align: center;
-    gap: 3rem;
-    padding: 2rem 0;
+
+    gap: 5rem;
+    padding: 3rem 1rem;
 }
 
 /* The Countdown Section Dominates the Viewport. */
 .countdown
 {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    transform: scale(1.15);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+
+    gap: 3.5rem;
+    transform: scale(1.1);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    transition: transform var(--transition);
+}
+
+.countdown:hover
+{
+    transform: scale(1.12);
 }
 
 /* Date Picker Compact Card Styles. */
@@ -46,40 +61,40 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 1.25rem;
 
     background: rgba(255, 255, 255, 0.05);
-    padding: 1.4rem 1.8rem;
+    padding: 1.6rem 2.2rem;
     border-radius: var(--radius);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(10px);
-    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.25);
 
     transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .date-picker:hover
 {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 28px rgba(255, 117, 24, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(255, 117, 24, 0.35);
 }
 
 /* Label Styles. */
 .date-label
 {
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 500;
     color: var(--color-highlight);
-    letter-spacing: 0.4px;
+    letter-spacing: 0.5px;
 }
 
 /* Custom Date Input Styles. */
 .date-input
 {
-    padding: 0.9rem 1.4rem;
+    padding: 1rem 1.5rem;
     border: 2px solid var(--color-accent);
     border-radius: var(--radius);
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 500;
 
     background: var(--color-text);
@@ -87,33 +102,55 @@
     cursor: pointer;
 
     transition: border-color var(--transition),
-                box-shadow var(--transition);
+                box-shadow var(--transition),
+                transform var(--transition);
 }
 
 .date-input:hover
 {
     border-color: var(--color-highlight);
+    transform: scale(1.03);
 }
 
 .date-input:focus
 {
     outline: none;
     border-color: var(--color-secondary);
-    box-shadow: 0 0 10px var(--color-secondary);
+    box-shadow: 0 0 12px var(--color-secondary);
+}
+
+@media (max-width: 1200px)
+{
+    .countdown
+    {
+        gap: 2.5rem;
+        transform: scale(1.05);
+    }
+
+    .main-content
+    {
+        gap: 3rem;
+        padding: 2rem 1rem;
+    }
 }
 
 @media (max-width: 900px)
 {
     .countdown
     {
-        transform: scale(1.05);
-        max-width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        transform: scale(1.02);
     }
 
     .main-content
     {
         gap: 2rem;
-        padding: 1rem;
+    }
+
+    .date-picker
+    {
+        width: 90%;
     }
 }
 
@@ -121,11 +158,13 @@
 {
     .countdown
     {
+        grid-template-columns: 1fr;
+        gap: 1.6rem;
         transform: scale(1);
     }
 
     .date-picker
     {
-        width: 90%;
+        padding: 1.2rem 1.4rem;
     }
 }
