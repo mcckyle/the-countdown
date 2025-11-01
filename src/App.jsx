@@ -1,7 +1,7 @@
 //Filename: App.jsx
 //Author: Kyle McColgan
-//Date: 20 October 2025
-//Description: This file contains the entry component for the Countdown React project.
+//Date: 31 October 2025
+//Description: This file contains the entry component for the React Countdown project.
 
 import { useState } from "react";
 import Countdown from "./components/Countdown/Countdown.jsx";
@@ -12,8 +12,8 @@ import "./App.css";
 
 function App()
 {
-  //Default date = Halloween 🎃.
-  const [targetDate, setTargetDate] = useState("2025-10-31T00:00:00");
+  //Default date = Thanksgiving 🦃
+  const [targetDate, setTargetDate] = useState("2025-11-27T00:00:00");
   const today = new Date().toISOString().split("T")[0];
 
   const handleDateChange = (e) => {
@@ -34,7 +34,7 @@ function App()
 
          <section className="date-picker" aria-labelledby="date-picker-label">
            <label id="date-picker-label" htmlFor="countdown-date" className="date-label">
-             Pick a target date:
+             Choose your own celebration date:
            </label>
            <input
              type="date"

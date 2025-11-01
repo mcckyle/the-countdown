@@ -1,3 +1,3 @@
 # the-countdown
 
-A simple, modern, and seasonal Halloween based countdown built with React and Vite.
+A simple, modern, and seasonal countdown to Thanksgiving built with React and Vite.
