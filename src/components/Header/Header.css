@@ -4,23 +4,23 @@
 .header
 {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
     padding: 2rem 1.5rem;
 
     background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: var(--radius);
     backdrop-filter: blur(10px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 
-    animation: fadeIn 0.9s ease both;
+    animation: fadeIn 0.8s ease both;
     transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .header:hover
 {
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(255, 180, 80, 0.25);
+    box-shadow: 0 10px 24px rgba(255, 179, 71, 0.25);
 }
 
 /* Header Title Styles. */
@@ -28,22 +28,21 @@
 {
     font-family: "Playfair Display", serif;
     font-weight: 600;
-    font-size: clamp(2.6rem, 6vw, 3.6rem);
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
     margin-bottom: 0.6rem;
-    letter-spacing: 0.5px;
 
     background: linear-gradient(90deg, #ffb347, #ffd194);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    text-shadow: 0 0 8px rgba(255, 191, 73, 0.5);
+    text-shadow: 0 0 8px rgba(255, 179, 71, 0.5);
 }
 
 /* Emoji Animation Styles. */
 .emoji
 {
     display: inline-block;
-    margin-right: 0.5rem;
+    margin-right: 0.4rem;
 
     animation: float 3s ease-in-out infinite;
 }
@@ -56,8 +55,6 @@
     opacity: 0.9;
     letter-spacing: 0.4px;
     font-weight: 400;
-
-    animation: fadeIn 1s ease both 0.25s;
 }
 
 /* Floating Emoji Animation Styles. */

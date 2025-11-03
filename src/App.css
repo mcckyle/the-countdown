@@ -10,7 +10,7 @@
 
     min-height: 100vh;
     width: 100%;
-    padding: 2rem 4rem;
+    padding: 2rem clamp(1.5rem, 4vw, 4rem);
 
     animation: fadeIn 1s ease both;
 }
@@ -23,36 +23,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     width: 100%;
-    max-width: 1800px;
-    margin: 0 auto;
-    text-align: center;
 
-    gap: 5rem;
+    gap: 4rem;
     padding: 3rem 1rem;
-}
-
-/* The Countdown Section Dominates the Viewport. */
-.countdown
-{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    align-items: center;
-
-    gap: 3.5rem;
-    transform: scale(1.1);
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-
-    transition: transform var(--transition);
-}
-
-.countdown:hover
-{
-    transform: scale(1.12);
 }
 
 /* Date Picker Compact Card Styles. */
@@ -63,8 +37,8 @@
     align-items: center;
     gap: 1.25rem;
 
-    background: rgba(255, 255, 255, 0.05);
-    padding: 1.6rem 2.2rem;
+    background: var(--color-surface);
+    padding: 1.8rem 2.2rem;
     border-radius: var(--radius);
     border: 1px solid rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(10px);
@@ -76,7 +50,7 @@
 .date-picker:hover
 {
     transform: translateY(-3px);
-    box-shadow: 0 10px 28px rgba(255, 117, 24, 0.35);
+    box-shadow: 0 10px 28px rgba(245, 158, 11, 0.35);
 }
 
 /* Label Styles. */
@@ -119,52 +93,18 @@
     box-shadow: 0 0 12px var(--color-secondary);
 }
 
-@media (max-width: 1200px)
+/* Shared Animations Styles. */
+@keyframes fadeIn
 {
-    .countdown
-    {
-        gap: 2.5rem;
-        transform: scale(1.05);
-    }
-
-    .main-content
-    {
-        gap: 3rem;
-        padding: 2rem 1rem;
-    }
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 900px)
 {
-    .countdown
-    {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-        transform: scale(1.02);
-    }
-
     .main-content
     {
-        gap: 2rem;
-    }
-
-    .date-picker
-    {
-        width: 90%;
-    }
-}
-
-@media (max-width: 600px)
-{
-    .countdown
-    {
-        grid-template-columns: 1fr;
-        gap: 1.6rem;
-        transform: scale(1);
-    }
-
-    .date-picker
-    {
-        padding: 1.2rem 1.4rem;
+        gap: 2.5rem;
+        padding: 2rem 1rem;
     }
 }

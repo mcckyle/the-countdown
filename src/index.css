@@ -25,15 +25,10 @@
 /* Base Layout Styles. */
 body
 {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
     background: radial-gradient(circle at 20% 30%, #1c1713 0%, #0f0d0c 100%);
     color: var(--color-text);
     font-family: "Poppins", system-ui, sans-serif;
+    min-height: 100vh;
 }
 
 h1, h2, h3
@@ -60,17 +55,4 @@ a:hover
 {
     color: var(--color-accent);
     text-shadow: 0 0 8px var(--color-accent);
-}
-
-/* Shared Animations Styles. */
-@keyframes fadeIn
-{
-    from { opacity: 0; transform: translateY(12px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInUp
-{
-    from { opacity: 0; transform: translateY(18px); }
-    to { opacity: 1; transform: translateY(0); }
 }

@@ -4,7 +4,7 @@
 .footer
 {
     margin-top: 3rem;
-    padding: 1.4rem 1rem;
+    padding: 1.5rem 1rem;
     text-align: center;
 
     background: rgba(255, 255, 255, 0.03);
@@ -13,7 +13,7 @@
     border-image-slice: 1;
 
     backdrop-filter: blur(8px);
-    box-shadow: 0 -3px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -3px 14px rgba(0, 0, 0, 0.3);
 
     transition: transform var(--transition), box-shadow var(--transition);
     animation: fadeIn 1s ease both;
@@ -22,7 +22,7 @@
 .footer:hover
 {
     transform: translateY(-2px);
-    box-shadow: 0 -4px 20px rgba(255, 191, 73, 0.25);
+    box-shadow: 0 -4px 18px rgba(255, 179, 71, 0.3);
 }
 
 /* Footer Text Styles. */
@@ -34,8 +34,6 @@
     color: #fdf5e6;
     opacity: 0.85;
     letter-spacing: 0.4px;
-
-    animation: fadeInUp 1.1s ease both 0.3s;
 }
 
 /* Footer Highlighted Words Styles. */
