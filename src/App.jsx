@@ -33,7 +33,11 @@ function App()
          <Countdown targetDate={targetDate} />
 
          <section className="date-picker" aria-labelledby="date-picker-label">
-           <label id="date-picker-label" htmlFor="countdown-date" className="date-label">
+           <label
+             id="date-picker-label"
+             htmlFor="countdown-date"
+             className="date-label"
+           >
              Choose your own celebration date:
            </label>
            <input

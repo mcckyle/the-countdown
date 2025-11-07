@@ -7,15 +7,13 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
-
     min-height: 100vh;
-    width: 100%;
     padding: 2rem clamp(1.5rem, 4vw, 4rem);
 
     animation: fadeIn 1s ease both;
 }
 
-/* Main Landscape Layout Styles. */
+/* Main Content Area Styles. */
 .main-content
 {
     flex: 1;
@@ -23,50 +21,50 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    text-align: center;
 
-    gap: 4rem;
+    gap: 3.5rem;
     padding: 3rem 1rem;
 }
 
-/* Date Picker Compact Card Styles. */
+/* Date Picker Card Styles. */
 .date-picker
 {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.25rem;
+    padding: 2rem 2.5rem;
 
-    background: var(--color-surface);
-    padding: 1.8rem 2.2rem;
-    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius);
     backdrop-filter: blur(10px);
-    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
 
     transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .date-picker:hover
 {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 28px rgba(245, 158, 11, 0.35);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 26px rgba(255, 179, 71, 0.25);
 }
 
 /* Label Styles. */
 .date-label
 {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     font-weight: 500;
     color: var(--color-highlight);
-    letter-spacing: 0.5px;
+    letter-spacing: 0.6px;
 }
 
 /* Custom Date Input Styles. */
 .date-input
 {
     padding: 1rem 1.5rem;
-    border: 2px solid var(--color-accent);
+    border: 2px solid transparent;
     border-radius: var(--radius);
     font-size: 1.05rem;
     font-weight: 500;
@@ -82,8 +80,9 @@
 
 .date-input:hover
 {
-    border-color: var(--color-highlight);
     transform: scale(1.03);
+    border-color: var(--color-highlight);
+    box-shadow: 0 0 10px rgba(255, 179, 71, 0.35);
 }
 
 .date-input:focus
@@ -106,5 +105,11 @@
     {
         gap: 2.5rem;
         padding: 2rem 1rem;
+    }
+
+    .date-picker
+    {
+        width: 90%;
+        padding: 1.8rem 1.5rem;
     }
 }

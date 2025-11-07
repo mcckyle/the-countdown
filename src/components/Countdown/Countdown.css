@@ -6,14 +6,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2.4rem;
-
-    width: 100%;
-    max-width: 1200px;
+    gap: 2.5rem;
     margin: 3rem auto;
-    padding: 2.5rem;
+    padding: 2.8rem 2rem;
+    max-width: 1000px;
 
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: var(--radius);
     backdrop-filter: blur(10px);
@@ -27,21 +25,19 @@
 .countdown:hover
 {
     transform: translateY(-3px);
-    box-shadow: 0 10px 26px rgba(255, 179, 71, 0.3);
+    box-shadow: 0 10px 28px rgba(245, 158, 11, 0.35);
 }
 
 /* Time Box Styles. */
 .time-box
 {
     flex: 1 1 200px;
-    max-width: 240px;
-    min-width: 180px;
-
-    padding: 2rem 1rem;
+    max-width: 220px;
+    padding: 2rem 1.25rem;
     text-align: center;
     border-radius: var(--radius);
 
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.07);
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 
@@ -58,12 +54,12 @@
 .time-value
 {
     display: block;
-    font-size: clamp(3rem, 8vw, 6.5rem);
+    font-size: clamp(3.2rem, 7vw, 6rem);
     font-weight: 700;
     color: var(--color-accent);
     line-height: 1.1;
 
-    text-shadow: 0 0 12px rgba(255, 179, 71, 0.4);
+    text-shadow: 0 0 12px rgba(255, 179, 71, 0.35);
 }
 
 /* Time Label Styles. */
@@ -71,11 +67,11 @@
 {
     display: block;
     margin-top: 0.6rem;
-    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    font-size: clamp(0.9rem, 1.2vw, 1.2rem);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
     color: var(--color-highlight);
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
 /* Past Date Message Styling. */
@@ -88,7 +84,7 @@
 
     background: rgba(255, 255, 255, 0.05);
     border-radius: var(--radius);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
 }
 
 .past-message
@@ -97,7 +93,7 @@
     font-weight: 600;
     color: var(--color-accent);
 
-    text-shadow: 0 0 8px rgba(255, 179, 71, 0.4);
+    text-shadow: 0 0 10px rgba(255, 179, 71, 0.4);
 }
 
 @media (max-width: 900px)
@@ -106,13 +102,13 @@
     {
         flex-direction: column;
         align-items: center;
-        gap: 1.8rem;
+        gap: 2rem;
         padding: 2rem 1rem;
     }
 
     .time-box
     {
-        width: 80%;
+        width: 85%;
         max-width: 260px;
     }
 }

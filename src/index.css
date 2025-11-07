@@ -3,12 +3,12 @@
 /* Theme Variables. */
 :root
 {
-    --color-bg: #12100f; /* Color: Soft Neutral Background. */
+    --color-bg: #14110f; /* Color: Soft Neutral Background. */
     --color-surface: rgba(255, 255, 255, 0.05);
-    --color-text: #f3f3f3; /* Color: Charcoal Gray Text. */
+    --color-text: #f8f7f4; /* Color: Charcoal Gray Text. */
     --color-accent: #f59e0b; /* Color: Warm Amber Accent. */
-    --color-secondary: #e77e2e; /* Color: Pumpkin Bronze. */
-    --color-highlight: #ffb347; /* Color: Soft Glowing Gold. */
+    --color-secondary: #d97706; /* Color: Burnt Orange. */
+    --color-highlight: #fbbf24; /* Color: Soft Glowing Gold. */
 
     --radius: 1rem;
     --transition: 0.3s ease-in-out;
@@ -25,10 +25,12 @@
 /* Base Layout Styles. */
 body
 {
-    background: radial-gradient(circle at 20% 30%, #1c1713 0%, #0f0d0c 100%);
+    background: radial-gradient(circle at 30% 30%, #1c1815 0%, #0c0a08 100%);
     color: var(--color-text);
     font-family: "Poppins", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 h1, h2, h3
@@ -55,4 +57,10 @@ a:hover
 {
     color: var(--color-accent);
     text-shadow: 0 0 8px var(--color-accent);
+}
+
+::selection
+{
+    background-color: var(--color-accent);
+    color: #fff;
 }
