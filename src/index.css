@@ -1,6 +1,6 @@
 /* Filename: index.css */
 
-/* Theme Variables. */
+/* Root Theme Variables. */
 :root
 {
     --color-bg: #14110f; /* Color: Soft Neutral Background. */
@@ -11,7 +11,7 @@
     --color-highlight: #fbbf24; /* Color: Soft Glowing Gold. */
 
     --radius: 1rem;
-    --transition: 0.3s ease-in-out;
+    --transition: 0.3s ease;
 }
 
 /* Reset Styles. */
@@ -25,17 +25,18 @@
 /* Base Layout Styles. */
 body
 {
-    background: radial-gradient(circle at 30% 30%, #1c1815 0%, #0c0a08 100%);
+    background: radial-gradient(circle at 30% 30%, #1c1815 0%, #0b0907 100%);
     color: var(--color-text);
     font-family: "Poppins", system-ui, sans-serif;
-    -webkit-font-smoothing: antialiased;
+
     min-height: 100vh;
-    overflow-x: hidden;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3
 {
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 0.5em;
 }
 

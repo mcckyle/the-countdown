@@ -18,7 +18,6 @@
     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
 
     transition: transform var(--transition), box-shadow var(--transition);
-
     animation: fadeIn 1s ease both;
 }
 
@@ -54,7 +53,7 @@
 .time-value
 {
     display: block;
-    font-size: clamp(3.2rem, 7vw, 6rem);
+    font-size: clamp(3.4rem, 7vw, 6rem);
     font-weight: 700;
     color: var(--color-accent);
     line-height: 1.1;
