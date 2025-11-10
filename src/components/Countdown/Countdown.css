@@ -6,16 +6,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2.5rem;
+    gap: 2.4rem;
     margin: 3rem auto;
-    padding: 2.8rem 2rem;
-    max-width: 1000px;
+    padding: 2.6rem 2rem;
+    max-width: 950px;
 
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: var(--radius);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 
     transition: transform var(--transition), box-shadow var(--transition);
     animation: fadeIn 1s ease both;
@@ -24,15 +24,15 @@
 .countdown:hover
 {
     transform: translateY(-3px);
-    box-shadow: 0 10px 28px rgba(245, 158, 11, 0.35);
+    box-shadow: 0 12px 26px rgba(245, 158, 11, 0.35);
 }
 
 /* Time Box Styles. */
 .time-box
 {
     flex: 1 1 200px;
-    max-width: 220px;
-    padding: 2rem 1.25rem;
+    max-width: 210px;
+    padding: 1.8rem 1.25rem;
     text-align: center;
     border-radius: var(--radius);
 
@@ -46,17 +46,18 @@
 .time-box:hover
 {
     transform: translateY(-6px);
-    box-shadow: 0 10px 24px rgba(255, 179, 71, 0.25);
+    box-shadow: 0 10px 22px rgba(255, 179, 71, 0.25);
 }
 
 /* Time Value Styles. */
 .time-value
 {
     display: block;
-    font-size: clamp(3.4rem, 7vw, 6rem);
+    font-size: clamp(3.6rem, 7vw, 6rem);
     font-weight: 700;
     color: var(--color-accent);
-    line-height: 1.1;
+    line-height: 1.05;
+    letter-spacing: -0.5px;
 
     text-shadow: 0 0 12px rgba(255, 179, 71, 0.35);
 }
@@ -64,13 +65,12 @@
 /* Time Label Styles. */
 .time-label
 {
-    display: block;
-    margin-top: 0.6rem;
-    font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+    margin-top: 0.65rem;
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
     text-transform: uppercase;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.1px;
     color: var(--color-highlight);
-    opacity: 0.9;
+    opacity: 0.85;
 }
 
 /* Past Date Message Styling. */
@@ -79,7 +79,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 220px;
+    min-height: 230px;
 
     background: rgba(255, 255, 255, 0.05);
     border-radius: var(--radius);
@@ -88,11 +88,11 @@
 
 .past-message
 {
-    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
     font-weight: 600;
     color: var(--color-accent);
 
-    text-shadow: 0 0 10px rgba(255, 179, 71, 0.4);
+    text-shadow: 0 0 10px rgba(255, 179, 71, 0.45);
 }
 
 @media (max-width: 900px)
