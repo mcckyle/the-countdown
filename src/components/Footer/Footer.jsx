@@ -10,7 +10,7 @@ function Footer()
   return (
     <footer className="footer">
       <p className="footer-text">
-        🦃 Crafted with gratitude by{" "}
+        🎄 Crafted with joy by{" "}
         <span className="highlight">Kyle McColgan</span> · Built with{" "}
         <span className="highlight">React</span> &{" "}
         <span className="highlight">Vite</span> ·{" "}

@@ -26,7 +26,7 @@
 /* Header Title Styles. */
 .header-title
 {
-    font-family: "Playfair Display", serif;
+    font-family: var(--heading-font);
     font-weight: 600;
     font-size: clamp(2.6rem, 6vw, 3.8rem);
     margin-bottom: 0.7rem;
@@ -35,7 +35,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    text-shadow: 0 0 10px rgba(255, 179, 71, 0.45);
+    text-shadow: 0 0 12px rgba(214, 40, 40, 0.6), 0 0 8px rgba(244, 211, 94, 0.4);
 }
 
 /* Header Subtitle Styles. */
@@ -54,7 +54,7 @@
 .emoji
 {
     display: inline-block;
-    margin-right: 0.4rem;
+    margin-right: 0.5rem;
 
     animation: float 3s ease-in-out infinite;
 }

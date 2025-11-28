@@ -5,11 +5,11 @@
 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
     min-height: 100vh;
-    padding: 2.5rem clamp(1.5rem, 4vw, 4rem);
-
-    animation: fadeIn 0.8s ease both;
+    padding: 3rem clamp(1.5rem, 4vw, 5rem);
+    gap: 2.5rem;
 }
 
 /* Main Content Area Styles. */
@@ -20,8 +20,8 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-
-    gap: 3rem;
+    gap: 3.2rem;
+    width: 100%;
 }
 
 /* Date Picker Card Styles. */
@@ -36,8 +36,8 @@
 
     background: var(--color-surface);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
 
     transition: transform var(--transition), box-shadow var(--transition);
 }
@@ -45,13 +45,13 @@
 .date-picker:hover
 {
     transform: translateY(-3px);
-    box-shadow: 0 12px 26px rgba(245, 158, 11, 0.25);
+    box-shadow: 0 14px 32px rgba(245, 158, 11, 0.28);
 }
 
 /* Label Styles. */
 .date-label
 {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     font-weight: 500;
     color: var(--color-highlight);
     letter-spacing: 0.6px;
@@ -60,10 +60,10 @@
 /* Custom Date Input Styles. */
 .date-input
 {
-    padding: 0.9rem 1.25rem;
+    padding: 0.9rem 1.5rem;
     border: 2px solid transparent;
     border-radius: var(--radius);
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     font-weight: 500;
 
     background: var(--color-text);
@@ -77,14 +77,14 @@
 {
     transform: scale(1.03);
     border-color: var(--color-highlight);
-    box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+    box-shadow: 0 0 12px rgba(245, 158, 11, 0.45);
 }
 
 .date-input:focus
 {
     outline: none;
     border-color: var(--color-secondary);
-    box-shadow: 0 0 12px var(--color-secondary);
+    box-shadow: 0 0 14px var(--color-secondary);
 }
 
 /* Shared Animations Styles. */
