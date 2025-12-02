@@ -1,6 +1,6 @@
 //Filename: App.jsx
 //Author: Kyle McColgan
-//Date: 28 November 2025
+//Date: 1 December 2025
 //Description: This file contains the entry component for the React Countdown project.
 
 import { useState } from "react";
@@ -12,7 +12,7 @@ import "./App.css";
 
 function App()
 {
-  //Default Thanksgiving date (November 27th, 2025).
+  //Default Christmas date (December 25th, 2025).
   const [targetDate, setTargetDate] = useState("2025-12-25T00:00:00");
   const today = new Date().toISOString().split("T")[0];
 
@@ -26,7 +26,7 @@ function App()
   };
 
     return (
-      <div className="app">
+      <div className="app fade-in">
        <Header />
 
        <main className="main-content">
@@ -38,7 +38,7 @@ function App()
              htmlFor="countdown-date"
              className="date-label"
            >
-             Choose your own celebration date:
+             Pick your own celebration date:
            </label>
            <input
              type="date"

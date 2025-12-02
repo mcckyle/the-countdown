@@ -14,8 +14,8 @@
     background: rgba(255, 255, 255, 0.06);
     border-radius: var(--radius);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(14px);
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
 
     transition: transform var(--transition), box-shadow var(--transition);
 }
@@ -23,7 +23,7 @@
 .countdown:hover
 {
     transform: translateY(-3px);
-    box-shadow: 0 16px 32px rgba(245, 158, 11, 0.32);
+    box-shadow: 0 16px 36px rgba(245, 158, 11, 0.32);
 }
 
 /* Time Box Styles. */
@@ -37,15 +37,15 @@
 
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 
-    transition: transform var(--transition), box-shadow var(--transition);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .time-box:hover
 {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 28px rgba(42, 157, 143, 0.25); /* Green Glow for Hover. */
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 14px 28px rgba(42, 157, 143, 0.25); /* Green Glow for Hover. */
 }
 
 /* Time Value Styles. */
@@ -54,8 +54,10 @@
     font-size: clamp(4rem, 7vw, 6.5rem);
     font-weight: 700;
     color: var(--color-accent);
+    text-shadow: 0 0 18px rgba(214, 40, 40, 0.6),
+                 0 0 10px rgba(244, 211, 94, 0.45);
 
-    text-shadow: 0 0 20px rgba(214, 40, 40, 0.6), 0 0 12px rgba(244, 211, 94, 0.45);
+    animation: pulse 1.2s infinite ease-in-out;
 }
 
 /* Time Label Styles. */
@@ -89,6 +91,12 @@
     color: var(--color-accent);
 
     text-shadow: 0 0 12px rgba(255, 179, 71, 0.45);
+}
+
+@keyframes pulse
+{
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
 }
 
 @media (max-width: 900px)

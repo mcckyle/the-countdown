@@ -9,8 +9,8 @@
 
     background: rgba(255, 255, 255, 0.05);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 -6px 22px rgba(0, 0, 0, 0.28);
 
     transition: transform var(--transition), box-shadow var(--transition);
     animation: fadeIn 1.2s ease both;
@@ -19,7 +19,7 @@
 .footer:hover
 {
     transform: translateY(-2px);
-    box-shadow: 0 -6px 22px rgba(245, 158, 11, 0.35);
+    box-shadow: 0 -8px 28px rgba(245, 158, 11, 0.35);
 }
 
 /* Footer Text Styles. */
