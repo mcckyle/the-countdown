@@ -10,6 +10,7 @@
     padding: 3rem clamp(1.5rem, 4vw, 5rem);
     gap: 3rem;
     background: radial-gradient(circle at 35% 25%, #1e1915 0%, #0a0807 100%);
+    color: var(--color-text);
 }
 
 /* Main Content Styles. */

@@ -4,12 +4,12 @@
 .footer
 {
     margin-top: 3.5rem;
-    padding: 1.6rem 1rem;
+    padding: 1.8rem 1rem;
     text-align: center;
 
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.06);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(14px);
     box-shadow: 0 -6px 22px rgba(0, 0, 0, 0.28);
 
     transition: transform var(--transition), box-shadow var(--transition);
@@ -26,7 +26,7 @@
 .footer-text
 {
     margin: 0;
-    font-size: clamp(0.9rem, 1vw + 0.3rem, 1.05rem);
+    font-size: clamp(0.95rem, 1vw + 0.3rem, 1.05rem);
     font-weight: 400;
     color: var(--color-text);
     opacity: 0.85;
@@ -39,7 +39,7 @@
 {
     color: var(--color-highlight);
     font-weight: 500;
-    text-shadow: 0 0 8px rgba(255, 179, 71, 0.4);
+    text-shadow: 0 0 10px rgba(255, 179, 71, 0.45);
 
     transition: color var(--transition), text-shadow var(--transition);
 }
@@ -47,7 +47,7 @@
 .footer-text .highlight:hover
 {
     color: var(--color-accent);
-    text-shadow: 0 0 12px rgba(255, 179, 71, 0.55);
+    text-shadow: 0 0 14px rgba(255, 179, 71, 0.55);
 }
 
 /* Year Accent Styles. */
