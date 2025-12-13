@@ -4,33 +4,26 @@
 .footer
 {
     margin-top: 3.5rem;
-    padding: 1.7rem 1rem;
+    padding: 1.6rem 1rem;
     text-align: center;
 
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.045);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(12px);
-    box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 -6px 18px rgba(0, 0, 0, 0.25);
 
-    transition: transform var(--transition), box-shadow var(--transition);
     animation: fadeIn 1.2s ease both;
-}
-
-.footer:hover
-{
-    transform: translateY(-2px);
-    box-shadow: 0 -8px 26px rgba(245, 158, 11, 0.3);
 }
 
 /* Footer Text Styles. */
 .footer-text
 {
     margin: 0;
-    font-size: clamp(0.9rem, 1vw + 0.25rem, 1.05rem);
+    font-size: clamp(0.9rem, 1vw + 0.25rem, 1.02rem);
     font-weight: 400;
     color: var(--color-text);
     opacity: 0.85;
-    letter-spacing: 0.45px;
+    letter-spacing: 0.4px;
     line-height: 1.55;
 }
 
@@ -39,15 +32,6 @@
 {
     color: var(--color-highlight);
     font-weight: 500;
-    text-shadow: 0 0 8px rgba(255, 179, 71, 0.35);
-
-    transition: color var(--transition), text-shadow var(--transition);
-}
-
-.footer-text .highlight:hover
-{
-    color: var(--color-accent);
-    text-shadow: 0 0 12px rgba(255, 179, 71, 0.45);
 }
 
 /* Year Accent Styles. */

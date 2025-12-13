@@ -28,12 +28,12 @@
 /* Base Layout Styles. */
 body
 {
-    background: radial-gradient(circle at 35% 25%, #1e1915 0%, #0a0807 100%);
-    color: var(--color-text);
-    font-family: var(--main-font);
-
     min-height: 100vh;
+    font-family: var(--main-font);
+    color: var(--color-text);
     line-height: 1.6;
+
+    background: radial-gradient(circle at 35% 25%, #1e1915 0%, #0a0807 100%);
     -webkit-font-smoothing: antialiased;
 }
 

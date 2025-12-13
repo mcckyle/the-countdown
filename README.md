@@ -4,7 +4,7 @@ A simple, modern, and seasonal countdown experience built with **React** and **V
 
 ## 🎯 Overview
 
-The Countdown app provides a simple, modern interface that updates in real time as you approach a meaningful seasonal date. Originally created for Thanksgiving, the project is structured to support effortless transitions into other themes — such as Christmas, New Year, or any special occasion.
+The Countdown app provides a simple, modern interface that updates in real time as you approach a meaningful seasonal date. Originally created for Halloween, the project is structured to support effortless transitions into other themes - such as Thanksgiving, Christmas, New Year, or any special occasion.
 
 ## ✨ Features
 

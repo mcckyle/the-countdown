@@ -5,22 +5,15 @@
 {
     text-align: center;
     margin-bottom: 3rem;
-    padding: 2.5rem 1.5rem;
+    padding: 2.4rem 1.5rem;
 
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.055);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: var(--radius);
     backdrop-filter: blur(14px);
-    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
 
     animation: fadeIn 1s ease both;
-    transition: transform var(--transition), box-shadow var(--transition);
-}
-
-.header:hover
-{
-    transform: translateY(-3px);
-    box-shadow: 0 14px 32px rgba(245, 158, 11, 0.28);
 }
 
 /* Header Title Styles. */
@@ -28,22 +21,20 @@
 {
     font-family: var(--heading-font);
     font-weight: 600;
-    font-size: clamp(2.8rem, 6vw, 3.6rem);
+    font-size: clamp(2.7rem, 5.5vw, 3.5rem);
     margin-bottom: 0.6rem;
 
     background: linear-gradient(90deg, var(--color-accent), var(--color-highlight));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    text-shadow: 0 0 12px rgba(214, 40, 40, 0.5);
+    text-shadow: 0 0 10px rgba(214, 40, 40, 0.45);
 }
 
 /* Header Subtitle Styles. */
 .header-subtitle
 {
-    font-family: var(--main-font);
-    font-size: clamp(1rem, 1.6vw, 1.2rem);
-    font-weight: 400;
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
     color: var(--color-text);
     opacity: 0.85;
     letter-spacing: 0.4px;
@@ -54,14 +45,14 @@
 .emoji
 {
     display: inline-block;
-    margin-right: 0.45rem;
+    margin-right: 0.4rem;
 
-    animation: float 3s ease-in-out infinite;
+    animation: float 3.2s ease-in-out infinite;
 }
 
 /* Floating Emoji Animation Styles. */
 @keyframes float
 {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-6px); }
+    50% { transform: translateY(-5px); }
 }
