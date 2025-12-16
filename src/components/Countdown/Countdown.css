@@ -8,8 +8,8 @@
     justify-content: center;
     gap: 2.4rem;
 
-    padding: 2.8rem 2.2rem;
-    margin: 2.4rem auto;
+    padding: 2.4rem 2.2rem;
+    margin: 2.6rem auto;
     max-width: 880px;
     width: 100%;
 
@@ -17,14 +17,8 @@
     border-radius: var(--radius);
     border: 1px solid rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(16px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
 
-    transition: transform var(--transition);
-}
-
-.countdown:hover
-{
-    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.28);
 }
 
 /* Time Box Styles. */
@@ -33,7 +27,7 @@
     flex: 1 1 180px;
     max-width: 220px;
 
-    padding: 2.1rem 1.5rem;
+    padding: 1.9rem 1.5rem;
     border-radius: var(--radius);
     text-align: center;
 
@@ -43,14 +37,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    user-select: none;
-
-    transition: transform 0.28s ease;
-}
-
-.time-box:hover
-{
-    transform: translateY(-4px);
 }
 
 /* Prevents Distorted Animation. */
@@ -67,18 +53,17 @@
     font-size: clamp(3.6rem, 6.5vw, 5.8rem);
     font-weight: 700;
     color: var(--color-accent);
-    text-shadow: 0 0 16px rgba(214, 40, 40, 0.5),
-                 0 0 8px rgba(244, 211, 94, 0.3);
+
+    text-shadow: 0 0 10px rgba(214, 40, 40, 0.4);
 }
 
 /* Time Label Styles. */
 .time-label
 {
-    margin-top: 0.7rem;
-    font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+    margin-top: 0.5rem;
+    font-size: clamp(0.9rem, 1.1vw, 1.05rem);
     letter-spacing: 1px;
     text-transform: uppercase;
-    user-select: none;
 
     color: var(--color-highlight);
     opacity: 0.85;
@@ -96,7 +81,7 @@
 
     background: rgba(255, 255, 255, 0.05);
     border-radius: var(--radius);
-    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.32);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
 .past-message
@@ -105,9 +90,7 @@
     font-weight: 600;
     color: var(--color-accent);
 
-    text-shadow:
-      0 0 12px rgba(244, 211, 94, 0.4),
-      0 0 8px rgba(214, 40, 40, 0.3);
+    text-shadow: 0 0 8px rgba(214, 40, 40, 0.35);
 }
 
 @media (max-width: 900px)

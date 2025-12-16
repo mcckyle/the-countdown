@@ -43,15 +43,19 @@ npm run build
 ```
 src/
   components/
-    Header.jsx
-    Countdown.jsx
-    Footer.jsx
-  styles/
-    Header.css
-    Countdown.css
-    Footer.css
+    Header/
+      Header.jsx
+      Header.css
+    Countdown/
+      Countdown.jsx
+      Countdown.css
+    Footer/
+      Footer.jsx
+      Footer.css
   App.jsx
+  App.css
   main.jsx
+  index.css
 ```
 
 ## 🎨 Theming
@@ -67,7 +71,7 @@ The app uses a simple, extensible design system based on CSS variables. You can 
 
 ## 🧑‍💻 Author
 
-Crafted with care in **Saint Louis, Missouri** by **Kyle McColgan**.
+Designed in **Saint Louis, Missouri** by **Kyle McColgan**.
 
 ## 📝 License
 
