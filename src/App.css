@@ -1,4 +1,4 @@
-/* Filename: App.css */
+/* Filename: src/App.css */
 
 /* App Container Styles. */
 .app
@@ -26,59 +26,6 @@
     gap: 3.6rem;
 
     text-align: center;
-}
-
-/* Date Picker Card Styles. */
-.date-picker
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.85rem;
-
-    padding: 1.4rem 2rem;
-    border-radius: calc(var(--radius) - 0.2rem);
-
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    backdrop-filter: blur(10px);
-
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
-}
-
-/* Label Styles. */
-.date-label
-{
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: var(--color-highlight);
-    letter-spacing: 0.4px;
-    opacity: 0.9;
-}
-
-/* Custom Date Input Styles. */
-.date-input
-{
-    padding: 0.7rem 1.3rem;
-    font-size: 0.95rem;
-    font-weight: 500;
-
-    border-radius: var(--radius);
-    border: 2px solid transparent;
-
-    background: var(--color-text);
-    color: var(--color-bg);
-    cursor: pointer;
-
-    transition: border-color var(--transition),
-                box-shadow var(--transition);
-}
-
-.date-input:focus
-{
-    outline: none;
-    border-color: var(--color-secondary);
-    box-shadow: 0 0 10px rgba(42, 157, 143, 0.4);
 }
 
 @media (max-width: 900px)

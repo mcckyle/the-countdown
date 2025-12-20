@@ -1,4 +1,4 @@
-/* Filename: index.css */
+/* Filename: src/index.css */
 
 /* Root Theme Variables. */
 :root
@@ -55,17 +55,10 @@ a
 }
 a:hover { color: var(--color-accent); }
 
-::selection
-{
-    background-color: var(--color-accent);
-    color: #fff;
-}
+::selection { background-color: var(--color-accent); color: #fff; }
 
 /* Smooth Fade-In for All Elements. */
-.fade-in
-{
-    animation: fadeIn 0.9s ease both;
-}
+.fade-in { animation: fadeIn 0.9s ease both; }
 
 /* Shared Animations Styles. */
 @keyframes fadeIn
