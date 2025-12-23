@@ -1,12 +1,14 @@
 //Filename: Countdown.jsx
 //Author: Kyle McColgan
-//Date: 15 December 2025
+//Date: 22 December 2025
 //Description: This file contains the parent component for the Countdown React project.
 
 import { useEffect, useState } from "react";
 import { getTimeRemaining } from "../../utils/timeUtils";
 
 import "./Countdown.css"
+
+const UNITS = ["days", "hours", "minutes", "seconds"];
 
 function Countdown({ targetDate })
 {
@@ -30,22 +32,24 @@ function Countdown({ targetDate })
     {
         return (
           <section
-            className="countdown past"
-            aria-label="Countdown complete"
+            className="countdown countdown-past"
+            aria-live="polite"
           >
-            <p className="past-message">🎄 This date has already passed</p>
+            <p className="past-message">
+              🎄 The moment has arrived.
+            </p>
           </section>
         );
     }
 
     return (
-      <section className="countdown" aria-label="Countdown Timer">
-        {["days", "hours", "minutes", "seconds"].map((unit) => (
+      <section className="countdown" aria-label="Time remaining">
+        {UNITS.map((unit) => (
           <div key={unit} className="time-box">
-            <div className="time-inner">
-              <span className="time-value">{timeLeft[unit]}</span>
-              <span className="time-label">{unit}</span>
-            </div>
+            <span className="time-value">
+              {String(timeLeft[unit]).padStart(2, "0")}
+            </span>
+            <span className="time-label">{unit}</span>
           </div>
         ))}
       </section>

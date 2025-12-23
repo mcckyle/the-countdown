@@ -1,30 +1,27 @@
-/* Filename: Footer.css */
+/* Filename: src/components/Footer/Footer.css */
 
 /* Footer Container Styles. */
 .footer
 {
-    margin-top: 3.5rem;
-    padding: 1.6rem 1rem;
+    margin-top: 3.2rem;
+    padding: 1.4rem 1rem;
     text-align: center;
 
-    background: rgba(255, 255, 255, 0.045);
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 -6px 18px rgba(0, 0, 0, 0.25);
-
-    animation: fadeIn 1.2s ease both;
+    background: rgba(255, 255, 255, 0.035);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
 }
 
 /* Footer Text Styles. */
 .footer-text
 {
     margin: 0;
-    font-size: clamp(0.9rem, 1vw + 0.25rem, 1.02rem);
+    font-size: clamp(0.85rem, 0.9vw + 0.35rem, 1rem);
     font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
     color: var(--color-text);
-    opacity: 0.85;
-    letter-spacing: 0.4px;
-    line-height: 1.55;
+    opacity: 0.75;
 }
 
 /* Footer Highlighted Words Styles. */
@@ -39,4 +36,10 @@
 {
     color: var(--color-accent);
     font-weight: 500;
+}
+
+.footer-text .separator
+{
+    margin: 0 0.4rem;
+    opacity: 0.4;
 }

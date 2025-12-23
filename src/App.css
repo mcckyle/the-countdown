@@ -7,9 +7,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3.2rem;
 
-    padding: 3rem clamp(1.5rem, 4vw, 5rem);
+    gap: 2.6rem;
+    padding: 3rem clamp(1.5rem, 4vw, 4.5rem);
     color: var(--color-text);
 }
 
@@ -18,18 +18,17 @@
 {
     flex: 1;
     width: 100%;
-    max-width: 1100px;
+    max-width: 960px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3.6rem;
+    gap: 3.2rem;
 
     text-align: center;
 }
 
 @media (max-width: 900px)
 {
-    .main-content { gap: 2.6rem; }
-    .date-picker { width: 90%; }
+    .main-content { gap: 2.4rem; }
 }

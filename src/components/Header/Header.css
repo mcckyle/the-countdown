@@ -1,58 +1,54 @@
-/* Filename: Header.css */
+/* Filename: src/components/Header/Header.css */
 
 /* Header Container Styles. */
 .header
 {
-    text-align: center;
-    margin-bottom: 3rem;
-    padding: 2.4rem 1.5rem;
+    width: 100%;
+    max-width: 960px;
 
-    background: rgba(255, 255, 255, 0.055);
+    text-align: center;
+    padding: 2.6rem 2rem;
+
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03));
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: var(--radius);
-    backdrop-filter: blur(14px);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
 
-    animation: fadeIn 1s ease both;
+    animation: fadeIn 0.8s ease both;
 }
 
 /* Header Title Styles. */
 .header-title
 {
     font-family: var(--heading-font);
+    font-size: clamp(2.4rem, 5vw, 3.2rem);
     font-weight: 600;
-    font-size: clamp(2.7rem, 5.5vw, 3.5rem);
-    margin-bottom: 0.6rem;
 
-    background: linear-gradient(90deg, var(--color-accent), var(--color-highlight));
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.04em;
+
+    background: linear-gradient(90deg, var(--color-highlight), var(--color-accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    text-shadow: 0 0 10px rgba(214, 40, 40, 0.45);
 }
 
 /* Header Subtitle Styles. */
 .header-subtitle
 {
-    font-size: clamp(1rem, 1.5vw, 1.15rem);
-    color: var(--color-text);
+    max-width: 520px;
+    margin: 0 auto;
+
+    font-size: clamp(0.95rem, 1.4vw, 1.1rem);
     opacity: 0.85;
-    letter-spacing: 0.4px;
-    line-height: 1.55;
+    line-height: 1.6;
 }
 
-/* Floating Emoji Styles. */
-.emoji
+/* Accent Emoji Styles. */
+.header-accent
 {
     display: inline-block;
-    margin-right: 0.4rem;
-
-    animation: float 3.2s ease-in-out infinite;
-}
-
-/* Floating Emoji Animation Styles. */
-@keyframes float
-{
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
+    margin-right: 0.5rem;
+    transform: translateY(-0.1em);
+    opacity: 0.9;
 }

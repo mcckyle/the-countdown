@@ -15,7 +15,7 @@
     --heading-font: "Playfair Display", serif;
 
     --radius: 1.1rem;
-    --transition: 0.35s ease;
+    --transition: 0.3s ease;
 }
 
 /* Reset Styles. */
@@ -32,19 +32,25 @@ body
     min-height: 100vh;
     font-family: var(--main-font);
     color: var(--color-text);
-    line-height: 1.6;
+    line-height: 1.65;
 
     background: radial-gradient(
-      circle at 35% 25%,
-      #1e1915 0%,
+      circle at 30% 20%,
+      #1b1612 0%,
       var(--color-bg) 100%
     );
 
     -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3 { font-weight: 600; }
-p { font-size: 1.05rem; opacity: 0.9; }
+h1, h2, h3
+{
+    font-family: var(--heading-font);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+p { font-size: 1.05rem; opacity: 0.88; }
 
 /* Links Styles. */
 a
@@ -58,7 +64,7 @@ a:hover { color: var(--color-accent); }
 ::selection { background-color: var(--color-accent); color: #fff; }
 
 /* Smooth Fade-In for All Elements. */
-.fade-in { animation: fadeIn 0.9s ease both; }
+.fade-in { animation: fadeIn 0.8s ease both; }
 
 /* Shared Animations Styles. */
 @keyframes fadeIn
