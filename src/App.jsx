@@ -1,6 +1,6 @@
 //Filename: App.jsx
 //Author: Kyle McColgan
-//Date: 22 December 2025
+//Date: 26 December 2025
 //Description: This file contains the entry component for the React Countdown project.
 
 import { useState } from "react";
@@ -13,8 +13,8 @@ import "./App.css";
 
 function App()
 {
-  //Default: Christmas Day (December 25th, 2025).
-  const [targetDate, setTargetDate] = useState("2025-12-25T00:00:00");
+  //Default: New Year Day (January 1st, 2026).
+  const [targetDate, setTargetDate] = useState("2026-01-01T00:00:00");
   const today = new Date().toISOString().split("T")[0];
 
   const handleDateChange = (e) => {
@@ -28,7 +28,7 @@ function App()
 
     return (
       <div className="app fade-in">
-       <Header />
+       <Header title="🎆 New Year Countdown" subtitle="Counting down to fresh beginnings!" />
 
        <main className="main-content">
          <Countdown targetDate={targetDate} />

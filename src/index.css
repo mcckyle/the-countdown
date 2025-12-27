@@ -7,9 +7,9 @@
     --color-surface: rgba(255, 255, 255, 0.08); /* Color: Light Snow Overlay. */
     --color-text: #f8f7f4;
 
-    --color-accent: #d62828; /* Color: Festive Red for Highlights. */
-    --color-secondary: #2a9d8f; /* Color: Pine Green. */
-    --color-highlight: #f4d35e; /* Color: Golden Lights. */
+    --color-accent: #d62828; /* Color: Fireworks Red. */
+    --color-secondary: #2a9d8f; /* Color: Cool Blue/Green Accent. */
+    --color-highlight: #f4d35e; /* Color: Golden Spark. */
 
     --main-font: "Poppins", system-ui, sans-serif;
     --heading-font: "Playfair Display", serif;
@@ -57,6 +57,7 @@ a
 {
     color: var(--color-highlight);
     text-decoration: none;
+
     transition: color var(--transition);
 }
 a:hover { color: var(--color-accent); }

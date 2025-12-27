@@ -7,27 +7,30 @@
     max-width: 860px;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 2.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: clamp(1.6rem, 3vw, 2.4rem);
 
-    padding: 2.6rem 2.4rem;
-    margin: 2.4rem auto;
+    padding: clamp(2.2rem, 4vw, 2.8rem);
+    margin: 2.6rem auto;
 
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025));
+    border: 1px solid rgba(255, 255, 255, 0.07);
     border-radius: var(--radius);
-    border: 1px solid rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(14px);
 
-    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+    animation: fadeIn 0.7s ease both;
 }
 
 /* Individual Time Unit Styles. */
 .time-box
 {
     text-align: center;
-    padding: 1.8rem 1.4rem;
+    padding: clamp(1.6rem, 3vw, 2rem) 1.4rem;
 
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.035);
     border-radius: calc(var(--radius) - 0.2rem);
 
     transition: transform var(--transition),
@@ -36,8 +39,8 @@
 
 .time-box:hover
 {
-    transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.055);
 }
 
 /* Time Value Styles. */
@@ -45,26 +48,26 @@
 {
     display: block;
 
-    font-size: clamp(3.4rem, 6vw, 5.4rem);
-    font-weight: 700;
-    line-height: 1;
+    font-size: clamp(3.2rem, 6vw, 5.2rem);
+    font-weight: 600;
+    line-height: 1.05;
 
     color: var(--color-accent);
-    letter-spacing: 0.04em;
+    letter-spacing: 0.03em;
 }
 
 /* Time Label Styles. */
 .time-label
 {
-    margin-top: 0.6rem;
     display: block;
+    margin-top: 0.65rem;
 
-    font-size: 0.85rem;
-    letter-spacing: 0.14em;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
 
     color: var(--color-highlight);
-    opacity: 0.85;
+    opacity: 0.8;
 }
 
 /* Past Date Message Styling. */
@@ -80,7 +83,7 @@
 .past-message
 {
     font-family: var(--heading-font);
-    font-size: clamp(1.5rem, 2.4vw, 2rem);
+    font-size: clamp(1.4rem, 2.4vw, 1.9rem);
     font-weight: 600;
 
     color: var(--color-accent);
@@ -90,9 +93,5 @@
 
 @media (max-width: 900px)
 {
-    .countdown
-    {
-        padding: 2.2rem 1.6rem;
-        gap: 1.6rem;
-    }
+    .countdown { margin: 2rem auto; }
 }

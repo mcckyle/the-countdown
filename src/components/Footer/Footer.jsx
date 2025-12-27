@@ -1,6 +1,6 @@
 //Filename: Footer.jsx
 //Author: Kyle McColgan
-//Date: 22 December 2025
+//Date: 26 December 2025
 //Description: This file contains the Footer component for the React Countdown project.
 
 import "./Footer.css";
@@ -10,7 +10,7 @@ function Footer()
   return (
     <footer className="footer">
       <p className="footer-text">
-        🎄 Crafted with joy by{" "}
+        Crafted in Saint Louis by{" "}
         <span className="highlight">Kyle McColgan</span>
         <span className="separator">·</span>
         Built with <span className="highlight">React</span> &{" "}

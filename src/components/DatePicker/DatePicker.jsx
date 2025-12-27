@@ -1,6 +1,6 @@
 //Filename: DatePicker.jsx
 //Author: Kyle McColgan
-//Date: 22 December 2025
+//Date: 26 December 2025
 //Description: This file contains the entry component for the React Countdown project.
 
 import "./DatePicker.css";
@@ -13,7 +13,7 @@ export default function DatePicker ({ value, minDate, onChange }) {
             htmlFor="countdown-date"
             className="date-label"
           >
-            Select another date
+            Choose a different date
           </label>
 
           <input
