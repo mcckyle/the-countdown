@@ -1,6 +1,6 @@
 /* Filename: src/App.css */
 
-/* App Container Styles. */
+/* App Shell Styles. */
 .app
 {
     min-height: 100vh;
@@ -8,8 +8,8 @@
     flex-direction: column;
     align-items: center;
 
-    gap: 2.8rem;
-    padding: clamp(2.6rem, 5vw, 3.6rem) clamp(1.4rem, 4vw, 4.6rem);
+    gap: 3rem;
+    padding: clamp(2.8rem, 5vw, 3.8rem) clamp(1.4rem, 4vw, 4.8rem);
     color: var(--color-text);
 }
 
@@ -23,12 +23,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2.8rem;
+    gap: 3rem;
 
     text-align: center;
 }
 
 @media (max-width: 900px)
 {
-    .main-content { gap: 2.2rem; }
+    .main-content { gap: 2.4rem; }
 }
