@@ -8,38 +8,39 @@
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: clamp(1.5rem, 3vw, 2.2rem);
+    gap: clamp(1.6rem, 3vw, 2.4rem);
 
-    padding: clamp(2rem, 4vw, 2.6rem);
-    margin: 2.4rem auto;
+    padding: clamp(2.2rem, 4.5vw, 2.8rem);
+    margin: 2.2rem auto;
 
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.015));
-    border: 1px solid rgba(255, 255, 255, 0.04);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(255, 255, 255, 0.035);
     border-radius: var(--radius);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(14px);
 
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.26),
-                inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28),
+                inset 0 1px 0 rgba(255, 255, 255, 0.025);
 
     animation: fadeIn 0.6s ease both;
 }
 
-/* Time Unit Card Styles. */
+/* Individual Time Card Styles. */
 .time-box
 {
     text-align: center;
-    padding: clamp(1.5rem, 3vw, 1.9rem) 1.4rem;
+    padding: clamp(1.6rem, 3vw, 2rem) 1.4rem;
 
-    background: rgba(255, 255, 255, 0.028);
+    background: rgba(255, 255, 255, 0.025);
     border-radius: calc(var(--radius) - 0.3rem);
 
-    transition: background var(--transition), transform var(--transition);
+    transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
 .time-box:hover
 {
     background: rgba(255, 255, 255, 0.04);
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
 
 /* Numeric Time Value Styles. */
@@ -47,12 +48,12 @@
 {
     display: block;
 
-    font-size: clamp(2.9rem, 5.5vw, 4.6rem);
+    font-size: clamp(3rem, 5.5vw, 4.4rem);
     font-weight: 600;
     line-height: 1;
 
     color: var(--color-accent);
-    letter-spacing: 0.025em;
+    letter-spacing: 0.02em;
 }
 
 /* Time Label Styles. */
@@ -62,22 +63,22 @@
     margin-top: 0.75rem;
 
     font-size: 0.65rem;
-    letter-spacing: 0.22em;
+    letter-spacing: 0.24em;
     text-transform: uppercase;
 
     color: var(--color-highlight);
-    opacity: 0.65;
+    opacity: 0.6;
 }
 
 /* Past State Styles. */
 .countdown-past
 {
+    min-height: 220px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    min-height: 220px;
     text-align: center;
 }
 
@@ -85,13 +86,13 @@
 .past-message
 {
     font-family: var(--heading-font);
-    font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+    font-size: clamp(1.7rem, 2.8vw, 2.2rem);
     font-weight: 600;
 
     color: var(--color-accent);
     margin-bottom: 0.4rem;
 }
-.past-subtle { font-size: 0.9rem; letter-spacing: 0.05em; opacity: 0.65; }
+.past-subtle { font-size: 0.9rem; letter-spacing: 0.06em; opacity: 0.65; }
 
 @media (max-width: 900px)
 {
