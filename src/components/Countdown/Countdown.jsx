@@ -36,9 +36,9 @@ function Countdown({ targetDate })
             aria-live="polite"
             aria-label="Countdown complete"
           >
-            <p className="past-message">❤️ The moment is here.</p>
+            <p className="past-message">❤️ The moment has arrived</p>
             <span className="past-subtle">
-              A day meant to be shared.
+              A day meant to be shared
             </span>
           </section>
         );

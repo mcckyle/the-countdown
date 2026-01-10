@@ -31,5 +31,5 @@
 
 @media (max-width: 900px)
 {
-    .main-content { gap: 2.4rem; }
+    .main-content { gap: 2.4rem; padding: 0 1rem; }
 }

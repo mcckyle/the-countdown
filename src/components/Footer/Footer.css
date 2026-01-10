@@ -4,25 +4,24 @@
 .footer
 {
     width: 100%;
-    margin-top: 4rem;
-    padding: 1.3rem 1rem 1.6rem;
+    margin-top: 4.2rem;
+    padding: 1.2rem 1rem 1.5rem;
     text-align: center;
 
-    background: rgba(255, 255, 255, 0.01);
-    border-top: 1px solid rgba(255, 255, 255, 0.035);
-    backdrop-filter: blur(6px);
+    background: transparent;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 /* Footer Text Styles. */
 .footer-text
 {
-    font-size: clamp(0.7rem, 0.65vw + 0.3rem, 0.82rem);
+    font-size: clamp(0.7rem, 0.6vw + 0.3rem, 0.8rem);
     line-height: 1.7;
     letter-spacing: 0.1em;
     font-weight: 400;
 
     color: var(--color-text);
-    opacity: 0.45;
+    opacity: 0.42;
 }
 
 /* Footer Highlighted Words Styles. */
@@ -30,15 +29,15 @@
 {
     color: var(--color-highlight);
     font-weight: 500;
-    opacity: 0.8;
+    opacity: 0.75;
 }
 
 /* Divider Dot Styles. */
 .footer-text .separator
 {
     display: inline-block;
-    margin: 0 0.7rem;
-    opacity: 0.18;
+    margin: 0 0.65rem;
+    opacity: 0.16;
 }
 
 /* Year Accent Styles. */
@@ -46,5 +45,5 @@
 {
     color: var(--color-accent);
     font-weight: 500;
-    opacity: 0.8;
+    opacity: 0.75;
 }
