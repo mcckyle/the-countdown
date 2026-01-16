@@ -41,21 +41,41 @@ npm run build
 ## 📁 Project Structure
 
 ```
-src/
-  components/
-    Header/
-      Header.jsx
-      Header.css
-    Countdown/
-      Countdown.jsx
-      Countdown.css
-    Footer/
-      Footer.jsx
-      Footer.css
-  App.jsx
-  App.css
-  main.jsx
-  index.css
+the-countdown/
+├── public/               # Static assets (served as-is).
+├── src/                  # Application Source code.
+│   ├── components/       # Reusable React components.
+│   │   ├── Countdown/
+│   │   │   ├── Countdown.jsx
+│   │   │   └── Countdown.css
+│   │   │
+│   │   ├── Header/
+│   │   │   ├── Header.jsx
+│   │   │   └── Header.css
+│   │   │
+│   │   ├── DatePicker/
+│   │   │   ├── DatePicker.jsx
+│   │   │   └── DatePicker.css
+│   │   │
+│   │   └── Footer/
+│   │       ├── Footer.jsx
+│   │       └── Footer.css
+│   │
+│   ├── utils/
+│   │   └── timeUtils.js
+│   │
+│   ├── App.jsx           # Main React application component.
+│   ├── main.jsx          # React DOM entry point.
+│   ├── App.css           # Styles specific to App.jsx.
+│   └── index.css         # Global styles and Tailwind imports.
+│
+├── .gitignore            # Specifies intentionally untracked files and folders to ignore.
+├── README.md             # Project overview, instructions, and documentation.
+├── eslint.config.js      # ESLint configuration.
+├── index.html            # HTML entry point.
+├── vite.config.js        # Vite config for build and development.
+├── package.json          # Project metadata, dependencies, and scripts.
+└── package-lock.json     # Exact versions of installed dependencies.
 ```
 
 ## 🎨 Theming

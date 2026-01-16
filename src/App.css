@@ -12,9 +12,11 @@
     padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 4vw, 5rem);
     color: var(--color-text);
     background: radial-gradient(circle at 30% 20%, #1b1612 0%, var(--color-bg) 100%);
+
+    transition: background 0.4s ease, color 0.4s ease;
 }
 
-/* Main Content Styles. */
+/* Main Content Layout Styles. */
 .main-content
 {
     flex: 1;

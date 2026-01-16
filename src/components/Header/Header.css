@@ -9,16 +9,24 @@
     text-align: center;
     padding: clamp(2.6rem, 5vw, 3.4rem) clamp(1.8rem, 4vw, 2.8rem);
 
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.01));
-
-    border: 1px solid rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.015);
     border-radius: var(--radius);
+    border: 1px solid rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(14px);
 
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25),
-                inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.24),
+                inset 0 1px 0 rgba(255, 255, 255, 0.02);
+
+    transition: transform var(--transition), box-shadow var(--transition);
 
     animation: fadeIn 0.6s ease both;
+}
+
+.header:hover
+{
+    transform: translateY(-1px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28),
+                inset 0 1px 0 rgba(255, 255, 255, 0.02);
 }
 
 /* Header Title Styles. */
@@ -53,11 +61,11 @@
     letter-spacing: 0.02em;
 
     color: var(--color-text);
-    opacity: 0.72;
+    opacity: 0.7;
 
-    transition: opacity var(--transition);
+    transition: opacity var(--transition), transform var(--transition);
 }
-.header-subtitle:hover { opacity: 0.82; }
+.header-subtitle:hover { opacity: 0.82; transform: translateY(-1px); }
 
 /* Accent Emoji Styles. */
 .header-accent
@@ -69,4 +77,4 @@
 
     transition: transform var(--transition), opacity var(--transition);
 }
-.header-accent:hover { transform: translateY(-0.06em) scale(1.1); opacity: 0.65; }
+.header-accent:hover { transform: translateY(-0.06em) scale(1.15); opacity: 0.65; }

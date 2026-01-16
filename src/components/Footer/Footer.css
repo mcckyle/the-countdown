@@ -26,6 +26,8 @@
 
     color: var(--color-text);
     opacity: 0.42;
+
+    transition: opacity var(--transition);
 }
 
 /* Footer Highlighted Words Styles. */
@@ -40,8 +42,8 @@
 
 .footer-text .highlight:hover
 {
-    transform: translateY(-1px) scale(1.02);
-    opacity: 0.85;
+    transform: translateY(-1px) scale(1.03);
+    opacity: 0.88;
 }
 
 /* Divider Dot Styles. */
@@ -58,6 +60,14 @@
     color: var(--color-accent);
     font-weight: 500;
     opacity: 0.78;
+
+    transition: color var(--transition), transform var(--transition);
+}
+
+.footer-text .year:hover
+{
+    transform: translateY(-1px) scale(1.02);
+    color: var(--color-accent);
 }
 
 /* Media Query Styles. */
