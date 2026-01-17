@@ -13,14 +13,13 @@
     padding: clamp(2.2rem, 4.5vw, 2.8rem);
     margin: 2.4rem auto;
 
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(255, 255, 255, 0.015);
     border-radius: var(--radius);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(14px);
 
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28),
-                inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
 
-    transition: transform 0.3s ease;
+    transition: transform var(--transition), background var(--transition);
 
     animation: fadeIn 0.6s ease both;
 }
@@ -28,10 +27,13 @@
 /* Individual Time Box Styles. */
 .time-box
 {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: clamp(1.6rem, 3vw, 2rem) 1.4rem;
 
-    background: rgba(255, 255, 255, 0.015);
+    background: rgba(255, 255, 255, 0.01);
     border-radius: calc(var(--radius) - 0.3rem);
 
     transition: background var(--transition),
@@ -41,18 +43,16 @@
 
 .time-box:hover
 {
-    background: rgba(255, 255, 255, 0.035);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+    background: rgba(255, 255, 255, 0.03);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
 }
 
 /* Numeric Time Value Styles. */
 .time-value
 {
-    display: block;
-
-    font-size: clamp(3rem, 5.5vw, 4.6rem);
-    font-weight: 600;
+    font-size: clamp(3rem, 5.5vw, 4.8rem);
+    font-weight: 700;
     line-height: 1;
 
     color: var(--color-accent);
@@ -64,11 +64,9 @@
 /* Time Label Styles. */
 .time-label
 {
-    display: block;
     margin-top: 0.85rem;
-
-    font-size: 0.6rem;
-    letter-spacing: 0.26em;
+    font-size: 0.65rem;
+    letter-spacing: 0.28em;
     text-transform: uppercase;
 
     color: var(--color-highlight);
@@ -93,7 +91,7 @@
 .past-message
 {
     font-family: var(--heading-font);
-    font-size: clamp(1.9rem, 3vw, 2.4rem);
+    font-size: clamp(2rem, 3vw, 2.5rem);
     font-weight: 600;
 
     color: var(--color-accent);

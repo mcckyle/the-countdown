@@ -25,7 +25,7 @@
 {
     background: rgba(255, 255, 255, 0.025);
     transform: translateY(-1px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
 }
 
 /* Date Picker Label Styles. */
@@ -39,9 +39,9 @@
     color: var(--color-highlight);
     opacity: 0.5;
 
-    transition: opacity var(--transition);
+    transition: opacity var(--transition), transform var(--transition);
 }
-.date-label:hover { opacity: 0.65; }
+.date-label:hover { opacity: 0.7; transform: translateY(-1px); }
 
 /* Custom Date Input Field Styles. */
 .date-input
