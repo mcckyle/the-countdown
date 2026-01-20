@@ -7,24 +7,15 @@
     max-width: 960px;
 
     text-align: center;
-    padding: clamp(2.5rem, 5vw, 3.4rem);
+    padding: clamp(2.6rem, 5vw, 3.4rem);
 
-    background: rgba(255, 255, 255, 0.015);
+    background: rgba(255, 255, 255, 0.012);
     border-radius: var(--radius);
     border: 1px solid rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(14px);
-
-    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.24);
-
-    transition: transform var(--transition), box-shadow var(--transition);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
 
     animation: fadeIn 0.6s ease both;
-}
-
-.header:hover
-{
-    transform: translateY(-1px);
-    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
 }
 
 /* Header Title Styles. */
@@ -38,20 +29,17 @@
     font-size: clamp(2.4rem, 5vw, 3rem);
     font-weight: 600;
     letter-spacing: 0.02em;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.8rem;
 
     background: linear-gradient(90deg, var(--color-highlight), var(--color-accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    transition: transform var(--transition), filter var(--transition);
 }
-.header-title:hover { transform: translateY(-1px); filter: brightness(1.05); }
 
 /* Header Subtitle Styles. */
 .header-subtitle
 {
-    max-width: 540px;
+    max-width: 520px;
     margin: 0 auto;
 
     font-size: clamp(0.95rem, 1.4vw, 1.05rem);
@@ -59,23 +47,17 @@
     letter-spacing: 0.02em;
 
     color: var(--color-text);
-    opacity: 0.72;
-
-    transition: opacity var(--transition), transform var(--transition);
+    opacity: 0.7;
 }
-.header-subtitle:hover { opacity: 0.82; transform: translateY(-1px); }
 
-/* Accent Emoji Styles. */
+/* Header Accent Emoji Styles. */
 .header-accent
 {
-    font-size: 0.95em;
+    font-size: 0.9em;
     transform: translateY(-0.04em);
-    opacity: 0.55;
+    opacity: 0.5;
     filter: saturate(0.85);
-
-    transition: transform var(--transition), opacity var(--transition);
 }
-.header-accent:hover { transform: translateY(-0.06em) scale(1.15); opacity: 0.65; }
 
 /* Header Media Queries Styles. */
 @media (max-width: 600px)
