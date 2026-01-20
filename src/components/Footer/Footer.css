@@ -4,77 +4,71 @@
 .footer
 {
     width: 100%;
-    margin-top: 4rem;
-    padding: 1.4rem 1.2rem 1.6rem;
+    margin-top: 3.2rem;
+    padding: 1.2rem 1rem 1.4rem;
     text-align: center;
 
-    background: rgba(255, 255, 255, 0.012);
-    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.01);
+    border-top: 1px solid rgba(255, 255, 255, 0.025);
     border-radius: var(--radius);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.02);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(10px);
 
-    animation: fadeIn 0.6s ease both;
+    animation: fadeIn 0.5s ease both;
 }
 
 /* Footer Text Styles. */
 .footer-text
 {
-    font-size: clamp(0.72rem, 0.65vw + 0.3rem, 0.82rem);
-    line-height: 1.7;
-    letter-spacing: 0.1em;
+    font-size: clamp(0.72rem, 0.6vw + 0.35rem, 0.8rem);
+    line-height: 1.65;
+    letter-spacing: 0.06em;
     font-weight: 400;
 
     color: var(--color-text);
-    opacity: 0.45;
+    opacity: 0.55;
 
     transition: opacity var(--transition);
 }
-.footer-text:hover { opacity: 0.55; }
+.footer-text:hover { opacity: 0.65; }
 
 /* Footer Highlighted Words Styles. */
 .footer-text .highlight
 {
     color: var(--color-highlight);
     font-weight: 500;
-    opacity: 0.75;
+    opacity: 0.85;
 
-    transition: transform var(--transition), opacity var(--transition);
+    transition: opacity var(--transition), transform var(--transition);
 }
 
 .footer-text .highlight:hover
 {
-    transform: translateY(-1px) scale(1.05);
-    opacity: 0.88;
+    opacity: 1;
+    transform: translateY(-0.5px);
 }
 
-/* Divider Dot Styles. */
+/* Footer Separator Dot Styles. */
 .footer-text .separator
 {
     display: inline-block;
-    margin: 0 0.65rem;
-    opacity: 0.18;
+    margin: 0 0.6rem;
+    opacity: 0.2;
 }
 
-/* Year Accent Styles. */
+/* Footer Year Accent Styles. */
 .footer-text .year
 {
     color: var(--color-accent);
     font-weight: 500;
-    opacity: 0.78;
+    opacity: 0.9;
 
-    transition: color var(--transition), transform var(--transition);
+    transition: opacity var(--transition);
 }
+.footer-text .year:hover { opacity: 1; }
 
-.footer-text .year:hover
-{
-    transform: translateY(-1px) scale(1.03);
-    color: var(--color-accent);
-}
-
-/* Media Query Styles. */
+/* Footer Media Query Styles. */
 @media (max-width: 600px)
 {
     .footer { padding: 1rem 0.8rem 1.2rem; }
-    .footer-text { font-size: 0.68rem; line-height: 1.6; }
+    .footer-text { font-size: 0.7rem; letter-spacing: 0.05em; }
 }
