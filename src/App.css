@@ -13,7 +13,7 @@
     color: var(--color-text);
     background: radial-gradient(circle at 30% 20%, #1b1612 0%, var(--color-bg) 100%);
 
-    transition: background 0.4s ease, color 0.4s ease;
+    animation: fadeIn 0.8s ease both;
 }
 
 /* Main Content Layout Styles. */
@@ -26,12 +26,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: clamp(3rem, 4vw, 3.5rem);
+    gap: clamp(2.6rem, 4vw, 3.2rem);
 
     text-align: center;
 }
 
 @media (max-width: 900px)
 {
-    .main-content { gap: 2.4rem; padding: 0 1rem; }
+    .main-content { gap: 2.2rem; padding: 0 1rem; }
 }

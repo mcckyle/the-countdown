@@ -1,6 +1,6 @@
 //Filename: App.jsx
 //Author: Kyle McColgan
-//Date: 2 January 2026
+//Date: 19 January 2026
 //Description: This file contains the entry component for the React Countdown project.
 
 import { useState } from "react";
@@ -13,7 +13,7 @@ import "./App.css";
 
 function App()
 {
-  //Default: Valentine's Day (February 14th, 2026).
+  //Target: Valentine's Day 2026 (February 14th, 2026).
   const [targetDate, setTargetDate] = useState("2026-02-14T00:00:00");
   const today = new Date().toISOString().split("T")[0];
 
@@ -27,7 +27,7 @@ function App()
   };
 
     return (
-      <div className="app fade-in">
+      <div className="app">
        <Header />
 
        <main className="main-content">
