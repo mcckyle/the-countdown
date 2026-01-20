@@ -8,69 +8,58 @@
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: clamp(1.6rem, 3vw, 2.4rem);
+    gap: clamp(1.6rem, 3vw, 2.2rem);
 
     padding: clamp(2.2rem, 4.5vw, 2.8rem);
     margin: 2.4rem auto;
 
-    background: rgba(255, 255, 255, 0.015);
+    background: rgba(255, 255, 255, 0.012);
     border-radius: var(--radius);
     backdrop-filter: blur(14px);
-
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
-
-    transition: transform var(--transition), background var(--transition);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
 
     animation: fadeIn 0.6s ease both;
 }
 
-/* Individual Time Box Styles. */
+/* Time Unit Box Styles. */
 .time-box
 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: clamp(1.6rem, 3vw, 2rem) 1.4rem;
+    padding: clamp(1.6rem, 3vw, 2rem) 1.2rem;
 
     background: rgba(255, 255, 255, 0.01);
     border-radius: calc(var(--radius) - 0.3rem);
 
     transition: background var(--transition),
-                transform var(--transition),
-                box-shadow var(--transition);
+                transform var(--transition);
 }
-
-.time-box:hover
-{
-    background: rgba(255, 255, 255, 0.03);
-    transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
-}
+.time-box:hover { background: rgba(255, 255, 255, 0.025); transform: translateY(-2px); }
 
 /* Numeric Time Value Styles. */
 .time-value
 {
-    font-size: clamp(3rem, 5.5vw, 4.8rem);
-    font-weight: 700;
+    font-family: var(--heading-font);
+    font-size: clamp(3.2rem, 5.8vw, 4.8rem);
+    font-weight: 600;
     line-height: 1;
 
     color: var(--color-accent);
-    letter-spacing: 0.02em;
-
-    transition: color var(--transition), transform var(--transition);
+    letter-spacing: 0.015em;
 }
 
-/* Time Label Styles. */
+/* Time Unit Label Styles. */
 .time-label
 {
-    margin-top: 0.85rem;
-    font-size: 0.65rem;
-    letter-spacing: 0.28em;
+    margin-top: 0.75rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.32em;
     text-transform: uppercase;
 
     color: var(--color-highlight);
-    opacity: 0.55;
+    opacity: 0.5;
 }
 
 /* Past State Styles. */
@@ -96,17 +85,15 @@
 
     color: var(--color-accent);
     margin-bottom: 0.5rem;
-
-    animation: popIn 0.6s ease both;
 }
-.past-subtle { font-size: 0.95rem; letter-spacing: 0.05em; opacity: 0.68; }
+.past-subtle { font-size: 0.95rem; letter-spacing: 0.05em; opacity: 0.65; }
 
 /* Animations Styles. */
-@keyframes popIn
+/*@keyframes popIn
 {
     from { opacity: 0; transform: scale(0.96); }
     to { opacity: 1; transform: scale(1); }
-}
+}*/
 
 @media (max-width: 900px)
 {
