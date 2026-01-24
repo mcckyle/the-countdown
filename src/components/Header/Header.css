@@ -7,16 +7,19 @@
     max-width: 960px;
 
     text-align: center;
-    padding: clamp(2.6rem, 5vw, 3.4rem);
+    padding: clamp(2.8rem, 5vw, 3.6rem);
 
-    background: rgba(255, 255, 255, 0.012);
+    background: rgba(255, 255, 255, 0.015);
     border-radius: var(--radius);
     border: 1px solid rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(14px);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
+
+    transition: transform var(--transition), box-shadow var(--transition);
 
     animation: fadeIn 0.6s ease both;
 }
+.header:hover { transform: translateY(-1px); box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28); }
 
 /* Header Title Styles. */
 .header-title
@@ -26,20 +29,23 @@
     gap: 0.6rem;
 
     font-family: var(--heading-font);
-    font-size: clamp(2.4rem, 5vw, 3rem);
-    font-weight: 600;
+    font-size: clamp(2.6rem, 5vw, 3.2rem);
+    font-weight: 700;
     letter-spacing: 0.02em;
     margin-bottom: 0.8rem;
 
     background: linear-gradient(90deg, var(--color-highlight), var(--color-accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    transition: transform var(--transition), filter var(--transition);
 }
+.header-title:hover { transform: translateY(-1px) scale(1.02); filter: brightness(1.05); }
 
 /* Header Subtitle Styles. */
 .header-subtitle
 {
-    max-width: 520px;
+    max-width: 540px;
     margin: 0 auto;
 
     font-size: clamp(0.95rem, 1.4vw, 1.05rem);
@@ -47,21 +53,27 @@
     letter-spacing: 0.02em;
 
     color: var(--color-text);
-    opacity: 0.7;
+    opacity: 0.72;
+
+    transition: opacity var(--transition), transform var(--transition);
 }
+.header-subtitle:hover { opacity: 0.82; transform: translateY(-1px); }
 
 /* Header Accent Emoji Styles. */
 .header-accent
 {
-    font-size: 0.9em;
+    font-size: 1em;
     transform: translateY(-0.04em);
-    opacity: 0.5;
+    opacity: 0.55;
     filter: saturate(0.85);
+
+    transition: transform var(--transition), opacity var(--transition);
 }
+.header-accent:hover { transform: translateY(-0.06em) scale(1.15); opacity: 0.65; }
 
 /* Header Media Queries Styles. */
 @media (max-width: 600px)
 {
-    .header-title { font-size: clamp(2rem, 6vw, 2.6rem); }
-    .header-subtitle { font-size: 0.92rem; }
+    .header-title { font-size: clamp(1rem, 4vw, 2rem); }
+    .header-subtitle { font-size: 0.92rem; max-width: 90%; }
 }

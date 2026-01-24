@@ -53,7 +53,7 @@ h1, h2, h3
 }
 
 /* Text Styles. */
-p { font-size: 1rem; opacity: 0.85; }
+p { font-size: 1rem; opacity: 0.85; transition: opacity var(--transition); }
 
 /* Links Styles. */
 a
