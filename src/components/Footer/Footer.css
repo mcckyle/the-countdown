@@ -1,83 +1,71 @@
 /* Filename: src/components/Footer/Footer.css */
 
-/* Footer Container Styles. */
+/* ====================================
+   Footer Container Styles.
+======================================= */
 .footer
 {
     width: 100%;
     margin-top: 3.5rem;
-    padding: clamp(1.2rem, 2vw, 1.6rem) clamp(1rem, 2.5vw, 2rem);
+    padding: clamp(1.1rem, 2vw, 1.4rem) clamp(1rem, 2.5vw, 2rem);
     text-align: center;
 
-    background: rgba(255, 255, 255, 0.012);
-    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.01);
+    border-top: 1px solid rgba(255, 255, 255, 0.025);
     border-radius: var(--radius);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-
-    transition: transform var(--transition), box-shadow var(--transition);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 
     animation: fadeIn 0.5s ease both;
 }
-.footer:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); }
 
-/* Footer Text Styles. */
+/* ====================================
+   Footer Text Styles.
+======================================= */
 .footer-text
 {
-    font-size: clamp(0.72rem, 0.65vw + 0.3rem, 0.82rem);
+    font-size: clamp(0.72rem, 0.6vw + 0.3rem, 0.8rem);
     line-height: 1.7;
     letter-spacing: 0.06em;
     font-weight: 400;
 
     color: var(--color-text);
     opacity: 0.55;
-
-    transition: opacity var(--transition);
 }
-.footer-text:hover { opacity: 0.68; }
 
-/* Footer Highlighted Words Styles. */
+/* ====================================
+   Footer Highlighted Words Styles.
+======================================= */
 .footer-text .highlight
 {
     color: var(--color-highlight);
     font-weight: 500;
     opacity: 0.85;
-
-    transition: transform var(--transition), opacity var(--transition);
 }
 
-.footer-text .highlight:hover
-{
-    transform: translateY(-0.5px) scale(1.03);
-    opacity: 1;
-}
-
-/* Footer Separator Dot Styles. */
+/* ====================================
+   Footer Separator Dot Styles.
+======================================= */
 .footer-text .separator
 {
     display: inline-block;
-    margin: 0 0.65rem;
-    opacity: 0.25;
-
-    transition: opacity var(--transition);
+    margin: 0 0.6rem;
+    opacity: 0.22;
 }
-.footer-text .separator:hover { opacity: 0.4; }
 
-/* Footer Year Accent Styles. */
+/* ====================================
+   Footer Year Accent Styles.
+======================================= */
 .footer-text .year
 {
     color: var(--color-accent);
     font-weight: 500;
-    opacity: 0.9;
-
-    transition: transform var(--transition), opacity var(--transition);
-}
-.footer-text .year:hover
-{
-    transform: translateY(-0.5px) scale(1.02);
-    opacity: 1;
+    opacity: 0.85;
 }
 
-/* Footer Media Query Styles. */
+/* ====================================
+   Footer Media Query Styles.
+======================================= */
 @media (max-width: 600px)
 {
     .footer { padding: 1rem 0.8rem 1.2rem; }

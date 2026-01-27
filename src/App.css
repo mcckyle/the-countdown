@@ -8,26 +8,14 @@
     flex-direction: column;
     align-items: center;
 
-    gap: clamp(3rem, 5vw, 4.5rem);
-    padding: clamp(3rem, 5vw, 5rem) clamp(1.5rem, 4vw, 5rem);
+    gap: clamp(3rem, 5vw, 4.2rem);
+    padding: clamp(2.8rem, 5vw, 4.5rem) clamp(1.5rem, 4vw, 5rem);
     color: var(--color-text);
-    background: radial-gradient(circle at 30% 20%, #1b1612 0%, var(--color-bg) 100%);
 
     animation: fadeIn 0.8s ease both;
 }
 
-/* Simple Overlay for Depth Styles. */
-.app::before
-{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: var(--color-surface);
-    pointer-events: none;
-    border-radius: inherit;
-}
-
-/* Main Content Layout Styles. */
+/* Main Content Styles. */
 .main-content
 {
     flex: 1;
@@ -37,12 +25,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: clamp(3rem, 4vw, 3.5rem);
+    gap: clamp(2.8rem, 4vw, 3.4rem);
     text-align: center;
 
     animation: fadeIn 0.9s ease both;
 }
 
+/* Media Query Styles. */
 @media (max-width: 900px)
 {
     .main-content { gap: 2.2rem; padding: 0 1rem; }
