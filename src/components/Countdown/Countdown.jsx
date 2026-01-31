@@ -1,6 +1,6 @@
 //Filename: Countdown.jsx
 //Author: Kyle McColgan
-//Date: 26 January 2026
+//Date: 30 January 2026
 //Description: This file contains the parent component for the Countdown React project.
 
 import { useEffect, useState } from "react";
@@ -23,18 +23,18 @@ function Countdown({ targetDate })
         return () => clearInterval(timer);
     }, [targetDate]);
 
-    const isPast = Object.values(timeLeft).every((value) => value <= 0);
+    const isComplete = Object.values(timeLeft).every((value) => value <= 0);
 
-    if (isPast)
+    if (isComplete)
     {
         return (
           <section
-            className="countdown countdown-past"
+            className="countdown countdown-complete"
             aria-live="polite"
             aria-label="Countdown complete"
           >
-            <p className="past-message">❤️ The moment is here</p>
-            <span className="past-subtle">
+            <p className="complete-message">❤️ The moment is here</p>
+            <span className="complete-subtle">
               Take it in. Celebrate. Remember it.
             </span>
           </section>

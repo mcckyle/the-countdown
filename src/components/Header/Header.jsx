@@ -10,7 +10,7 @@ function Header()
   return (
     <header className="header">
       <h1 className="header-title">
-        <span className="header-accent" aria-hidden="true">❤️</span>
+        <span className="header-accent" aria-hidden="true">♥</span>
          Valentine&rsquo;s&nbsp;Day&nbsp;Countdown
       </h1>
 

@@ -10,17 +10,15 @@
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
-    gap: clamp(1.6rem, 3vw, 2.2rem);
+    gap: clamp(1.6rem, 3vw, 2.1rem);
 
-    padding: clamp(2.2rem, 4vw, 2.8rem);
-    margin: 2.4rem auto;
+    padding: clamp(2.2rem, 4vw, 2.6rem);
+    margin: 2.2rem auto;
 
-    background: rgba(255, 255, 255, 0.015);
+    background: rgba(255, 255, 255, 0.014);
     border-radius: var(--radius);
     backdrop-filter: blur(14px);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
-
-    animation: fadeIn 0.6s ease both;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
 }
 
 /* ====================================
@@ -32,15 +30,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: clamp(1.5rem, 3vw, 1.9rem) 1.2rem;
+    padding: clamp(1.4rem, 3vw, 1.8rem) 1.2rem;
 
     background: rgba(255, 255, 255, 0.01);
-    border-radius: calc(var(--radius) - 0.35rem);
+    border-radius: calc(var(--radius) - 0.4rem);
 
-    transition: background var(--transition),
-                transform var(--transition);
+    transition: transform var(--transition);
 }
-.time-box:hover { background: rgba(255, 255, 255, 0.022); transform: translateY(-1px); }
+.time-box:hover { transform: translateY(-1px); }
 
 /* ====================================
    Numeric Time Value Styles.
@@ -48,7 +45,7 @@
 .time-value
 {
     font-family: var(--heading-font);
-    font-size: clamp(3rem, 6vw, 4.6rem);
+    font-size: clamp(3rem, 6vw, 4.4rem);
     font-weight: 700;
     line-height: 1;
 
@@ -61,19 +58,19 @@
 ======================================= */
 .time-label
 {
-    margin-top: 0.85rem;
+    margin-top: 0.9rem;
     font-size: 0.6rem;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.28em;
     text-transform: uppercase;
 
     color: var(--color-highlight);
-    opacity: 0.5;
+    opacity: 0.45;
 }
 
 /* ====================================
-   Countdown Past State Styles.
+   Countdown Complete State Styles.
 ======================================= */
-.countdown-past
+.countdown-complete
 {
     min-height: 220px;
 
@@ -82,40 +79,27 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-
-    animation: fadeIn 0.6s ease both;
 }
 
 /* ====================================
-   Countdown Past Message Styles.
+   Countdown Complete Message Styles.
 ======================================= */
-.past-message
+.complete-message
 {
     font-family: var(--heading-font);
-    font-size: clamp(2.1rem, 4vw, 2.7rem);
+    font-size: clamp(2.1rem, 4vw, 2.6rem);
     font-weight: 700;
 
     color: var(--color-accent);
-    margin-bottom: 0.5rem;
-
-    /*animation: popIn 0.6s ease both;*/
+    margin-bottom: 0.4rem;
 }
-.past-subtle { font-size: 0.95rem; letter-spacing: 0.04em; opacity: 0.65; }
-
-/* ====================================
-   Countdown Animations Styles.
-======================================= */
-@keyframes popIn
-{
-    from { opacity: 0; transform: scale(0.96); }
-    to { opacity: 1; transform: scale(1); }
-}
+.complete-subtle { font-size: 0.95rem; letter-spacing: 0.04em; opacity: 0.65; }
 
 /* ====================================
    Countdown Media Query Styles.
  ======================================= */
 @media (max-width: 900px)
 {
-    .countdown { margin: 2rem auto; }
-    .time-value { font-size: clamp(2.4rem, 7vw, 3.9rem); }
+    .countdown { margin: 1.9rem auto; }
+    .time-value { font-size: clamp(2.4rem, 7vw, 3.8rem); }
 }
