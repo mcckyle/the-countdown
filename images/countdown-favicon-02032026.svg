@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true">
+  <defs>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f4d35e"></stop>
+      <stop offset="100%" stop-color="#d62828"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Heart outline -->
+  <path d="M32 54
+       C32 54 6 36 6 22
+       C6 14 12 8 20 8
+       C25 8 29 11 32 15
+       C35 11 39 8 44 8
+       C52 8 58 14 58 22
+       C58 36 32 54 32 54 Z" fill="none" stroke="url(#accent)" stroke-width="4" stroke-linejoin="round"></path>
+
+  <!-- Center moment dot -->
+  <circle cx="32" cy="28" r="3.2" fill="#f8f7f4" opacity="0.9"></circle>
+</svg>
