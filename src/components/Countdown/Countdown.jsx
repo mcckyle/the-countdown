@@ -1,6 +1,6 @@
 //Filename: Countdown.jsx
 //Author: Kyle McColgan
-//Date: 9 February 2026
+//Date: 12 February 2026
 //Description: This file contains the parent component for the Countdown React project.
 
 import { useEffect, useState } from "react";
@@ -13,7 +13,7 @@ const UNITS = ["days", "hours", "minutes", "seconds"];
 function Countdown({ targetDate })
 {
     const [timeLeft, setTimeLeft] = useState(getTimeRemaining(targetDate));
-    const [tick, setTick] = useState(false); //Triggers animation.
+    const [tick, setTick] = useState(false); //Triggers pop animation.
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -44,11 +44,7 @@ function Countdown({ targetDate })
     }
 
     return (
-      <section
-        className="countdown"
-        role="timer"
-        aria-label="Time remaining"
-      >
+      <section className="countdown" role="timer" aria-label="Time remaining">
         {UNITS.map((unit) => (
           <div key={unit} className={`time-box ${tick ? "tick" : ""}`}>
             <span className="time-value">

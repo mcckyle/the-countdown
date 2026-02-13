@@ -33,7 +33,10 @@
 
     color: var(--color-highlight);
     opacity: 0.55;
+
+    transition: opacity var(--transition);
 }
+.date-label:hover { opacity: 0.75; }
 
 /* ====================================
    DatePicker Custom Date Input Field Styles.
