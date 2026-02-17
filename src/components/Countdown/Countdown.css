@@ -15,12 +15,12 @@
     padding: clamp(2.2rem, 4vw, 2.6rem);
     margin: 2.2rem auto;
 
-    background: rgba(255, 255, 255, 0.012);
+    background: rgba(255, 255, 255, 0.01);
     border-radius: var(--radius);
-    backdrop-filter: blur(14px);
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
 
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* ====================================
@@ -34,14 +34,15 @@
     justify-content: center;
     padding: clamp(1.4rem, 3vw, 1.8rem) 1.2rem;
 
-    background: rgba(255, 255, 255, 0.01);
-    border-radius: calc(var(--radius) - 0.4rem);
+    background: rgba(255, 255, 255, 0.015);
+    border-radius: calc(var(--radius) - 0.35rem);
+    box-shadow: 0 4px 12px rgba(214, 40, 40, 0.1);
 
     transition: transform var(--transition),
                 background var(--transition),
                 box-shadow var(--transition);
 }
-.time-box:hover { transform: translateY(-1.5px); background: rgba(255, 255, 255, 0.025); box-shadow: 0 6px 18px rgba(214, 40, 40, 0.08); }
+.time-box:hover { transform: translateY(-2px); background: rgba(214, 40, 40, 0.03); box-shadow: 0 6px 20px rgba(214, 40, 40, 0.18); }
 .time-box.tick .time-value { animation: pop 0.22s ease forwards; }
 
 /* ====================================
@@ -50,12 +51,15 @@
 .time-value
 {
     font-family: var(--heading-font);
-    font-size: clamp(3rem, 6vw, 4.4rem);
+    font-size: clamp(3rem, 6vw, 4.6rem);
     font-weight: 700;
     line-height: 1;
-
     color: var(--color-accent);
+    text-shadow: 0 0 6px rgba(214, 40, 40, 0.5),
+                 0 0 12px rgba(214, 40, 40, 0.3);
     letter-spacing: 0.02em;
+
+    transition: color 0.2s ease;
 }
 
 /* ====================================
@@ -64,12 +68,12 @@
 .time-label
 {
     margin-top: 0.85rem;
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     letter-spacing: 0.28em;
     text-transform: uppercase;
 
     color: var(--color-highlight);
-    opacity: 0.45;
+    opacity: 0.55;
 }
 
 /* ====================================
@@ -92,13 +96,14 @@
 .complete-message
 {
     font-family: var(--heading-font);
-    font-size: clamp(2.2rem, 4vw, 2.8rem);
+    font-size: clamp(2.4rem, 4.5vw, 3rem);
     font-weight: 700;
 
     color: var(--color-accent);
+    text-shadow: 0 0 10px rgba(214, 40, 40, 0.5);
     margin-bottom: 0.5rem;
 }
-.complete-subtle { font-size: 0.95rem; letter-spacing: 0.04em; opacity: 0.65; }
+.complete-subtle { font-size: 0.95rem; letter-spacing: 0.04em; opacity: 0.7; color: var(--color-text); }
 
 /* ====================================
    Countdown Animations Styles.
@@ -115,6 +120,6 @@
  ======================================= */
 @media (max-width: 900px)
 {
-    .countdown { margin: 2rem auto; }
+    .countdown { margin: 2rem auto; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 1.2rem; padding: 1.8rem; }
     .time-value { font-size: clamp(2.4rem, 7vw, 3.8rem); }
 }

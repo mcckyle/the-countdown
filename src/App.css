@@ -41,9 +41,10 @@
 {
     padding: 2rem;
     border-radius: var(--radius);
-    background: radial-gradient(circle at center, rgba(214, 40, 40, 0.1) 0%, transparent 80%);
+    background: radial-gradient(circle at center, rgba(214, 40, 40, 0.15) 0%, rgba(214, 40, 40, 0.05) 20%, transparent 80%);
+    box-shadow: 0 0 60px rgba(214, 40, 40, 0.2);
 
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* ====================================

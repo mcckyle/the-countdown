@@ -1,6 +1,6 @@
 //Filename: Countdown.jsx
 //Author: Kyle McColgan
-//Date: 12 February 2026
+//Date: 16 February 2026
 //Description: This file contains the parent component for the Countdown React project.
 
 import { useEffect, useState } from "react";
@@ -35,9 +35,9 @@ function Countdown({ targetDate })
             aria-live="polite"
             aria-label="Countdown complete"
           >
-            <p className="complete-message">❤️ The moment is here</p>
+            <p className="complete-message">The day is here!</p>
             <span className="complete-subtle">
-              Take it in. Celebrate. Remember it.
+              Happy Gaming! Enjoy!
             </span>
           </section>
         );

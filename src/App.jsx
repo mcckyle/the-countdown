@@ -1,10 +1,9 @@
 //Filename: App.jsx
 //Author: Kyle McColgan
-//Date: 12 February 2026
+//Date: 16 February 2026
 //Description: This file contains the entry component for the React Countdown project.
 
 import { useState } from "react";
-
 import Header from "./components/Header/Header.jsx";
 import Countdown from "./components/Countdown/Countdown.jsx";
 import DatePicker from "./components/DatePicker/DatePicker.jsx";
@@ -14,8 +13,8 @@ import "./App.css";
 
 function App()
 {
-  //Target date: Valentine's Day 2026 (February 14th, 2026).
-  const [targetDate, setTargetDate] = useState("2026-02-14T00:00:00");
+  //Target date: RE9 Release Day 2026 (February 27th, 2026).
+  const [targetDate, setTargetDate] = useState("2026-02-27T00:00:00");
   const today = new Date().toISOString().split("T")[0];
 
   const handleDateChange = (e) => {
