@@ -6,7 +6,9 @@
 :root
 {
     --color-bg: #0a0807;
-    --color-surface: rgba(255, 255, 255, 0.05);
+    --color-bg-deep: #140e0b;
+
+    --color-surface: rgba(255, 255, 255, 0.04);
     --color-text: #f8f7f4;
 
     --color-accent: #d62828;
@@ -16,12 +18,12 @@
     --main-font: "Poppins", system-ui, sans-serif;
     --heading-font: "Playfair Display", serif;
 
-    --radius: 1.1rem;
-    --transition: 0.22s ease;
+    --radius: 1.2rem;
+    --transition: 0.25s ease;
 }
 
 /* ====================================
-   Reset Styles.
+   Global Reset Styles.
 ======================================= */
 *, *::before, *::after
 {
@@ -41,9 +43,14 @@ body
     line-height: 1.65;
 
     background: radial-gradient(
-      circle at 30% 20%,
-      #1b1612 0%,
-      var(--color-bg) 70%
+      circle at 25% 20%,
+      var(--color-bg-deep) 0%,
+      var(--color-bg) 60%
+    ),
+    radial-gradient(
+        circle at 80% 80%,
+        rgba(214, 40, 40, 0.05),
+        transparent 50%
     );
 
     -webkit-font-smoothing: antialiased;
@@ -57,13 +64,13 @@ h1, h2, h3
 {
     font-family: var(--heading-font);
     font-weight: 600;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.04em;
 }
 
 /* ====================================
    Text Styles.
 ======================================= */
-p { font-size: 1rem; opacity: 0.82; }
+p { font-size: 1rem; opacity: 0.85; }
 
 /* ====================================
    Links Styles.
@@ -87,6 +94,6 @@ a:hover { color: var(--color-accent); }
 ======================================= */
 @keyframes fadeIn
 {
-    from { opacity: 0; transform: translateY(6px); }
+    from { opacity: 0; transform: translateY(8px); }
     to { opacity: 1; transform: translateY(0); }
 }
