@@ -1,25 +1,39 @@
 //Filename: Countdown.jsx
 //Author: Kyle McColgan
-//Date: 16 February 2026
+//Date: 23 February 2026
 //Description: This file contains the parent component for the Countdown React project.
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getTimeRemaining } from "../../utils/timeUtils";
 
 import "./Countdown.css"
 
-const UNITS = ["days", "hours", "minutes", "seconds"];
+const UNITS = [
+  { key: "days", label: "Days" },
+  { key: "hours", label: "Hours" },
+  { key: "minutes", label: "Minutes" },
+  { key: "seconds", label: "Seconds" },
+];
 
 function Countdown({ targetDate })
 {
     const [timeLeft, setTimeLeft] = useState(getTimeRemaining(targetDate));
     const [tick, setTick] = useState(false); //Triggers pop animation.
+    const hasMounted = useRef(false);
 
     useEffect(() => {
         const timer = setInterval(() => {
             const remaining = getTimeRemaining(targetDate);
             setTimeLeft(remaining);
-            setTick(prev => ! prev);
+
+            if (hasMounted.current)
+            {
+              setTick(prev => ! prev);
+            }
+            else
+            {
+              hasMounted.current = true;
+            }
         }, 1000);
 
         return () => clearInterval(timer);
@@ -31,26 +45,31 @@ function Countdown({ targetDate })
     {
         return (
           <section
-            className="countdown countdown-complete"
+            className="countdowncomplete"
             aria-live="polite"
             aria-label="Countdown complete"
           >
-            <p className="complete-message">The day is here!</p>
-            <span className="complete-subtle">
-              Happy Gaming! Enjoy!
-            </span>
+            <h2 className="complete-title">Launch Day</h2>
+            <p className="complete-subtitle">
+              The wait is over.
+            </p>
           </section>
         );
     }
 
     return (
-      <section className="countdown" role="timer" aria-label="Time remaining">
-        {UNITS.map((unit) => (
-          <div key={unit} className={`time-box ${tick ? "tick" : ""}`}>
+      <section
+        className="countdown"
+        role="timer"
+        aria-live="polite"
+        aria-label="Time remaining until launch"
+      >
+        {UNITS.map(({ key, label }) => (
+          <div key={key} className={`time-unit ${tick ? "tick" : ""}`}>
             <span className="time-value">
-              {String(timeLeft[unit]).padStart(2, "0")}
+              {String(timeLeft[key]).padStart(2, "0")}
             </span>
-            <span className="time-label">{unit}</span>
+            <span className="time-label">{label}</span>
           </div>
         ))}
       </section>
