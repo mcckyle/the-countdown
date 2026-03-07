@@ -11,12 +11,12 @@ function Header()
     <header className="header">
       <div className="header-inner">
         <h1 className="header-title">
-          <span className="header-icon" aria-hidden="true">☣</span>
-          RE9
+          <span className="header-icon" aria-hidden="true">🍀</span>
+          Saint Patrick's Day
         </h1>
 
         <p className="header-subtitle">
-          Launch Countdown · February 27, 2026
+          March 17th, 2026
         </p>
       </div>
     </header>

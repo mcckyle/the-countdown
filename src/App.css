@@ -41,8 +41,9 @@
     width: 100%;
     padding: clamp(1.75rem, 4vw, 2.5rem);
     border-radius: var(--radius);
-    background: radial-gradient(circle at center, rgba(214, 40, 40, 0.18) 0%, rgba(214, 40, 40, 0.08) 25%, transparent 75%);
-    box-shadow: 0 0 80px rgba(214, 40, 40, 0.15), 0 0 140px rgba(214, 40, 40, 0.08);
+    background: radial-gradient(circle at center, rgba(46, 204, 113, 0.18) 0%, rgba(46, 204, 113, 0.08) 25%, transparent 75%);
+    box-shadow: 0 0 60px rgba(46, 204, 113, 0.12),
+                0 0 100px rgba(46, 204, 113, 0.06);
 
     transition: transform var(--transition), box-shadow var(--transition);
 }
@@ -57,8 +58,8 @@
 {
     .countdown-section:hover
     {
-        transform: translateY(-2px);
-        box-shadow: 0 0 100px rgba(214, 40, 40, 0.18), 0 0 180px rgba(214, 40, 40, 0.1);
+        transform: translateY(-1.5px);
+        box-shadow: 0 0 80px rgba(46, 204, 113, 0.14), 0 0 140px rgba(46, 204, 113, 0.08);
     }
 }
 

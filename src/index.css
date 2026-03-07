@@ -11,7 +11,7 @@
     --color-surface: rgba(255, 255, 255, 0.04);
     --color-text: #f8f7f4;
 
-    --color-accent: #d62828;
+    --color-accent: #2ecc71; /* Green accent for Saint Patrick's Day. */
     --color-secondary: #2a9d8f;
     --color-highlight: #f4d35e;
 
@@ -49,7 +49,7 @@ body
     ),
     radial-gradient(
         circle at 80% 80%,
-        rgba(214, 40, 40, 0.05),
+        rgba(46, 204, 113, 0.05),
         transparent 50%
     );
 
