@@ -8,8 +8,8 @@
     width: 100%;
     max-width: 880px;
 
-    margin-top: clamp(3rem, 6vw, 4rem);
-    padding: clamp(1.2rem, 2vw, 1.6rem);
+    margin-top: clamp(2.8rem, 6vw, 3.8rem);
+    padding: clamp(1.1rem, 2vw, 1.4rem);
     text-align: center;
 
     border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -20,10 +20,10 @@
 ======================================= */
 .footer-text
 {
-    font-size: clamp(0.72rem, 0.5vw + 0.4rem, 0.82rem);
+    font-size: clamp(0.7rem, 0.45vw + 0.4rem, 0.8rem);
     line-height: 1.7;
 
-    letter-spacing: 0.08em;
+    letter-spacing: 0.075em;
     text-transform: uppercase;
 
     color: var(--color-text);
@@ -37,7 +37,7 @@
 {
     color: var(--color-highlight);
     font-weight: 500;
-    opacity: 0.85;
+    opacity: 0.8;
 }
 
 /* ====================================
@@ -46,8 +46,8 @@
 .divider
 {
     display: inline-block;
-    margin: 0 0.75rem;
-    opacity: 0.3;
+    margin: 0 0.7rem;
+    opacity: 0.28;
 }
 
 /* ====================================
@@ -56,8 +56,8 @@
 .footer-year
 {
     color: var(--color-accent);
-    opacity: 0.85;
     font-weight: 500;
+    opacity: 0.8;
 }
 
 /* ====================================
@@ -65,6 +65,6 @@
 ======================================= */
 @media (max-width: 600px)
 {
-    .footer-text { font-size: 0.68rem; letter-spacing: 0.06em; }
-    .divider { margin: 0 0.5rem; }
+    .footer-text { font-size: 0.66rem; letter-spacing: 0.055em; }
+    .divider { margin: 0 0.45rem; }
 }

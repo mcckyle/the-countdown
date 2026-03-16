@@ -1,6 +1,6 @@
 //Filename: Countdown.jsx
 //Author: Kyle McColgan
-//Date: 4 March 2026
+//Date: 15 March 2026
 //Description: This file contains the parent component for the Countdown React project.
 
 import { useEffect, useRef, useState } from "react";
@@ -28,7 +28,7 @@ function Countdown({ targetDate })
 
             if (hasMounted.current)
             {
-              setTick(prev => ! prev);
+              setTick((prev) => !prev);
             }
             else
             {
@@ -45,14 +45,12 @@ function Countdown({ targetDate })
     {
         return (
           <section
-            className="countdowncomplete"
+            className="countdown complete"
             aria-live="polite"
             aria-label="Countdown complete"
           >
             <h2 className="complete-title">Saint Patrick's Day</h2>
-            <p className="complete-subtitle">
-              The wait is over.
-            </p>
+            <p className="complete-subtitle">The wait is over.</p>
           </section>
         );
     }
@@ -62,7 +60,7 @@ function Countdown({ targetDate })
         className="countdown"
         role="timer"
         aria-live="polite"
-        aria-label="Time remaining until launch"
+        aria-label="Time remaining until Saint Patrick's Day'"
       >
         {UNITS.map(({ key, label }) => (
           <div key={key} className={`time-unit ${tick ? "tick" : ""}`}>
