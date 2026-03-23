@@ -12,12 +12,35 @@
 
 .header-inner
 {
-    padding: clamp(2.2rem, 5vw, 3.2rem) clamp(1.6rem, 4vw, 2.4rem);
+    padding: clamp(2.3rem, 5vw, 3.4rem) clamp(1.6rem, 4vw, 2.8rem);
     border-radius: var(--radius);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    background: var(--color-surface);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.035) 0%,
+        rgba(255, 255, 255, 0.02) 100%
+    );
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03),
+                0 18px 40px rgba(0, 0, 0, 0.14);
+    backdrop-filter: blur(10px);
 
     animation: fadeIn 0.7s ease both;
+}
+
+/* ====================================
+   Header Eyebrow Styles.
+======================================= */
+.header-eyebrow
+{
+    margin-bottom: 0.9rem;
+
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+
+    color: var(--color-highlight);
+    opacity: 0.7;
 }
 
 /* ====================================
@@ -27,14 +50,18 @@
 {
     display: inline-flex;
     align-items: center;
-    gap: 0.6rem;
+    justify-content: center;
+    gap: 0.7rem;
+    flex-wrap: wrap;
 
     font-family: var(--heading-font);
-    font-size: clamp(2.3rem, 5vw, 3rem);
+    font-size: clamp(2.4rem, 5vw, 3.3rem);
     font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: 0.04em;
 
-    letter-spacing: 0.05em;
     color: var(--color-text);
+    text-shadow: 0 0 20px rgba(196, 167, 255, 0.12);
 }
 
 /* ====================================
@@ -42,8 +69,10 @@
 ======================================= */
 .header-icon
 {
-    font-size: 0.9em;
-    opacity: 0.7;
+    font-size: 0.8em;
+    color: var(--color-accent);
+    opacity: 0.9;
+    transform: translateY(-0.04em);
 }
 
 /* ====================================
@@ -51,14 +80,15 @@
 ======================================= */
 .header-subtitle
 {
-    margin-top: 0.9rem;
+    max-width: 38rem;
+    margin: 1rem auto 0;
 
-    font-size: clamp(0.88rem, 1.3vw, 0.95rem);
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
+    font-size: clamp(0.96rem, 1.5vw, 1.05rem);
+    line-height: 1.7;
+    letter-spacing: 0.01em;
 
-    color: var(--color-highlight);
-    opacity: 0.6;
+    color: var(--color-text);
+    opacity: 0.74;
 }
 
 /* ====================================
@@ -88,6 +118,8 @@
 ======================================= */
 @media (max-width: 600px)
 {
-    .header-title { font-size: clamp(1.9rem, 6vw, 2.4rem); }
-    .header-subtitle { font-size: 0.82rem; }
+    .header-inner { padding: 2rem 1.15rem; }
+    .header-eyebrow { font-size: 0.66rem; letter-spacing: 0.24em; }
+    .header-title { font-size: clamp(1.95rem, 8vw, 2.5rem); gap: 0.5rem; }
+    .header-subtitle { font-size: 0.92rem; }
 }

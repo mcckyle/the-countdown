@@ -38,7 +38,7 @@ npm run dev
 npm run build
 ```
 
-## 📁 Project Structure
+## 📁 Architecture
 
 ```
 the-countdown/

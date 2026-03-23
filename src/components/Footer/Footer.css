@@ -8,11 +8,11 @@
     width: 100%;
     max-width: 880px;
 
-    margin-top: clamp(2.8rem, 6vw, 3.8rem);
-    padding: clamp(1.1rem, 2vw, 1.4rem);
+    margin-top: clamp(2.8rem, 6vw, 4rem);
+    padding: clamp(1.1rem, 2vw, 1.5rem);
     text-align: center;
 
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 /* ====================================
@@ -20,15 +20,22 @@
 ======================================= */
 .footer-text
 {
-    font-size: clamp(0.7rem, 0.45vw + 0.4rem, 0.8rem);
-    line-height: 1.7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.45rem;
 
-    letter-spacing: 0.075em;
+    font-size: clamp(0.72rem, 0.45vw + 0.4rem, 0.82rem);
+    line-height: 1.8;
+
+    letter-spacing: 0.07em;
     text-transform: uppercase;
 
     color: var(--color-text);
-    opacity: 0.55;
+    opacity: 0.58;
 }
+.footer-item { white-space: nowrap; }
 
 /* ====================================
    Footer Accent Elements Styles.
@@ -37,7 +44,9 @@
 {
     color: var(--color-highlight);
     font-weight: 500;
-    opacity: 0.8;
+    opacity: 0.9;
+
+    transition: color var(--transition), opacity var(--transition);
 }
 
 /* ====================================
@@ -45,9 +54,13 @@
 ======================================= */
 .divider
 {
-    display: inline-block;
-    margin: 0 0.7rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 0.35rem;
     opacity: 0.28;
+    color: var(--color-text);
 }
 
 /* ====================================
@@ -57,7 +70,14 @@
 {
     color: var(--color-accent);
     font-weight: 500;
-    opacity: 0.8;
+    opacity: 0.9;
+}
+
+/* Footer Desktop Hover Effects Styles. */
+@media (hover: hover)
+{
+    .footer:hover .footer-text { opacity: 0.7; }
+    .footer:hover .footer-accent, .footer:hover .footer-year { opacity: 1; }
 }
 
 /* ====================================
@@ -65,6 +85,8 @@
 ======================================= */
 @media (max-width: 600px)
 {
-    .footer-text { font-size: 0.66rem; letter-spacing: 0.055em; }
-    .divider { margin: 0 0.45rem; }
+    .footer { margin-top: 2.6rem; padding-top: 1rem; }
+    .footer-text { gap: 0.35rem; font-size: 0.66rem; letter-spacing: 0.055em; line-height: 1.75; }
+    .footer-item { white-space: normal; }
+    .divider { margin: 0 0.2rem; }
 }

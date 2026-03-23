@@ -5,15 +5,15 @@
 ======================================= */
 :root
 {
-    --color-bg: #0a0807;
-    --color-bg-deep: #140e0b;
+    --color-bg: #0f0c14;
+    --color-bg-deep: #17121f;
 
     --color-surface: rgba(255, 255, 255, 0.04);
-    --color-text: #f8f7f4;
+    --color-text: #f8f6fb;
 
-    --color-accent: #2ecc71; /* Green accent for Saint Patrick's Day. */
-    --color-secondary: #2a9d8f;
-    --color-highlight: #f4d35e;
+    --color-accent: #c4a7ff;
+    --color-secondary: #f2b5d4;
+    --color-highlight: #f3d98b;
 
     --main-font: "Poppins", system-ui, sans-serif;
     --heading-font: "Playfair Display", serif;
@@ -35,6 +35,8 @@
 /* ====================================
    Base Layout Styles.
 ======================================= */
+html { background: var(--color-bg); }
+#root { min-height: 100vh; }
 body
 {
     min-height: 100vh;
@@ -43,14 +45,19 @@ body
     line-height: 1.65;
 
     background: radial-gradient(
-      circle at 25% 20%,
-      var(--color-bg-deep) 0%,
-      var(--color-bg) 60%
+      circle at 22% 18%,
+      rgba(33, 24, 47, 0.96) 0%,
+      var(--color-bg) 58%
     ),
     radial-gradient(
-        circle at 80% 80%,
-        rgba(46, 204, 113, 0.05),
+        circle at 82% 78%,
+        rgba(196, 167, 255, 0.05),
         transparent 50%
+    ),
+    linear-gradient(
+        180deg,
+        #120e18 0%,
+        var(--color-bg) 100%
     );
 
     -webkit-font-smoothing: antialiased;
@@ -87,7 +94,7 @@ a:hover { color: var(--color-accent); }
 /* ====================================
    Selection Styles.
 ======================================= */
-::selection { background: var(--color-accent); color: #fff; }
+::selection { background: var(--color-accent); color: #140f1d; }
 
 /* ====================================
    Shared Animations Styles.

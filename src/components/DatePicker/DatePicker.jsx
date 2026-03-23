@@ -16,7 +16,7 @@ export default function DatePicker ({ value, minDate, onChange }) {
           htmlFor="countdown-date"
           className="date-label"
         >
-          Target Date
+          Choose a target date
         </label>
 
         <input

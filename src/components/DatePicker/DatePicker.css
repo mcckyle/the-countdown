@@ -10,13 +10,20 @@
 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-    padding: clamp(0.9rem, 2vw, 1.2rem);
+    align-items: stretch;
+    gap: 0.8rem;
+    padding: clamp(1rem, 2vw, 1.25rem);
 
-    background: var(--color-surface);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: calc(var(--radius) - 0.3rem);
+    border-radius: calc(var(--radius) - 0.2rem);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.03) 0%,
+        rgba(255, 255, 255, 0.018) 100%
+    );
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03),
+                0 14px 30px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(10px);
 
     animation: fadeIn 0.6s ease both;
 }
@@ -26,13 +33,14 @@
 ======================================= */
 .date-label
 {
-    font-size: 0.68rem;
+    font-size: 0.7rem;
     font-weight: 500;
-    letter-spacing: 0.26em;
+    letter-spacing: 0.24em;
     text-transform: uppercase;
+    text-align: center;
 
     color: var(--color-highlight);
-    opacity: 0.55;
+    opacity: 0.68;
 }
 
 /* ====================================
@@ -41,22 +49,25 @@
 .date-input
 {
     width: 100%;
+    min-height: 3rem;
     appearance: none;
+    padding: 0.8rem 1rem;
 
     font-family: var(--main-font);
-    font-size: 0.92rem;
+    font-size: 0.96rem;
     font-weight: 500;
-    padding: 0.65rem 1.1rem;
+    line-height: 1.2;
 
     color: var(--color-text);
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(255, 255, 255, 0.025);
 
+    border: 1px solid rgba(255, 255, 255, 0.09);
     border-radius: calc(var(--radius) - 0.35rem);
-    border: 1px solid rgba(255, 255, 255, 0.08);
 
     transition: border-color var(--transition),
                 background var(--transition),
-                box-shadow var(--transition);
+                box-shadow var(--transition),
+                transform var(--transition);
 }
 
 /* ====================================
@@ -65,26 +76,36 @@
 .date-input:focus
 {
     outline: none;
-    border-color: var(--color-accent);
-    box-shadow: 0 0 0 2px rgba(214, 40, 40, 0.18);
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(196, 167, 255, 0.5);
+    box-shadow: 0 0 0 3px rgba(196, 167, 255, 0.16);
+}
+
+/* ====================================
+   DatePicker Calendar Picker Styles.
+======================================= */
+.date-input::-webkit-calendar-picker-indicator
+{
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 /* DatePicker Desktop Hover Effects Styles. */
-/*@media (hover: hover)
+@media (hover: hover)
 {
     .date-input:hover
     {
-        border-color: rgba(214, 40, 40, 0.4);
-        transform: translateY(-1px);
+        background: rgba(255, 255, 255, 0.035);
+        border-color: rgba(196, 167, 255, 0.2);
     }
-}*/
+}
 
 /* ====================================
    DatePicker Media Query Styles.
 ======================================= */
 @media (max-width: 600px)
 {
-    .date-picker { padding: 0.85rem 0.95rem; }
-    .date-label { font-size: 0.64rem; }
+    .date-picker { padding: 0.9rem; }
+    .date-label { font-size: 0.64rem; letter-spacing: 0.22em; }
+    .date-input { font-size: 0.94rem; min-height: 2.85rem; }
 }
