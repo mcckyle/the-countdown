@@ -45,19 +45,14 @@ body
     line-height: 1.65;
 
     background: radial-gradient(
-      circle at 22% 18%,
-      rgba(33, 24, 47, 0.96) 0%,
-      var(--color-bg) 58%
+      circle at 20% 18%,
+      rgba(36, 26, 52, 0.95) 0%,
+      var(--color-bg) 55%
     ),
     radial-gradient(
-        circle at 82% 78%,
+        circle at 85% 80%,
         rgba(196, 167, 255, 0.05),
         transparent 50%
-    ),
-    linear-gradient(
-        180deg,
-        #120e18 0%,
-        var(--color-bg) 100%
     );
 
     -webkit-font-smoothing: antialiased;
