@@ -6,13 +6,13 @@
 .footer
 {
     width: 100%;
-    max-width: 880px;
+    max-width: 860px;
 
-    margin-top: clamp(2.8rem, 6vw, 4rem);
-    padding: clamp(1.1rem, 2vw, 1.5rem);
+    margin-top: clamp(2.6rem, 6vw, 3.6rem);
+    padding: clamp(0.9rem, 2vw, 1.2rem);
     text-align: center;
 
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* ====================================
@@ -21,21 +21,20 @@
 .footer-text
 {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 0.45rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.35rem;
 
-    font-size: clamp(0.72rem, 0.45vw + 0.4rem, 0.82rem);
-    line-height: 1.8;
+    font-size: clamp(0.7rem, 0.4vw + 0.4rem, 0.8rem);
+    line-height: 1.75;
 
-    letter-spacing: 0.07em;
+    letter-spacing: 0.065em;
     text-transform: uppercase;
 
     color: var(--color-text);
-    opacity: 0.58;
+    opacity: 0.55;
 }
-.footer-item { white-space: nowrap; }
 
 /* ====================================
    Footer Accent Elements Styles.
@@ -44,9 +43,9 @@
 {
     color: var(--color-highlight);
     font-weight: 500;
-    opacity: 0.9;
+    opacity: 0.85;
 
-    transition: color var(--transition), opacity var(--transition);
+    transition: opacity var(--transition);
 }
 
 /* ====================================
@@ -54,13 +53,9 @@
 ======================================= */
 .divider
 {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    margin: 0 0.35rem;
-    opacity: 0.28;
-    color: var(--color-text);
+    margin: 0 0.25rem;
+    opacity: 0.25;
+    transform: translateY(-0.02em);
 }
 
 /* ====================================
@@ -70,14 +65,13 @@
 {
     color: var(--color-accent);
     font-weight: 500;
-    opacity: 0.9;
+    opacity: 0.85;
 }
 
 /* Footer Desktop Hover Effects Styles. */
 @media (hover: hover)
 {
-    .footer:hover .footer-text { opacity: 0.7; }
-    .footer:hover .footer-accent, .footer:hover .footer-year { opacity: 1; }
+    .footer:hover .footer-text { opacity: 0.65; }
 }
 
 /* ====================================
@@ -85,8 +79,7 @@
 ======================================= */
 @media (max-width: 600px)
 {
-    .footer { margin-top: 2.6rem; padding-top: 1rem; }
-    .footer-text { gap: 0.35rem; font-size: 0.66rem; letter-spacing: 0.055em; line-height: 1.75; }
-    .footer-item { white-space: normal; }
-    .divider { margin: 0 0.2rem; }
+    .footer { margin-top: 2.4rem; padding-top: 0.85rem; }
+    .footer-text { gap: 0.25rem; font-size: 0.65rem; letter-spacing: 0.05em; }
+    .divider { margin: 0 0.15rem; }
 }

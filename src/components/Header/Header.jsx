@@ -1,6 +1,6 @@
 //Filename: Header.jsx
 //Author: Kyle McColgan
-//Date: 21 March 2026
+//Date: 3 April 2026
 //Description: This file contains the Header component for the Countdown React project.
 
 import "./Header.css";
@@ -17,7 +17,7 @@ function Header()
         </h1>
 
         <p className="header-subtitle">
-          Counting down to Easter Sunday on April 5, 2026
+          April 5, 2026
         </p>
       </div>
     </header>
