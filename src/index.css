@@ -5,15 +5,15 @@
 ======================================= */
 :root
 {
-    --color-bg: #0f0c14;
-    --color-bg-deep: #17121f;
+    --color-bg: #0e1411;
+    --color-bg-deep: #151d18;
 
     --color-surface: rgba(255, 255, 255, 0.04);
-    --color-text: #f8f6fb;
+    --color-text: #f4f7f5;
 
-    --color-accent: #c4a7ff;
-    --color-secondary: #f2b5d4;
-    --color-highlight: #f3d98b;
+    --color-accent: #78c8a0; /* Color: Earth Green. */
+    --color-secondary: #a0d8c5;
+    --color-highlight: #e6d7a3;
 
     --main-font: "Poppins", system-ui, sans-serif;
     --heading-font: "Playfair Display", serif;
@@ -45,14 +45,14 @@ body
     line-height: 1.65;
 
     background: radial-gradient(
-      circle at 20% 18%,
-      rgba(36, 26, 52, 0.95) 0%,
-      var(--color-bg) 55%
+      circle at 20% 20%,
+      rgba(60, 110, 85, 0.25),
+      transparent 55%
     ),
     radial-gradient(
-        circle at 85% 80%,
-        rgba(196, 167, 255, 0.05),
-        transparent 50%
+        circle at 80% 85%,
+        rgba(120, 200, 160, 0.08),
+        transparent 60%
     );
 
     -webkit-font-smoothing: antialiased;

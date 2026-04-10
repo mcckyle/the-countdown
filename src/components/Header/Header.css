@@ -8,12 +8,16 @@
     width: 100%;
     max-width: 860px;
     text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
 }
 
 /* ====================================
    Header Inner Card Styles.
 ======================================= */
-.header-inner
+/*.header-inner
 {
     padding: clamp(2.1rem, 4.5vw, 3rem) clamp(1.4rem, 4vw, 2.4rem);
     border-radius: var(--radius);
@@ -22,22 +26,20 @@
     backdrop-filter: blur(8px);
 
     animation: fadeIn 0.7s ease both;
-}
+}*/
 
 /* ====================================
    Header Eyebrow Styles.
 ======================================= */
 .header-eyebrow
 {
-    margin-bottom: 0.75rem;
-
     font-size: 0.68rem;
     font-weight: 500;
     letter-spacing: 0.26em;
     text-transform: uppercase;
 
-    color: var(--color-highlight);
-    opacity: 0.65;
+    color: var(--color-text);
+    opacity: 0.5;
 }
 
 /* ====================================
@@ -48,7 +50,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.55rem;
+    gap: 0.5rem;
     flex-wrap: wrap;
 
     font-family: var(--heading-font);
@@ -65,9 +67,8 @@
 .header-icon
 {
     font-size: 0.75em;
-    color: var(--color-accent);
-    opacity: 0.85;
-    transform: translateY(-0.05em);
+    opacity: 0.75;
+    transform: translateY(-0.04em);
 }
 
 /* ====================================
@@ -75,14 +76,10 @@
 ======================================= */
 .header-subtitle
 {
-    margin-top: 0.85rem;
-
-    font-size: clamp(0.9rem, 1.3vw, 1rem);
-    letter-spacing: 0.12em;
+    font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-
-    color: var(--color-text);
-    opacity: 0.7;
+    opacity: 0.6;
 }
 
 /* ====================================
@@ -112,8 +109,6 @@
 ======================================= */
 @media (max-width: 600px)
 {
-    .header-inner { padding: 1.8rem 1.1rem; }
-    .header-eyebrow { font-size: 0.64rem; letter-spacing: 0.22em; }
-    .header-title { font-size: clamp(1.9rem, 7vw, 2.4rem); gap: 0.45rem; }
-    .header-subtitle { font-size: 0.85rem; }
+    .header { gap: 0.6rem; }
+    .header-title { font-size: clamp(1.9rem, 7vw, 2.4rem); }
 }
