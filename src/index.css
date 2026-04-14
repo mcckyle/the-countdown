@@ -8,7 +8,8 @@
     --color-bg: #0e1411;
     --color-bg-deep: #151d18;
 
-    --color-surface: rgba(255, 255, 255, 0.04);
+    --color-surface: rgba(255, 255, 255, 0.035);
+    --color-border: rgba(255, 255, 255, 0.05);
     --color-text: #f4f7f5;
 
     --color-accent: #78c8a0; /* Color: Earth Green. */
@@ -45,15 +46,16 @@ body
     line-height: 1.65;
 
     background: radial-gradient(
-      circle at 20% 20%,
-      rgba(60, 110, 85, 0.25),
+      circle at 18% 22%,
+      rgba(80, 140, 110, 0.18),
       transparent 55%
     ),
     radial-gradient(
-        circle at 80% 85%,
-        rgba(120, 200, 160, 0.08),
+        circle at 82% 78%,
+        rgba(120, 200, 160, 0.06),
         transparent 60%
-    );
+    ),
+    linear-gradient(180deg, var(--color-bg-deep), var(--color-bg));
 
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -89,13 +91,13 @@ a:hover { color: var(--color-accent); }
 /* ====================================
    Selection Styles.
 ======================================= */
-::selection { background: var(--color-accent); color: #140f1d; }
+::selection { background: var(--color-accent); color: #1e1411; }
 
 /* ====================================
    Shared Animations Styles.
 ======================================= */
 @keyframes fadeIn
 {
-    from { opacity: 0; transform: translateY(8px); }
+    from { opacity: 0; transform: translateY(6px); }
     to { opacity: 1; transform: translateY(0); }
 }

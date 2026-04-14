@@ -10,7 +10,7 @@
 
     display: flex;
     flex-direction: column;
-    gap: 0.55rem;
+    gap: 0.5rem;
 }
 
 /* ====================================
@@ -18,13 +18,13 @@
 ======================================= */
 .date-label
 {
-    font-size: 0.65rem;
+    font-size: 0.64rem;
     font-weight: 500;
-    letter-spacing: 0.22em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
 
     color: var(--color-text);
-    opacity: 0.55;
+    opacity: 0.5;
 }
 
 /* ====================================
@@ -33,17 +33,17 @@
 .date-input
 {
     width: 100%;
-    min-height: 2.8rem;
-    padding: 0.65rem 0.85rem;
+    min-height: 2.75rem;
+    padding: 0.6rem 0.8rem;
 
     font-family: var(--main-font);
-    font-size: 0.95rem;
+    font-size: 0.94rem;
     font-weight: 500;
 
     color: var(--color-text);
     background: var(--color-surface);
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--color-border);
     border-radius: calc(var(--radius) - 0.35rem);
 
     transition: border-color var(--transition),
@@ -59,7 +59,7 @@
     border-color: var(--color-accent);
     background: rgba(255, 255, 255, 0.04);
 }
-.date-help { font-size: 0.75rem; opacity: 0.5; }
+.date-help { font-size: 0.72rem; opacity: 0.45; }
 
 /* ====================================
    DatePicker Calendar Picker Styles.
@@ -75,7 +75,7 @@
 {
     .date-input:hover
     {
-        border-color: rgba(196, 167, 255, 0.2);
+        border-color: rgba(120, 200, 160, 0.2);
     }
 }
 
