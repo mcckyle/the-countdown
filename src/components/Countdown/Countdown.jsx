@@ -1,6 +1,6 @@
 //Filename: Countdown.jsx
 //Author: Kyle McColgan
-//Date: 10 April 2026
+//Date: 24 April 2026
 //Description: This file contains the parent component for the Countdown React project.
 
 import { useState, useEffect, useRef } from "react";
@@ -23,17 +23,17 @@ function Countdown({ targetDate })
 
   useEffect(() => {
     const timer = setInterval(() => {
-        const remaining = getTimeRemaining(targetDate);
-        setTimeLeft(remaining);
+      const remaining = getTimeRemaining(targetDate);
+      setTimeLeft(remaining);
 
-        if (hasMounted.current)
-        {
-          setTick((prev) => !prev);
-        }
-        else
-        {
-          hasMounted.current = true;
-        }
+      if (hasMounted.current)
+      {
+        setTick((prev) => !prev);
+      }
+      else
+      {
+        hasMounted.current = true;
+      }
     }, 1000);
 
     return () => clearInterval(timer);
@@ -47,10 +47,10 @@ function Countdown({ targetDate })
       <section
         className="countdown complete"
         aria-live="polite"
-        aria-label="Earth Day has arrived"
+        aria-label="Cinco de Mayo has arrived"
       >
-        <h2 className="complete-title">Earth Day has arrived</h2>
-        <p className="complete-subtitle">Take a moment to appreciate our planet.</p>
+        <h2 className="complete-title">Cinco de Mayo has arrived</h2>
+        <p className="complete-subtitle">Celebrate the culture and spirit of the day.</p>
       </section>
     );
   }
@@ -60,7 +60,7 @@ function Countdown({ targetDate })
       className="countdown"
       role="timer"
       aria-live="polite"
-      aria-label="Time remaining until Earth Day"
+      aria-label="Time remaining until Cinco de Mayo"
     >
       {UNITS.map(({ key, label }) => (
         <div key={key} className={`time-unit ${tick ? "tick" : ""}`}>

@@ -5,22 +5,22 @@
 ======================================= */
 :root
 {
-    --color-bg: #0e1411;
-    --color-bg-deep: #151d18;
+    --color-bg: #140f0d;
+    --color-bg-deep: #1b1411;
 
-    --color-surface: rgba(255, 255, 255, 0.035);
-    --color-border: rgba(255, 255, 255, 0.05);
-    --color-text: #f4f7f5;
+    --color-surface: rgba(255, 255, 255, 0.04);
+    --color-border: rgba(255, 255, 255, 0.08);
+    --color-text: #f8f5f1;
 
-    --color-accent: #78c8a0; /* Color: Earth Green. */
-    --color-secondary: #a0d8c5;
-    --color-highlight: #e6d7a3;
+    --color-accent: #d96f32;
+    --color-secondary: #4fa36c;
+    --color-highlight: #e7b05d;
 
     --main-font: "Poppins", system-ui, sans-serif;
     --heading-font: "Playfair Display", serif;
 
-    --radius: 1.2rem;
-    --transition: 0.25s ease;
+    --radius: 1.3rem;
+    --transition: 0.28s ease;
 }
 
 /* ====================================
@@ -42,18 +42,23 @@ body
 {
     min-height: 100vh;
     font-family: var(--main-font);
-    color: var(--color-text);
     line-height: 1.65;
 
+    color: var(--color-text);
     background: radial-gradient(
-      circle at 18% 22%,
-      rgba(80, 140, 110, 0.18),
-      transparent 55%
+      circle at 18% 20%,
+      rgba(217, 111, 50, 0.18),
+      transparent 38%
     ),
     radial-gradient(
-        circle at 82% 78%,
-        rgba(120, 200, 160, 0.06),
-        transparent 60%
+        circle at 82% 75%,
+        rgba(79, 163, 108, 0.12),
+        transparent 34%
+    ),
+    radial-gradient(
+        circle at 50% 100%,
+        rgba(231, 176, 93, 0.08),
+        transparent 42%
     ),
     linear-gradient(180deg, var(--color-bg-deep), var(--color-bg));
 
@@ -68,13 +73,13 @@ h1, h2, h3
 {
     font-family: var(--heading-font);
     font-weight: 600;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.035em;
 }
 
 /* ====================================
    Text Styles.
 ======================================= */
-p { font-size: 1rem; opacity: 0.85; }
+p { font-size: 1rem; opacity: 0.88; }
 
 /* ====================================
    Links Styles.
@@ -84,14 +89,14 @@ a
     color: var(--color-highlight);
     text-decoration: none;
 
-    transition: color var(--transition);
+    transition: color var(--transition), opacity var(--transition);
 }
 a:hover { color: var(--color-accent); }
 
 /* ====================================
    Selection Styles.
 ======================================= */
-::selection { background: var(--color-accent); color: #1e1411; }
+::selection { background: var(--color-accent); color: #140f0d; }
 
 /* ====================================
    Shared Animations Styles.

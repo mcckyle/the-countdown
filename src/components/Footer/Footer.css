@@ -8,8 +8,8 @@
     width: 100%;
     max-width: 860px;
 
-    margin-top: clamp(2.2rem, 5vw, 3rem);
-    padding-top: 0.9rem;
+    margin-top: clamp(2.5rem, 5vw, 3.5rem);
+    padding-top: 1rem;
     text-align: center;
 }
 
@@ -20,18 +20,18 @@
 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
-    gap: 0.25rem;
+    justify-content: center;
+    gap: 0.35rem;
 
-    font-size: clamp(0.68rem, 0.35vw + 0.42rem, 0.76rem);
-    line-height: 1.7;
+    font-size: clamp(0.72rem, 0.35vw + 0.45rem, 0.8rem);
+    line-height: 1.8;
 
-    letter-spacing: 0.055em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
 
     color: var(--color-text);
-    opacity: 0.48;
+    opacity: 0.52;
 }
 
 /* ====================================
@@ -41,7 +41,7 @@
 {
     color: var(--color-highlight);
     font-weight: 500;
-    opacity: 0.75;
+    opacity: 0.95;
 }
 
 /* ====================================
@@ -49,8 +49,8 @@
 ======================================= */
 .divider
 {
-    margin: 0 0.2rem;
-    opacity: 0.22;
+    margin: 0 0.25rem;
+    opacity: 0.26;
 }
 
 /* ====================================
@@ -60,7 +60,7 @@
 {
     color: var(--color-accent);
     font-weight: 500;
-    opacity: 0.7;
+    opacity: 0.82;
 }
 
 /* Footer Desktop Hover Effects Styles. */
@@ -74,5 +74,5 @@
 ======================================= */
 @media (max-width: 600px)
 {
-    .footer-text { font-size: 0.64rem; letter-spacing: 0.045em; }
+    .footer-text { gap: 0.25rem; font-size: 0.68rem; letter-spacing: 0.06em; }
 }
