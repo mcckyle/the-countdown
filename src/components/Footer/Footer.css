@@ -1,15 +1,15 @@
 /* Filename: src/components/Footer/Footer.css */
 
 /* ====================================
-   Footer Container Styles.
+   Footer Layout Styles.
 ======================================= */
 .footer
 {
     width: 100%;
     max-width: 860px;
 
-    margin-top: clamp(2.5rem, 5vw, 3.5rem);
-    padding-top: 1rem;
+    margin-top: clamp(2.8rem, 6vw, 4rem);
+    padding-top: 0.5rem;
     text-align: center;
 }
 
@@ -25,23 +25,25 @@
     gap: 0.35rem;
 
     font-size: clamp(0.72rem, 0.35vw + 0.45rem, 0.8rem);
-    line-height: 1.8;
+    line-height: 1.9;
 
     letter-spacing: 0.08em;
     text-transform: uppercase;
 
     color: var(--color-text);
-    opacity: 0.52;
+    opacity: 0.48;
 }
 
 /* ====================================
-   Footer Accent Elements Styles.
+   Footer Accent Text Styles.
 ======================================= */
 .footer-accent
 {
     color: var(--color-highlight);
     font-weight: 500;
-    opacity: 0.95;
+    opacity: 0.92;
+
+    transition: color var(--transition), opacity var(--transition);
 }
 
 /* ====================================
@@ -49,8 +51,8 @@
 ======================================= */
 .divider
 {
-    margin: 0 0.25rem;
-    opacity: 0.26;
+    margin: 0 0.2rem;
+    opacity: 0.22;
 }
 
 /* ====================================
@@ -60,19 +62,19 @@
 {
     color: var(--color-accent);
     font-weight: 500;
-    opacity: 0.82;
+    opacity: 0.78;
 }
 
 /* Footer Desktop Hover Effects Styles. */
-/*@media (hover: hover)
+@media (hover: hover)
 {
-    .footer:hover .footer-text { opacity: 0.65; }
-}*/
+    .footer-accent:hover { color: var(--color-accent); opacity: 1; }
+}
 
 /* ====================================
    Footer Media Query Styles.
 ======================================= */
-@media (max-width: 600px)
+@media (max-width: 640px)
 {
-    .footer-text { gap: 0.25rem; font-size: 0.68rem; letter-spacing: 0.06em; }
+    .footer-text { gap: 0.25rem; font-size: 0.68rem; letter-spacing: 0.055em; }
 }

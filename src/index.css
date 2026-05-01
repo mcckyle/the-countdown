@@ -6,7 +6,7 @@
 :root
 {
     --color-bg: #140f0d;
-    --color-bg-deep: #1b1411;
+    --color-bg-deep: #1c1411;
 
     --color-surface: rgba(255, 255, 255, 0.04);
     --color-border: rgba(255, 255, 255, 0.08);
@@ -16,11 +16,11 @@
     --color-secondary: #4fa36c;
     --color-highlight: #e7b05d;
 
-    --main-font: "Poppins", system-ui, sans-serif;
-    --heading-font: "Playfair Display", serif;
+    --main-font: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --heading-font: "Playfair Display", Georgia, serif;
 
-    --radius: 1.3rem;
-    --transition: 0.28s ease;
+    --radius: 1.35rem;
+    --transition: 240ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* ====================================
@@ -36,7 +36,7 @@
 /* ====================================
    Base Layout Styles.
 ======================================= */
-html { background: var(--color-bg); }
+html { background: var(--color-bg); scroll-behavior: smooth; }
 #root { min-height: 100vh; }
 body
 {
@@ -62,7 +62,9 @@ body
     ),
     linear-gradient(180deg, var(--color-bg-deep), var(--color-bg));
 
+    background-attachment: fixed;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 }
 
@@ -73,13 +75,14 @@ h1, h2, h3
 {
     font-family: var(--heading-font);
     font-weight: 600;
-    letter-spacing: 0.035em;
+    letter-spacing: 0.03em;
 }
 
 /* ====================================
    Text Styles.
 ======================================= */
 p { font-size: 1rem; opacity: 0.88; }
+button, input, textarea, select { font: inherit; }
 
 /* ====================================
    Links Styles.
@@ -103,6 +106,6 @@ a:hover { color: var(--color-accent); }
 ======================================= */
 @keyframes fadeIn
 {
-    from { opacity: 0; transform: translateY(6px); }
+    from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }

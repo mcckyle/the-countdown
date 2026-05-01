@@ -1,6 +1,6 @@
 //Filename: App.jsx
 //Author: Kyle McColgan
-//Date: 24 April 2026
+//Date: 30 April 2026
 //Description: This file contains the entry component for the Countdown React project.
 
 import { useState } from "react";
@@ -18,7 +18,8 @@ function App()
   const [targetDate, setTargetDate] = useState("2026-05-05T00:00:00");
   const today = new Date().toISOString().split("T")[0];
 
-  const handleDateChange = (e) => {
+  const handleDateChange = (e) =>
+  {
     const date = e.target.value;
 
     if (date)
@@ -29,6 +30,9 @@ function App()
 
     return (
       <div className="app">
+        <div className="background-glow glow-primary" />
+        <div className="background-glow glow-secondary" />
+
         <div className="app-shell">
           <Header />
 

@@ -10,7 +10,7 @@
 
     display: flex;
     flex-direction: column;
-    gap: 0.65rem;
+    gap: 0.7rem;
 }
 
 /* ====================================
@@ -33,8 +33,8 @@
 .date-input
 {
     width: 100%;
-    min-height: 3rem;
-    padding: 0.72rem 0.95rem;
+    min-height: 3.1rem;
+    padding: 0.78rem 1rem;
 
     font-family: var(--main-font);
     font-size: 0.96rem;
@@ -47,9 +47,10 @@
         rgba(255, 255, 255, 0.025)
     );
 
-    border: 1px solid var(--color-border);
-    border-radius: calc(var(--radius) - 0.35rem);
-    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: calc(var(--radius) - 0.3rem);
+    backdrop-filter: blur(12px);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
 
     transition: border-color var(--transition),
                 background var(--transition),
@@ -63,7 +64,7 @@
 .date-input:focus
 {
     outline: none;
-    border-color: rgba(231, 176, 93, 0.5);
+    border-color: rgba(231, 176, 93, 0.45);
     background: linear-gradient(
         180deg,
         rgba(255, 255, 255, 0.06),
@@ -71,7 +72,7 @@
     );
     box-shadow: 0 0 0 4px rgba(231, 176, 93, 0.08);
 }
-.date-help { font-size: 0.76rem; line-height: 1.5; opacity: 0.5; }
+.date-help { font-size: 0.76rem; line-height: 1.6; opacity: 0.5; }
 
 /* ====================================
    DatePicker Calendar Picker Styles.
@@ -87,7 +88,8 @@
 {
     .date-input:hover
     {
-        border-color: rgba(231, 176, 93, 0.24);
+        border-color: rgba(231, 176, 93, 0.2);
+        transform: translateY(-1px);
     }
 }
 
@@ -96,6 +98,6 @@
 ======================================= */
 @media (max-width: 600px)
 {
-    .date-picker { gap: 0.55rem; }
-    .date-input { min-height: 2.9rem; }
+    .date-picker { gap: 0.6rem; }
+    .date-input { min-height: 3rem; }
 }

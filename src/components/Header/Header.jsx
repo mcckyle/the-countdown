@@ -1,6 +1,6 @@
 //Filename: Header.jsx
 //Author: Kyle McColgan
-//Date: 24 April 2026
+//Date: 30 April 2026
 //Description: This file contains the Header component for the Countdown React project.
 
 import "./Header.css";
@@ -9,14 +9,14 @@ function Header()
 {
   return (
     <header className="header">
-      <p className="header-eyebrow">Celebration Countdown</p>
+      <p className="header-eyebrow">Modern Celebration Countdown</p>
         <h1 className="header-title">
-          <span className="header-icon" aria-hidden="true">🎉</span>
-          Cinco de Mayo Countdown
+          <span className="header-icon" aria-hidden="true">✨</span>
+          Cinco de Mayo
         </h1>
 
         <p className="header-subtitle">
-          May 5, 2026
+          Countdown to May 5, 2026
         </p>
     </header>
   );
