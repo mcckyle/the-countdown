@@ -5,7 +5,6 @@
 ======================================= */
 .header
 {
-    position: relative;
     width: 100%;
     max-width: 860px;
 
@@ -13,7 +12,7 @@
     flex-direction: column;
     align-items: center;
 
-    gap: 0.85rem;
+    gap: 0.75rem;
     text-align: center;
 
     animation: fadeIn 700ms ease both;
@@ -38,15 +37,13 @@
 ======================================= */
 .header-eyebrow
 {
-    position: relative;
-
     font-size: 0.68rem;
     font-weight: 600;
-    letter-spacing: 0.22em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
 
     color: var(--color-highlight);
-    opacity: 0.72;
+    opacity: 0.6;
 }
 
 /* ====================================
@@ -58,16 +55,16 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 0.65rem;
+    gap: 0.5rem;
 
     font-family: var(--heading-font);
-    font-size: clamp(2.8rem, 7vw, 4.5rem);
+    font-size: clamp(2.6rem, 6.5vw, 4.2rem);
     font-weight: 600;
-    line-height: 0.98;
-    letter-spacing: 0.02em;
-    text-wrap: balance;
+
+    line-height: 1;
+    letter-spacing: 0.01em;
     color: var(--color-text);
-    text-shadow: 0 0 32px rgba(231, 176, 93, 0.08);
+    text-wrap: balance;
 }
 
 /* ====================================
@@ -75,14 +72,10 @@
 ======================================= */
 .header-icon
 {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 0.62em;
+    font-size: 0.6em;
     color: var(--color-highlight);
-    filter: drop-shadow(0 0 14px rgba(231, 176, 93, 0.2));
-    transform: translateY(-0.05em);
+    opacity: 0.85;
+    transform: translateY(-0.04em);
 }
 
 /* ====================================
@@ -90,14 +83,14 @@
 ======================================= */
 .header-subtitle
 {
-    max-width: 36ch;
-    font-size: clamp(0.84rem, 1vw, 0.96rem);
+    max-width: 40ch;
+    font-size: 0.9rem;
     font-weight: 500;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
 
     color: var(--color-text);
-    opacity: 0.56;
+    opacity: 0.55;
 }
 
 /* ====================================
@@ -127,8 +120,8 @@
 ======================================= */
 @media (max-width: 640px)
 {
-    .header { gap: 0.75rem; }
-    .header-eyebrow { font-size: 0.64rem; letter-spacing: 0.18em; }
-    .header-title { max-width: 9ch; font-size: clamp(2.2rem, 11vw, 3.4rem); }
-    .header-subtitle { letter-spacing: 0.12em; }
+    .header { gap: 0.6rem; }
+    .header-eyebrow { font-size: 0.62rem; letter-spacing: 0.16em; }
+    .header-title { font-size: clamp(2.2rem, 10vw, 3.4rem); }
+    .header-subtitle { font-size: 0.82rem; letter-spacing: 0.1em; }
 }

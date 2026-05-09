@@ -5,21 +5,21 @@
 ======================================= */
 :root
 {
-    --color-bg: #140f0d;
-    --color-bg-deep: #1c1411;
+    --color-bg: #120d11;
+    --color-bg-deep: #1a1318;
 
-    --color-surface: rgba(255, 255, 255, 0.04);
+    --color-surface: rgba(255, 255, 255, 0.05);
     --color-border: rgba(255, 255, 255, 0.08);
-    --color-text: #f8f5f1;
+    --color-text: #f8f4f6;
 
-    --color-accent: #d96f32;
-    --color-secondary: #4fa36c;
-    --color-highlight: #e7b05d;
+    --color-accent: #d68ead;
+    --color-secondary: #b784d6;
+    --color-highlight: #ffd6e6;
 
-    --main-font: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    --heading-font: "Playfair Display", Georgia, serif;
+    --main-font: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --heading-font: "Cormorant Garamond", Georgia, serif;
 
-    --radius: 1.35rem;
+    --radius: 1.5rem;
     --transition: 240ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -37,28 +37,22 @@
    Base Layout Styles.
 ======================================= */
 html { background: var(--color-bg); scroll-behavior: smooth; }
-#root { min-height: 100vh; }
+body, #root { min-height: 100vh; }
 body
 {
-    min-height: 100vh;
     font-family: var(--main-font);
     line-height: 1.65;
 
     color: var(--color-text);
     background: radial-gradient(
-      circle at 18% 20%,
-      rgba(217, 111, 50, 0.18),
-      transparent 38%
+      circle at 20% 20%,
+      rgba(214, 142, 173, 0.18),
+      transparent 34%
     ),
     radial-gradient(
-        circle at 82% 75%,
-        rgba(79, 163, 108, 0.12),
-        transparent 34%
-    ),
-    radial-gradient(
-        circle at 50% 100%,
-        rgba(231, 176, 93, 0.08),
-        transparent 42%
+        circle at 82% 78%,
+        rgba(183, 132, 214, 0.14),
+        transparent 32%
     ),
     linear-gradient(180deg, var(--color-bg-deep), var(--color-bg));
 
@@ -75,13 +69,13 @@ h1, h2, h3
 {
     font-family: var(--heading-font);
     font-weight: 600;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.02em;
 }
 
 /* ====================================
    Text Styles.
 ======================================= */
-p { font-size: 1rem; opacity: 0.88; }
+p { font-size: 1rem; opacity: 0.84; }
 button, input, textarea, select { font: inherit; }
 
 /* ====================================
@@ -99,7 +93,7 @@ a:hover { color: var(--color-accent); }
 /* ====================================
    Selection Styles.
 ======================================= */
-::selection { background: var(--color-accent); color: #140f0d; }
+::selection { background: var(--color-accent); color: #120d11; }
 
 /* ====================================
    Shared Animations Styles.

@@ -18,12 +18,10 @@
 ======================================= */
 .date-label
 {
-    font-size: 0.68rem;
+    font-size: 0.7rem;
     font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-
-    color: var(--color-text);
     opacity: 0.58;
 }
 
@@ -33,10 +31,9 @@
 .date-input
 {
     width: 100%;
-    min-height: 3.1rem;
-    padding: 0.78rem 1rem;
+    min-height: 3.15rem;
+    padding: 0.82rem 1rem;
 
-    font-family: var(--main-font);
     font-size: 0.96rem;
     font-weight: 500;
 
@@ -49,11 +46,10 @@
 
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: calc(var(--radius) - 0.3rem);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(10px);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
 
     transition: border-color var(--transition),
-                background var(--transition),
                 box-shadow var(--transition),
                 transform var(--transition);
 }
@@ -64,13 +60,8 @@
 .date-input:focus
 {
     outline: none;
-    border-color: rgba(231, 176, 93, 0.45);
-    background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.06),
-        rgba(255, 255, 255, 0.03)
-    );
-    box-shadow: 0 0 0 4px rgba(231, 176, 93, 0.08);
+    border-color: rgba(255, 214, 230, 0.38);
+    box-shadow: 0 0 0 4px rgba(255, 214, 230, 0.08);
 }
 .date-help { font-size: 0.76rem; line-height: 1.6; opacity: 0.5; }
 
@@ -88,8 +79,8 @@
 {
     .date-input:hover
     {
-        border-color: rgba(231, 176, 93, 0.2);
         transform: translateY(-1px);
+        border-color: rgba(255, 214, 230, 0.16);
     }
 }
 

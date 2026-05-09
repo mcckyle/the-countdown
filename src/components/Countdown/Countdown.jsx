@@ -1,6 +1,6 @@
 //Filename: Countdown.jsx
 //Author: Kyle McColgan
-//Date: 30 April 2026
+//Date: 8 May 2026
 //Description: This file contains the parent component for the Countdown React project.
 
 import { useState, useEffect, useRef } from "react";
@@ -18,7 +18,7 @@ const UNITS = [
 function Countdown({ targetDate })
 {
   const [timeLeft, setTimeLeft] = useState(getTimeRemaining(targetDate));
-  const [tick, setTick] = useState(false); //Triggers pop animation.
+  const [animate, setAnimate] = useState(false); //Triggers pop animation.
   const hasMounted = useRef(false);
 
   useEffect(() =>
@@ -30,7 +30,7 @@ function Countdown({ targetDate })
 
       if (hasMounted.current)
       {
-        setTick((prev) => !prev);
+        setAnimate((prev) => !prev);
       }
       else
       {
@@ -49,10 +49,10 @@ function Countdown({ targetDate })
       <section
         className="countdown complete"
         aria-live="polite"
-        aria-label="Cinco de Mayo has arrived"
+        aria-label="Mother's Day has arrived"
       >
-        <h2 className="complete-title">Cinco de Mayo has arrived</h2>
-        <p className="complete-subtitle">Celebrate the culture and spirit of the day.</p>
+        <h2 className="complete-title">Happy Mother&apos;s Day</h2>
+        <p className="complete-subtitle">Celebrate the love and care mothers bring into our lives.</p>
       </section>
     );
   }
@@ -62,10 +62,10 @@ function Countdown({ targetDate })
       className="countdown"
       role="timer"
       aria-live="polite"
-      aria-label="Time remaining until Cinco de Mayo"
+      aria-label="Time remaining until Mother's Day"
     >
       {UNITS.map(({ key, label }) => (
-        <article key={key} className={`time-unit ${tick ? "tick" : ""}`}>
+        <article key={key} className={`time-unit ${animate ? "animate" : ""}`}>
           <span className="time-value">
             {String(timeLeft[key]).padStart(2, "0")}
           </span>

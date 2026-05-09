@@ -1,6 +1,6 @@
 //Filename: App.jsx
 //Author: Kyle McColgan
-//Date: 30 April 2026
+//Date: 8 May 2026
 //Description: This file contains the entry component for the Countdown React project.
 
 import { useState } from "react";
@@ -14,8 +14,8 @@ import "./App.css";
 
 function App()
 {
-  //Target date: Cinco de Mayo 2026 (May 5, 2026).
-  const [targetDate, setTargetDate] = useState("2026-05-05T00:00:00");
+  //Target date: Mother's Day 2026 (May 10, 2026).
+  const [targetDate, setTargetDate] = useState("2026-05-10T00:00:00");
   const today = new Date().toISOString().split("T")[0];
 
   const handleDateChange = (e) =>
