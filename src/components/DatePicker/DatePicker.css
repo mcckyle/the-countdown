@@ -10,7 +10,7 @@
 
     display: flex;
     flex-direction: column;
-    gap: 0.7rem;
+    gap: 0.75rem;
 }
 
 /* ====================================
@@ -18,21 +18,22 @@
 ======================================= */
 .date-label
 {
-    font-size: 0.7rem;
-    font-weight: 500;
+    font-size: 0.72rem;
+    font-weight: 600;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    opacity: 0.58;
+    color: var(--color-text-muted);
 }
 
 /* ====================================
    DatePicker Custom Date Input Field Styles.
 ======================================= */
+.date-input-shell { position: relative; border-radius: calc(var(--radius) - 0.35rem); overflow: hidden; }
 .date-input
 {
     width: 100%;
-    min-height: 3.15rem;
-    padding: 0.82rem 1rem;
+    min-height: 3.25rem;
+    padding: 0.9rem 1rem;
 
     font-size: 0.96rem;
     font-weight: 500;
@@ -40,18 +41,19 @@
     color: var(--color-text);
     background: linear-gradient(
         180deg,
-        rgba(255, 255, 255, 0.05),
-        rgba(255, 255, 255, 0.025)
+        rgba(255, 255, 255, 0.07),
+        rgba(255, 255, 255, 0.035)
     );
 
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: calc(var(--radius) - 0.3rem);
-    backdrop-filter: blur(10px);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    border-radius: calc(var(--radius) - 0.35rem);
+    backdrop-filter: blur(14px);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
 
     transition: border-color var(--transition),
                 box-shadow var(--transition),
-                transform var(--transition);
+                transform var(--transition),
+                background var(--transition);
 }
 
 /* ====================================
@@ -60,17 +62,17 @@
 .date-input:focus
 {
     outline: none;
-    border-color: rgba(255, 214, 230, 0.38);
-    box-shadow: 0 0 0 4px rgba(255, 214, 230, 0.08);
+    border-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.05);
 }
-.date-help { font-size: 0.76rem; line-height: 1.6; opacity: 0.5; }
+.date-help { font-size: 0.78rem; line-height: 1.6; color: var(--color-text-muted); }
 
 /* ====================================
    DatePicker Calendar Picker Styles.
 ======================================= */
 .date-input::-webkit-calendar-picker-indicator
 {
-    opacity: 0.72;
+    opacity: 0.78;
     cursor: pointer;
 }
 
@@ -80,7 +82,7 @@
     .date-input:hover
     {
         transform: translateY(-1px);
-        border-color: rgba(255, 214, 230, 0.16);
+        border-color: rgba(255, 255, 255, 0.14);
     }
 }
 
@@ -89,6 +91,6 @@
 ======================================= */
 @media (max-width: 600px)
 {
-    .date-picker { gap: 0.6rem; }
-    .date-input { min-height: 3rem; }
+    .date-picker { gap: 0.65rem; }
+    .date-input { min-height: 3.1rem; }
 }

@@ -10,7 +10,7 @@
 
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: clamp(0.9rem, 2vw, 1.25rem);
+    gap: clamp(0.9rem, 2vw, 1.35rem);
 }
 
 /* ====================================
@@ -26,24 +26,25 @@
     justify-content: center;
     overflow: hidden;
 
-    min-height: clamp(7.5rem, 14vw, 9.5rem);
-    padding: clamp(1rem, 2vw, 1.5rem);
+    min-height: clamp(8rem, 14vw, 10rem);
+    padding: clamp(1rem, 2vw, 1.6rem);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: calc(var(--radius) - 0.2rem);
+    border-radius: calc(var(--radius) - 0.25rem);
     background: linear-gradient(
         180deg,
-        rgba(255, 255, 255, 0.05),
-        rgba(255, 255, 255, 0.025)
+        rgba(255, 255, 255, 0.08),
+        rgba(255, 255, 255, 0.035)
     );
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04),
-                0 12px 32px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05),
+                0 18px 40px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(18px);
 
     transition: transform var(--transition),
                 border-color var(--transition),
                 box-shadow var(--transition);
 }
 
-/* Countdown Ambient Glow Styles. */
+/* Countdown Ambient Layers Styles. */
 .time-unit::before
 {
     content: "";
@@ -52,33 +53,33 @@
 
     background: radial-gradient(
         circle at top,
-        rgba(255, 214, 230, 0.1),
+        rgba(255, 255, 255, 0.1),
         transparent 65%
     );
 
     pointer-events: none;
 }
-/*.time-unit::after
+.time-unit::after
 {
     content: "";
     position: absolute;
-    inset: auto 20% 0;
+    inset: auto 18% 0;
     height: 1px;
 
     background: linear-gradient(
         90deg,
         transparent,
-        rgba(231, 176, 93, 0.45),
+        rgba(255, 255, 255, 0.3),
         transparent
     );
 
-    opacity: 0.55;
-}*/
-/* Countdown Tick Animation Styles. */
-.time-unit.tick .time-value { animation: tick 240ms ease; }
+    opacity: 0.6;
+}
+/* Countdown Animation Styles. */
+.time-unit.animate .time-value { animation: tick 280ms ease; }
 
 /* ====================================
-   Countdown Numeric Time Value Styles.
+   Countdown Time Value Styles.
 ======================================= */
 .time-value
 {
@@ -86,12 +87,13 @@
     z-index: 1;
 
     font-family: var(--heading-font);
-    font-size: clamp(2.8rem, 5vw, 4.4rem);
-    font-weight: 600;
+    font-size: clamp(3rem, 5vw, 4.75rem);
+    font-weight: 700;
 
-    line-height: 0.92;
+    line-height: 0.9;
     letter-spacing: 0.015em;
     color: var(--color-highlight);
+    text-shadow: 0 0 24px rgba(255, 255, 255, 0.08);
 }
 
 /* ====================================
@@ -102,12 +104,12 @@
     position: relative;
     z-index: 1;
 
-    margin-top: 0.8rem;
-    font-size: 0.7rem;
-    font-weight: 500;
+    margin-top: 0.9rem;
+    font-size: 0.72rem;
+    font-weight: 600;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    opacity: 0.52;
+    color: var(--color-text-muted);
 }
 
 /* ====================================
@@ -115,32 +117,45 @@
 ======================================= */
 .countdown.complete
 {
-    min-height: 240px;
+    min-height: 260px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    gap: 1rem;
     padding: clamp(2rem, 4vw, 3rem);
 }
 
 /* ====================================
    Countdown Complete Message Styles.
 ======================================= */
+.complete-badge
+{
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+}
 .complete-title
 {
     max-width: 12ch;
-    font-size: clamp(2.2rem, 5vw, 3.2rem);
-    line-height: 1;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    line-height: 0.95;
     color: var(--color-highlight);
 }
-.complete-subtitle { max-width: 34ch; margin-top: 1rem; font-size: 1rem; line-height: 1.75; opacity: 0.7; }
+.complete-subtitle { max-width: 34ch; font-size: 1rem; line-height: 1.8; color: var(--color-text-muted); }
 
 /* Countdown Desktop Hover Styles. */
 @media (hover: hover)
 {
-    .time-unit:hover { transform: translateY(-2px); border-color: rgba(231, 176, 93, 0.14); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 18px 40px rgba(0, 0, 0, 0.24); }
+    .time-unit:hover { transform: translateY(-3px); border-color: rgba(255, 255, 255, 0.14); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 24px 52px rgba(0, 0, 0, 0.34); }
 
 /* ====================================
    Countdown Animations Styles.
@@ -158,11 +173,11 @@
 @media (max-width: 768px)
 {
     .countdown { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .time-unit { min-height: 7.25rem; }
+    .time-unit { min-height: 7.5rem; }
 }
 @media (max-width: 420px)
 {
     .countdown { grid-template-columns: 1fr; }
-    .time-unit { min-height: 6.5rem; }
-    .time-value { font-size: 3.1rem; }
+    .time-unit { min-height: 6.8rem; }
+    .time-value { font-size: 3.25rem; }
 }

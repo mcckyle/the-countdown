@@ -10,8 +10,31 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
-    padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 4vw, 3rem);
+    padding: clamp(1.5rem, 4vw, 3rem);
     color: var(--color-text);
+}
+
+/* ====================================
+   App Background Grid Styles.
+======================================= */
+.background-grid
+{
+    position: absolute;
+    inset: 0;
+
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.03) 1px,
+        transparent 1px
+    ),
+    linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.03) 1px,
+        transparent 1px
+    );
+    background-size: 80px 80px;
+    mask-image: radial-gradient(circle at center, black 30%, transparent 90%);
+    opacity: 0.32;
+    pointer-events: none;
 }
 
 /* ====================================
@@ -22,27 +45,35 @@
     position: absolute;
     border-radius: 999px;
 
+    filter: blur(120px);
     pointer-events: none;
-    filter: blur(110px);
 
-    opacity: 0.5;
+    opacity: 0.55;
     will-change: transform;
 }
 .glow-primary
 {
-    top: -10rem;
-    left: -8rem;
-    width: 30rem;
-    height: 30rem;
-    background: rgba(214, 142, 173, 0.16);
+    top: -12rem;
+    left: -10rem;
+    width: 32rem;
+    height: 32rem;
+    background: rgba(187, 28, 36, 0.22);
 }
 .glow-secondary
 {
-    right: -12rem;
+    right: -10rem;
+    top: 12rem;
+    width: 26rem;
+    height: 26rem;
+    background: rgba(59, 130, 246, 0.14);
+}
+.glow-tertiary
+{
     bottom: -12rem;
-    width: 32rem;
-    height: 32rem;
-    background: rgba(183, 132, 214, 0.12);
+    left: 50%;
+    width: 30rem;
+    height: 30rem;
+    background: rgba(255, 255, 255, 0.06);
 }
 
 /* ====================================
@@ -52,7 +83,7 @@
 {
     position: relative;
     z-index: 1;
-    width: min(100%, 920px);
+    width: min(100%, 940px);
 
     display: flex;
     flex-direction: column;
@@ -71,7 +102,7 @@
     align-items: center;
     text-align: center;
 
-    gap: clamp(1.75rem, 4vw, 2.5rem);
+    gap: clamp(2rem, 4vw, 2.75rem);
 }
 
 /* ====================================
@@ -81,18 +112,19 @@
 {
     position: relative;
     width: 100%;
-    padding: clamp(1.5rem, 3vw, 2.5rem);
+    padding: clamp(1.5rem, 3vw, 2.75rem);
     border-radius: calc(var(--radius) + 0.4rem);
+    overflow: hidden;
 
     background: linear-gradient(
         180deg,
-        rgba(255, 255, 255, 0.06),
+        rgba(255, 255, 255, 0.07),
         rgba(255, 255, 255, 0.03)
     );
     border: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(18px);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.34),
-                inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(22px);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.42),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
 
     transition: transform var(--transition),
                 border-color var(--transition),
@@ -107,6 +139,14 @@
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(255, 214, 230, 0.42), transparent);
 }
+.countdown-section::after
+{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 60%);
+    pointer-events: none;
+}
 /* ====================================
    App Date Picker Section Styles.
 ======================================= */
@@ -117,10 +157,10 @@
 {
     .countdown-section:hover
     {
-        transform: translateY(-2px);
-        border-color: rgba(255, 214, 230, 0.16);
-        box-shadow: 0 26px 70px rgba(0, 0, 0, 0.38),
-                    0 0 0 1px rgba(255, 214, 230, 0.03);
+        transform: translateY(-3px);
+        border-color: rgba(255, 255, 255, 0.14);
+        box-shadow: 0 40px 100px rgba(0, 0, 0, 0.48),
+                    0 0 0 1px rgba(255, 255, 255, 0.03);
     }
 }
 
@@ -130,6 +170,7 @@
 @media (max-width: 640px)
 {
     .app { padding: 1.25rem 1rem 2rem; }
-    .background-glow { opacity: 0.32; }
+    .background-grid { background-size: 56px 56px; opacity: 0.2; }
+    .background-glow { opacity: 0.36; }
     .countdown-section { padding: 1.25rem; }
 }

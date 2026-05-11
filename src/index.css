@@ -5,22 +5,24 @@
 ======================================= */
 :root
 {
-    --color-bg: #120d11;
-    --color-bg-deep: #1a1318;
+    --color-bg: #090d18;
+    --color-bg-deep: #05070d;
 
-    --color-surface: rgba(255, 255, 255, 0.05);
+    --color-surface: rgba(255, 255, 255, 0.06);
     --color-border: rgba(255, 255, 255, 0.08);
-    --color-text: #f8f4f6;
 
-    --color-accent: #d68ead;
-    --color-secondary: #b784d6;
-    --color-highlight: #ffd6e6;
+    --color-text: #f5f7fb;
+    --color-text-muted: rgba(245, 247, 251, 0.7);
+
+    --color-accent: #d72638;
+    --color-secondary: #3b82f6;
+    --color-highlight: #ffffff;
 
     --main-font: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     --heading-font: "Cormorant Garamond", Georgia, serif;
 
-    --radius: 1.5rem;
-    --transition: 240ms cubic-bezier(0.22, 1, 0.36, 1);
+    --radius: 1.75rem;
+    --transition: 260ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* ====================================
@@ -42,17 +44,17 @@ body
 {
     font-family: var(--main-font);
     line-height: 1.65;
-
     color: var(--color-text);
+
     background: radial-gradient(
-      circle at 20% 20%,
-      rgba(214, 142, 173, 0.18),
-      transparent 34%
+      circle at top left,
+      rgba(215, 38, 56, 0.16),
+      transparent 30%
     ),
     radial-gradient(
-        circle at 82% 78%,
-        rgba(183, 132, 214, 0.14),
-        transparent 32%
+        circle at top right,
+        rgba(59, 130, 246, 0.14),
+        transparent 26%
     ),
     linear-gradient(180deg, var(--color-bg-deep), var(--color-bg));
 
@@ -68,14 +70,14 @@ body
 h1, h2, h3
 {
     font-family: var(--heading-font);
-    font-weight: 600;
-    letter-spacing: 0.02em;
+    font-weight: 700;
+    letter-spacing: 0.015em;
 }
 
 /* ====================================
    Text Styles.
 ======================================= */
-p { font-size: 1rem; opacity: 0.84; }
+p { font-size: 1rem; color: var(--color-text-muted); }
 button, input, textarea, select { font: inherit; }
 
 /* ====================================
@@ -93,7 +95,7 @@ a:hover { color: var(--color-accent); }
 /* ====================================
    Selection Styles.
 ======================================= */
-::selection { background: var(--color-accent); color: #120d11; }
+::selection { background: var(--color-accent); color: #ffffff; }
 
 /* ====================================
    Shared Animations Styles.
