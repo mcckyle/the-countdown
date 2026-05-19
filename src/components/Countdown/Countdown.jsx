@@ -1,6 +1,6 @@
 //Filename: Countdown.jsx
 //Author: Kyle McColgan
-//Date: 11 May 2026
+//Date: 18 May 2026
 //Description: This file contains the parent component for the Countdown React project.
 
 import { useState, useEffect, useRef } from "react";
@@ -18,7 +18,7 @@ const UNITS = [
 function Countdown({ targetDate })
 {
   const [timeLeft, setTimeLeft] = useState(getTimeRemaining(targetDate));
-  const [animate, setAnimate] = useState(false); //Triggers pop animation.
+  const [isTicking, setisTicking] = useState(false); //Triggers pop animation.
   const hasMounted = useRef(false);
 
   useEffect(() =>
@@ -30,7 +30,7 @@ function Countdown({ targetDate })
 
       if (hasMounted.current)
       {
-        setAnimate((prev) => !prev);
+        setisTicking((prev) => !prev);
       }
       else
       {
@@ -53,7 +53,7 @@ function Countdown({ targetDate })
       >
         <div className="complete-badge">Memorial Day 2026</div>
         <h2 className="complete-title">Happy Memorial Day.</h2>
-        <p className="complete-subtitle">Remembrance and celebration.</p>
+        <p className="complete-subtitle">A day of remembrance and gratitude.</p>
       </section>
     );
   }
@@ -66,7 +66,7 @@ function Countdown({ targetDate })
       aria-label="Time remaining until Memorial Day"
     >
       {UNITS.map(({ key, label }) => (
-        <article key={key} className={`time-unit ${animate ? "animate" : ""}`}>
+        <article key={key} className={`time-unit ${isTicking ? "tick" : ""}`}>
           <span className="time-value">
             {String(timeLeft[key]).padStart(2, "0")}
           </span>

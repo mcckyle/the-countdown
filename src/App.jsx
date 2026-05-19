@@ -1,6 +1,6 @@
 //Filename: App.jsx
 //Author: Kyle McColgan
-//Date: 11 May 2026
+//Date: 18 May 2026
 //Description: This file contains the entry component for the Countdown React project.
 
 import { useState } from "react";
@@ -33,7 +33,6 @@ function App()
         <div className="background-grid" />
         <div className="background-glow glow-primary" />
         <div className="background-glow glow-secondary" />
-        <div className="background-glow glow-tertiary" />
 
         <div className="app-shell">
           <Header />

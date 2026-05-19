@@ -8,12 +8,12 @@
     width: 100%;
     max-width: 860px;
 
-    margin-top: clamp(2.5rem, 6vw, 4rem);
+    margin-top: clamp(2.75rem, 6vw, 4.5rem);
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.1rem;
+    gap: 1rem;
     text-align: center;
 }
 
@@ -24,7 +24,7 @@
 {
     width: min(100%, 140px);
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.16), transparent);
 }
 
 /* ====================================
@@ -38,7 +38,7 @@
     justify-content: center;
     gap: 0.45rem;
 
-    font-size: 0.76rem;
+    font-size: 0.74rem;
     line-height: 1.8;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -64,7 +64,7 @@
 ======================================= */
 .footer-divider
 {
-    opacity: 0.28;
+    opacity: 0.26;
     color: var(--color-text-muted);
 }
 
@@ -74,7 +74,7 @@
 .footer-year
 {
     color: var(--color-accent);
-    opacity: 0.9;
+    opacity: 0.85;
 }
 
 /* Footer Desktop Hover Effects Styles. */
@@ -89,5 +89,5 @@
 @media (max-width: 640px)
 {
     .footer { gap: 0.9rem; }
-    .footer-text { font-size: 0.7rem; letter-spacing: 0.06em; gap: 0.35rem; }
+    .footer-text { font-size: 0.69rem; letter-spacing: 0.06em; gap: 0.35rem; }
 }
