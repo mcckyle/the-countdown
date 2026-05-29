@@ -1,6 +1,6 @@
 //Filename: Countdown.jsx
 //Author: Kyle McColgan
-//Date: 18 May 2026
+//Date: 28 May 2026
 //Description: This file contains the parent component for the Countdown React project.
 
 import { useState, useEffect, useRef } from "react";
@@ -49,11 +49,11 @@ function Countdown({ targetDate })
       <section
         className="countdown complete"
         aria-live="polite"
-        aria-label="Memorial Day has arrived"
+        aria-label="Flag Day has arrived"
       >
-        <div className="complete-badge">Memorial Day 2026</div>
-        <h2 className="complete-title">Happy Memorial Day.</h2>
-        <p className="complete-subtitle">A day of remembrance and gratitude.</p>
+        <div className="complete-badge">June 14, 2026</div>
+        <h2 className="complete-title">Happy Flag Day</h2>
+        <p className="complete-subtitle">Honoring the American flag and the values it represents.</p>
       </section>
     );
   }
@@ -63,7 +63,7 @@ function Countdown({ targetDate })
       className="countdown"
       role="timer"
       aria-live="polite"
-      aria-label="Time remaining until Memorial Day"
+      aria-label="Time remaining until Flag Day 2026"
     >
       {UNITS.map(({ key, label }) => (
         <article key={key} className={`time-unit ${isTicking ? "tick" : ""}`}>

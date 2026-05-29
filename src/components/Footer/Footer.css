@@ -8,7 +8,7 @@
     width: 100%;
     max-width: 860px;
 
-    margin-top: clamp(2.75rem, 6vw, 4.5rem);
+    margin-top: clamp(3rem, 6vw, 5rem);
 
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@
 {
     width: min(100%, 140px);
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.16), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.14), transparent);
 }
 
 /* ====================================
@@ -64,7 +64,7 @@
 ======================================= */
 .footer-divider
 {
-    opacity: 0.26;
+    opacity: 0.24;
     color: var(--color-text-muted);
 }
 
@@ -74,7 +74,7 @@
 .footer-year
 {
     color: var(--color-accent);
-    opacity: 0.85;
+    opacity: 0.82;
 }
 
 /* Footer Desktop Hover Effects Styles. */

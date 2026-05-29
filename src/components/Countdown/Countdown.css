@@ -10,7 +10,7 @@
 
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: clamp(0.9rem, 2vw, 1.4rem);
+    gap: clamp(0.85rem, 2vw, 1.25rem);
 }
 
 /* ====================================
@@ -20,24 +20,24 @@
 {
     position: relative;
     isolation: isolate;
+    overflow: hidden;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
 
-    min-height: clamp(7.75rem, 14vw, 10rem);
-    padding: clamp(1rem, 2vw, 1.5rem);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: calc(var(--radius) - 0.45rem);
+    min-height: clamp(8rem, 14vw, 10.5rem);
+    padding: clamp(1rem, 2vw, 1.6rem);
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    border-radius: calc(var(--radius) - 0.5rem);
     background: linear-gradient(
         180deg,
         rgba(255, 255, 255, 0.06),
         rgba(255, 255, 255, 0.03)
     );
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04),
-                0 14px 34px rgba(0, 0, 0, 0.24);
+                0 18px 40px rgba(0, 0, 0, 0.28);
     backdrop-filter: blur(14px);
 
     transition: transform var(--transition),
@@ -54,7 +54,7 @@
 
     background: radial-gradient(
         circle at top,
-        rgba(255, 255, 255, 0.08),
+        rgba(255, 255, 255, 0.07),
         transparent 64%
     );
 
@@ -88,13 +88,13 @@
     z-index: 1;
 
     font-family: var(--heading-font);
-    font-size: clamp(2.9rem, 5vw, 4.6rem);
+    font-size: clamp(3rem, 5vw, 4.75rem);
     font-weight: 700;
 
-    line-height: 0.88;
-    letter-spacing: 0.01em;
+    line-height: 0.84;
+    letter-spacing: -0.03em;
     color: var(--color-highlight);
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.06);
+    text-shadow: 0 0 24px rgba(255, 255, 255, 0.05);
 }
 
 /* ====================================
@@ -105,7 +105,7 @@
     position: relative;
     z-index: 1;
 
-    margin-top: 0.85rem;
+    margin-top: 0.9rem;
     font-size: 0.72rem;
     font-weight: 600;
     letter-spacing: 0.2em;
@@ -134,9 +134,9 @@
 ======================================= */
 .complete-badge
 {
-    padding: 0.45rem 0.95rem;
+    padding: 0.5rem 1rem;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.045);
     border: 1px solid rgba(255, 255, 255, 0.08);
     font-size: 0.72rem;
     font-weight: 600;
@@ -146,9 +146,10 @@
 }
 .complete-title
 {
-    max-width: 12ch;
-    font-size: clamp(2.6rem, 6vw, 4.25rem);
-    line-height: 0.92;
+    max-width: 10ch;
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    line-height: 0.9;
+    letter-spacing: -0.03em;
     color: var(--color-highlight);
 }
 .complete-subtitle { max-width: 34ch; font-size: 1rem; line-height: 1.8; color: var(--color-text-muted); }
@@ -156,7 +157,7 @@
 /* Countdown Desktop Hover Styles. */
 @media (hover: hover)
 {
-    .time-unit:hover { transform: translateY(-3px); border-color: rgba(255, 255, 255, 0.12); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 20px 44px rgba(0, 0, 0, 0.3); }
+    .time-unit:hover { transform: translateY(-3px); border-color: rgba(255, 255, 255, 0.12); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 24px 48px rgba(0, 0, 0, 0.34); }
 
 /* ====================================
    Countdown Animations Styles.
@@ -164,7 +165,7 @@
 @keyframes tick
 {
     0% { transform: scale(1); }
-    50% { transform: scale(1.03); }
+    50% { transform: scale(1.035); }
     100% { transform: scale(1); }
 }
 
@@ -174,11 +175,11 @@
 @media (max-width: 768px)
 {
     .countdown { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .time-unit { min-height: 7.2rem; }
+    .time-unit { min-height: 7.5rem; }
 }
 @media (max-width: 420px)
 {
     .countdown { grid-template-columns: 1fr; }
-    .time-unit { min-height: 6.6rem; }
-    .time-value { font-size: 3.1rem; }
+    .time-unit { min-height: 6.75rem; }
+    .time-value { font-size: 3.2rem; }
 }

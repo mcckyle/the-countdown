@@ -10,7 +10,7 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
-    padding: clamp(1.25rem, 4vw, 2.5rem);
+    padding: clamp(1.25rem, 4vw, 2.75rem);
     color: var(--color-text);
 }
 
@@ -23,17 +23,17 @@
     inset: 0;
 
     background-image: linear-gradient(
-        rgba(255, 255, 255, 0.025) 1px,
+        rgba(255, 255, 255, 0.03) 1px,
         transparent 1px
     ),
     linear-gradient(
         90deg,
-        rgba(255, 255, 255, 0.025) 1px,
+        rgba(255, 255, 255, 0.03) 1px,
         transparent 1px
     );
     background-size: 72px 72px;
-    mask-image: radial-gradient(circle at center, black 28%, transparent 88%);
-    opacity: 0.42;
+    mask-image: radial-gradient(circle at center, black 24%, transparent 82%);
+    opacity: 0.34;
     pointer-events: none;
 }
 
@@ -53,18 +53,18 @@
 }
 .glow-primary
 {
-    top: -16rem;
+    top: -14rem;
     left: -10rem;
     width: 34rem;
     height: 34rem;
-    background: radial-gradient(circle, rgba(215, 38, 56, 0.22), transparent 72%);
+    background: radial-gradient(circle, rgba(185, 28, 45, 0.22), transparent 72%);
 }
 .glow-secondary
 {
-    top: 8rem;
-    right: -12rem;
-    width: 28rem;
-    height: 28rem;
+    top: 4rem;
+    right: -10rem;
+    width: 30rem;
+    height: 30rem;
     background: radial-gradient(circle, rgba(59, 130, 246, 0.14), transparent 72%);
 }
 
@@ -103,21 +103,22 @@
 .countdown-section
 {
     position: relative;
+    isolation: isolate;
+
     width: 100%;
     overflow: hidden;
-    isolation: isolate;
-    padding: clamp(1.5rem, 3vw, 3rem);
 
-    border-radius: calc(var(--radius) + 0.25rem);
+    padding: clamp(1.5rem, 3vw, 3rem);
+    border-radius: calc(var(--radius) + 0.35rem);
     background: linear-gradient(
         180deg,
-        rgba(255, 255, 255, 0.07),
+        rgba(255, 255, 255, 0.075),
         rgba(255, 255, 255, 0.035)
     );
     border: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(18px);
-    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.42),
-                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.46),
+                inset 0 1px 0 rgba(255, 255, 255, 0.04);
 
     transition: transform var(--transition),
                 border-color var(--transition),
@@ -131,14 +132,14 @@
 
     width: 100%;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
 }
 .countdown-section::after
 {
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 62%);
+    background: radial-gradient(circle at top, rgba(255, 255, 255, 0.06), transparent 64%);
     pointer-events: none;
 }
 /* ====================================
@@ -153,7 +154,7 @@
     {
         transform: translateY(-4px);
         border-color: rgba(255, 255, 255, 0.12);
-        box-shadow: 0 36px 100px rgba(0, 0, 0, 0.5),
+        box-shadow: 0 36px 100px rgba(0, 0, 0, 0.52),
                     0 0 0 1px rgba(255, 255, 255, 0.03);
     }
 }
@@ -165,6 +166,6 @@
 {
     .app { padding: 1rem 1rem 2rem; }
     .background-grid { background-size: 52px 52px; opacity: 0.18; }
-    .background-glow { opacity: 0.3; }
+    .background-glow { opacity: 0.24; }
     .countdown-section { padding: 1.25rem; border-radius: 1.75rem; }
 }

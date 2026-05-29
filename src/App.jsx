@@ -1,6 +1,6 @@
 //Filename: App.jsx
 //Author: Kyle McColgan
-//Date: 18 May 2026
+//Date: 28 May 2026
 //Description: This file contains the entry component for the Countdown React project.
 
 import { useState } from "react";
@@ -14,8 +14,8 @@ import "./App.css";
 
 function App()
 {
-  //Target date: Memorial Day 2026 (May 25, 2026).
-  const [targetDate, setTargetDate] = useState("2026-05-25T00:00:00");
+  //Target date: Flag Day 2026 (June 14, 2026).
+  const [targetDate, setTargetDate] = useState("2026-06-14T00:00:00");
   const today = new Date().toISOString().split("T")[0];
 
   const handleDateChange = (e) =>
