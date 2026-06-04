@@ -6,7 +6,7 @@
 .app
 {
     position: relative;
-    min-height: 100vh;
+    min-height: 100dvh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -32,8 +32,8 @@
         transparent 1px
     );
     background-size: 72px 72px;
-    mask-image: radial-gradient(circle at center, black 24%, transparent 82%);
-    opacity: 0.34;
+    mask-image: radial-gradient(circle at center, black 12%, rgba(0, 0, 0, 0.7) 42%, transparent 82%);
+    opacity: 0.18;
     pointer-events: none;
 }
 
@@ -45,27 +45,26 @@
     position: absolute;
     border-radius: 999px;
 
-    filter: blur(120px);
-
-    opacity: 0.42;
+    filter: blur(150px);
+    opacity: 0.32;
     pointer-events: none;
     will-change: transform;
 }
 .glow-primary
 {
-    top: -14rem;
-    left: -10rem;
-    width: 34rem;
-    height: 34rem;
-    background: radial-gradient(circle, rgba(185, 28, 45, 0.22), transparent 72%);
+    top: -8rem;
+    left: -4rem;
+    width: 32rem;
+    height: 32rem;
+    background: radial-gradient(circle, rgba(185, 28, 45, 0.28), transparent 72%);
 }
 .glow-secondary
 {
-    top: 4rem;
-    right: -10rem;
-    width: 30rem;
-    height: 30rem;
-    background: radial-gradient(circle, rgba(59, 130, 246, 0.14), transparent 72%);
+    top: 2rem;
+    right: -4rem;
+    width: 28rem;
+    height: 28rem;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.18), transparent 72%);
 }
 
 /* ====================================
@@ -112,13 +111,13 @@
     border-radius: calc(var(--radius) + 0.35rem);
     background: linear-gradient(
         180deg,
-        rgba(255, 255, 255, 0.075),
-        rgba(255, 255, 255, 0.035)
+        rgba(255, 255, 255, 0.08),
+        rgba(255, 255, 255, 0.04)
     );
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(16px);
-    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.46),
-                inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--color-border);
+    backdrop-filter: blur(var(--glass-blur));
+    box-shadow: var(--shadow-soft),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
 
     transition: transform var(--transition),
                 border-color var(--transition),
@@ -152,10 +151,10 @@
 {
     .countdown-section:hover
     {
-        transform: translateY(-4px);
+        transform: translateY(-2px);
         border-color: rgba(255, 255, 255, 0.12);
-        box-shadow: 0 36px 100px rgba(0, 0, 0, 0.52),
-                    0 0 0 1px rgba(255, 255, 255, 0.03);
+        box-shadow: var(--shadow-raised),
+                    0 0 0 1px rgba(255, 255, 255, 0.04);
     }
 }
 

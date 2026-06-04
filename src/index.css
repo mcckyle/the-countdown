@@ -9,7 +9,10 @@
     --color-bg-deep: #03050a;
 
     --color-surface: rgba(255, 255, 255, 0.05);
+    --color-surface-strong: rgba(255, 255, 255, 0.08);
+
     --color-border: rgba(255, 255, 255, 0.08);
+    --color-border-strong: rgba(255, 255, 255, 0.12);
 
     --color-text: #f5f7fb;
     --color-text-muted: rgba(245, 247, 251, 0.72);
@@ -17,6 +20,10 @@
     --color-accent: #b91c2d;
     --color-secondary: #3b82f6;
     --color-highlight: #ffffff;
+
+    --shadow-soft: 0 24px 80px rgba(0, 0, 0, 0.46);
+    --shadow-raised: 0 36px 100px rgba(0, 0, 0, 0.52);
+    --glass-blur: 16px;
 
     --main-font: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     --heading-font: "Cormorant Garamond", Georgia, serif;
@@ -39,7 +46,7 @@
    Base Layout Styles.
 ======================================= */
 html { background: var(--color-bg); scroll-behavior: smooth; }
-body, #root { min-height: 100vh; }
+body, #root { min-height: 100dvh; }
 body
 {
     font-family: var(--main-font);
@@ -47,14 +54,9 @@ body
     color: var(--color-text);
 
     background: radial-gradient(
-      circle at top left,
-      rgba(185, 28, 45, 0.12),
-      transparent 32%
-    ),
-    radial-gradient(
-        circle at top right,
-        rgba(59, 130, 246, 0.12),
-        transparent 28%
+      circle at top,
+      rgba(255, 255, 255, 0.025),
+      transparent 42%
     ),
     linear-gradient(180deg, var(--color-bg-deep), var(--color-bg));
 

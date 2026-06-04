@@ -8,7 +8,7 @@
     width: 100%;
     max-width: 860px;
 
-    margin-top: clamp(3rem, 6vw, 5rem);
+    margin-top: clamp(3.5rem, 7vw, 6rem);
 
     display: flex;
     flex-direction: column;
@@ -22,9 +22,9 @@
 ======================================= */
 .footer-line
 {
-    width: min(100%, 140px);
+    width: min(100%, 120px);
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.14), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
 }
 
 /* ====================================
@@ -38,9 +38,9 @@
     justify-content: center;
     gap: 0.45rem;
 
-    font-size: 0.74rem;
+    font-size: 0.72rem;
     line-height: 1.8;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.07em;
     text-transform: uppercase;
 }
 
@@ -58,6 +58,7 @@
 
     transition: color var(--transition), opacity var(--transition);
 }
+.footer-accent a { color: inherit; text-decoration: none; }
 
 /* ====================================
    Footer Divider Styles.
@@ -73,14 +74,14 @@
 ======================================= */
 .footer-year
 {
-    color: var(--color-accent);
-    opacity: 0.82;
+    color: var(--color-text-muted);
+    opacity: 0.75;
 }
 
 /* Footer Desktop Hover Effects Styles. */
 @media (hover: hover)
 {
-    .footer-accent:hover { color: var(--color-accent); }
+    .footer-accent a:hover { color: var(--color-accent); }
 }
 
 /* ====================================

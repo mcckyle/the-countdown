@@ -1,6 +1,6 @@
 //Filename: Countdown.jsx
 //Author: Kyle McColgan
-//Date: 28 May 2026
+//Date: 4 June 2026
 //Description: This file contains the parent component for the Countdown React project.
 
 import { useState, useEffect, useRef } from "react";
@@ -18,7 +18,7 @@ const UNITS = [
 function Countdown({ targetDate })
 {
   const [timeLeft, setTimeLeft] = useState(getTimeRemaining(targetDate));
-  const [isTicking, setisTicking] = useState(false); //Triggers pop animation.
+  const [isTicking, setIsTicking] = useState(false); //Triggers pop animation.
   const hasMounted = useRef(false);
 
   useEffect(() =>
@@ -30,7 +30,7 @@ function Countdown({ targetDate })
 
       if (hasMounted.current)
       {
-        setisTicking((prev) => !prev);
+        setIsTicking((prev) => !prev);
       }
       else
       {
