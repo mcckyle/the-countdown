@@ -33,7 +33,7 @@
     );
     background-size: 72px 72px;
     mask-image: radial-gradient(circle at center, black 12%, rgba(0, 0, 0, 0.7) 42%, transparent 82%);
-    opacity: 0.18;
+    opacity: 0.08;
     pointer-events: none;
 }
 
@@ -43,28 +43,20 @@
 .background-glow
 {
     position: absolute;
-    border-radius: 999px;
+    inset: auto;
 
-    filter: blur(150px);
-    opacity: 0.32;
+    top: -14rem;
+    left: 50%;
+
+    width: min(80vw, 64rem);
+    height: min(80vw, 64rem);
+
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(185, 28, 45, 0.22), rgba(59, 130, 246, 0.12), transparent 72%);
+
+    filter: blur(120px);
     pointer-events: none;
-    will-change: transform;
-}
-.glow-primary
-{
-    top: -8rem;
-    left: -4rem;
-    width: 32rem;
-    height: 32rem;
-    background: radial-gradient(circle, rgba(185, 28, 45, 0.28), transparent 72%);
-}
-.glow-secondary
-{
-    top: 2rem;
-    right: -4rem;
-    width: 28rem;
-    height: 28rem;
-    background: radial-gradient(circle, rgba(59, 130, 246, 0.18), transparent 72%);
 }
 
 /* ====================================
@@ -74,7 +66,7 @@
 {
     position: relative;
     z-index: 1;
-    width: min(100%, 960px);
+    width: min(100%, 1080px);
 
     display: flex;
     flex-direction: column;
@@ -102,22 +94,13 @@
 .countdown-section
 {
     position: relative;
-    isolation: isolate;
-
     width: 100%;
-    overflow: hidden;
-
-    padding: clamp(1.5rem, 3vw, 3rem);
-    border-radius: calc(var(--radius) + 0.35rem);
-    background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.08),
-        rgba(255, 255, 255, 0.04)
-    );
+    padding: clamp(1.75rem, 4vw, 3.5rem);
+    border-radius: calc(var(--radius) + 0.2rem);
+    background: var(--color-surface);
     border: 1px solid var(--color-border);
     backdrop-filter: blur(var(--glass-blur));
-    box-shadow: var(--shadow-soft),
-                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    box-shadow: var(--shadow-soft);
 
     transition: transform var(--transition),
                 border-color var(--transition),
@@ -131,16 +114,9 @@
 
     width: 100%;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
 }
-.countdown-section::after
-{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at top, rgba(255, 255, 255, 0.06), transparent 64%);
-    pointer-events: none;
-}
+
 /* ====================================
    App Date Picker Section Styles.
 ======================================= */
@@ -166,5 +142,5 @@
     .app { padding: 1rem 1rem 2rem; }
     .background-grid { background-size: 52px 52px; opacity: 0.18; }
     .background-glow { opacity: 0.24; }
-    .countdown-section { padding: 1.25rem; border-radius: 1.75rem; }
+    .countdown-section { padding: 1.25rem; border-radius: 1.5rem; }
 }

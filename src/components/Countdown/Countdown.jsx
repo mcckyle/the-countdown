@@ -1,6 +1,6 @@
 //Filename: Countdown.jsx
 //Author: Kyle McColgan
-//Date: 4 June 2026
+//Date: 11 June 2026
 //Description: This file contains the parent component for the Countdown React project.
 
 import { useState, useEffect, useRef } from "react";
@@ -66,7 +66,11 @@ function Countdown({ targetDate })
       aria-label="Time remaining until Flag Day 2026"
     >
       {UNITS.map(({ key, label }) => (
-        <article key={key} className={`time-unit ${isTicking ? "tick" : ""}`}>
+        <article
+          key={key}
+          className={`time-unit ${isTicking ? "tick" : ""}`}
+          aria-label={`${timeLeft[key]} ${label}`}
+        >
           <span className="time-value">
             {String(timeLeft[key]).padStart(2, "0")}
           </span>

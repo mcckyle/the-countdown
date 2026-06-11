@@ -21,8 +21,8 @@
     --color-secondary: #3b82f6;
     --color-highlight: #ffffff;
 
-    --shadow-soft: 0 24px 80px rgba(0, 0, 0, 0.46);
-    --shadow-raised: 0 36px 100px rgba(0, 0, 0, 0.52);
+    --shadow-soft: 0 16px 48px rgba(0, 0, 0, 0.32);
+    --shadow-raised: 0 24px 64px rgba(0, 0, 0, 0.38);
     --glass-blur: 16px;
 
     --main-font: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -50,13 +50,13 @@ body, #root { min-height: 100dvh; }
 body
 {
     font-family: var(--main-font);
-    line-height: 1.65;
+    line-height: 1.6;
     color: var(--color-text);
 
     background: radial-gradient(
-      circle at top,
-      rgba(255, 255, 255, 0.025),
-      transparent 42%
+      circle at top center,
+      rgba(255, 255, 255, 0.035),
+      transparent 45%
     ),
     linear-gradient(180deg, var(--color-bg-deep), var(--color-bg));
 
