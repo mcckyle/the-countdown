@@ -1,40 +1,30 @@
 //Filename: DatePicker.jsx
 //Author: Kyle McColgan
-//Date: 28 May 2026
+//Date: 17 June 2026
 //Description: This file contains the entry component for the Countdown React project.
 
 import "./DatePicker.css";
 
-export default function DatePicker ({ value, minDate, onChange }) {
+export default function DatePicker ({ value, minDate, onChange })
+{
   return (
-    <div
-      className="date-picker"
-      role="group"
-      aria-labelledby="date-picker-label"
-    >
-      <label
-        id="date-picker-label"
-        htmlFor="countdown-date"
-        className="date-label"
-      >
-        Select a date
+    <div className="date-picker">
+      <label htmlFor="countdown-date" className="date-label">
+        Choose date
       </label>
 
-      <div className="date-input-shell">
-        <input
+      <input
           type="date"
           id="countdown-date"
           className="date-input"
           value={value}
           min={minDate}
           onChange={onChange}
-          aria-describedby="date-help"
         />
-      </div>
 
-      <span id="date-help" className="date-help">
-        Choose a future holiday or celebration date.
-      </span>
+      <p className="date-help">
+        Select another future celebration date.
+      </p>
     </div>
   );
 };

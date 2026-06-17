@@ -8,39 +8,33 @@
     --color-bg: #070b14;
     --color-bg-deep: #03050a;
 
-    --color-surface: rgba(255, 255, 255, 0.05);
-    --color-surface-strong: rgba(255, 255, 255, 0.08);
+    --color-surface: rgba(255, 255, 255, 0.055);
 
-    --color-border: rgba(255, 255, 255, 0.08);
-    --color-border-strong: rgba(255, 255, 255, 0.12);
+    --color-border: rgba(255, 255, 255, 0.09);
+    --color-border-strong: rgba(255, 255, 255, 0.16);
 
-    --color-text: #f5f7fb;
-    --color-text-muted: rgba(245, 247, 251, 0.72);
+    --color-text: #f8fafc;
+    --color-text-muted: rgba(248, 250, 252, 0.68);
 
     --color-accent: #b91c2d;
     --color-secondary: #3b82f6;
     --color-highlight: #ffffff;
 
-    --shadow-soft: 0 16px 48px rgba(0, 0, 0, 0.32);
-    --shadow-raised: 0 24px 64px rgba(0, 0, 0, 0.38);
-    --glass-blur: 16px;
+    --shadow-soft: 0 24px 70px rgba(0, 0, 0, 0.38);
+    --shadow-raised: 0 32px 90px rgba(0, 0, 0, 0.48);
+    --glass-blur: 22px;
 
-    --main-font: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --main-font: "Inter", system-ui, sans-serif;
     --heading-font: "Cormorant Garamond", Georgia, serif;
 
-    --radius: 1.9rem;
+    --radius: 2rem;
     --transition: 260ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* ====================================
    Global Reset Styles.
 ======================================= */
-*, *::before, *::after
-{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+* { box-sizing: border-box; }
 
 /* ====================================
    Base Layout Styles.
@@ -49,21 +43,18 @@ html { background: var(--color-bg); scroll-behavior: smooth; }
 body, #root { min-height: 100dvh; }
 body
 {
+    margin: 0;
     font-family: var(--main-font);
-    line-height: 1.6;
     color: var(--color-text);
 
     background: radial-gradient(
-      circle at top center,
+      circle at top,
       rgba(255, 255, 255, 0.035),
       transparent 45%
     ),
     linear-gradient(180deg, var(--color-bg-deep), var(--color-bg));
 
-    background-attachment: fixed;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
 }
 
 /* ====================================
@@ -73,14 +64,12 @@ h1, h2, h3
 {
     font-family: var(--heading-font);
     font-weight: 700;
-    letter-spacing: 0.015em;
-    line-height: 1.05;
+    line-height: 1;
 }
 
 /* ====================================
-   Text Styles.
+   Interactive Styles.
 ======================================= */
-p { font-size: 1rem; color: var(--color-text-muted); }
 button, input, textarea, select { font: inherit; }
 
 /* ====================================
@@ -98,19 +87,19 @@ a:hover { color: var(--color-accent); }
 /* ====================================
    Accessibility Styles.
 ======================================= */
-:focus-visible { outline: 2px solid rgba(255, 255, 255, 0.88); outline-offset: 3px; }
+:focus-visible { outline: 2px solid white; outline-offset: 4px; }
 
 /* ====================================
    Selection Styles.
 ======================================= */
-::selection { background: var(--color-accent); color: #ffffff; }
+::selection { background: var(--color-accent); color: white; }
 
 /* ====================================
    Shared Animations Styles.
 ======================================= */
 @keyframes fadeIn
 {
-    from { opacity: 0; transform: translateY(10px); }
+    from { opacity: 0; transform: translateY(14px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
@@ -119,12 +108,9 @@ a:hover { color: var(--color-accent); }
 ======================================= */
 @media (prefers-reduced-motion: reduce)
 {
-    *
+    *, *::before, *::after
     {
         transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-
         animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
     }
 }

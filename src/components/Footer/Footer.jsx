@@ -1,12 +1,14 @@
 //Filename: Footer.jsx
 //Author: Kyle McColgan
-//Date: 28 May 2026
+//Date: 17 June 2026
 //Description: This file contains the Footer component for the Countdown React project.
 
 import "./Footer.css";
 
 function Footer()
 {
+  const year = new Date().getFullYear();
+
   return (
     <footer className="footer">
       <div className="footer-line" />
@@ -14,25 +16,23 @@ function Footer()
         <span className="footer-muted">
           Designed by
         </span>
-        <span className="footer-accent">
-          <a
-            href="https://mcckyle.github.io/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Visit Kyle McColgan's website"
-          >
-            Kyle McColgan
-          </a>
-        </span>
+        <a
+          className="footer-link"
+          href="https://mcckyle.github.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Kyle McColgan
+        </a>
 
-        <span className="footer-divider" aria-hidden="true">•</span>
+        <span className="footer-divider">•</span>
 
         <span className="footer-muted">
           React + Vite
         </span>
 
-        <span className="footer-divider" aria-hidden="true">•</span>
-        <span className="footer-year">{new Date().getFullYear()}</span>
+        <span className="footer-divider">•</span>
+        <span className="footer-muted">{year}</span>
       </p>
     </footer>
   );
