@@ -1,6 +1,6 @@
 //Filename: Countdown.jsx
 //Author: Kyle McColgan
-//Date: 17 June 2026
+//Date: 22 June 2026
 //Description: This file contains the parent component for the Countdown React project.
 
 import { useState, useEffect, useRef } from "react";
@@ -18,26 +18,19 @@ const UNITS = [
 function Countdown({ targetDate })
 {
   const [timeLeft, setTimeLeft] = useState(getTimeRemaining(targetDate));
-  const [isTicking, setIsTicking] = useState(false); //Triggers pop animation.
-  const mounted = useRef(false);
+  const [pulse, setPulse] = useState(0);
 
   useEffect(() =>
   {
-    const timer = setInterval(() =>
+    const update = () =>
     {
       const remaining = getTimeRemaining(targetDate);
       setTimeLeft(remaining);
+      setPulse(value => value + 1);
+    };
 
-      if (mounted.current)
-      {
-        setIsTicking((prev) => !prev);
-        setTimeout(() => setIsTicking(false), 260);
-      }
-      else
-      {
-        mounted.current = true;
-      }
-    }, 1000);
+    update();
+    const timer = setInterval(update, 1000);
 
     return () => clearInterval(timer);
   }, [targetDate]);
@@ -47,19 +40,19 @@ function Countdown({ targetDate })
   if (complete)
   {
     return (
-      <section
+      <div
         className="countdown complete"
         aria-live="polite"
       >
-        <span className="complete-badge">June 19, 2026</span>
-        <h2 className="complete-title">Happy Juneteenth</h2>
-        <p className="complete-subtitle">Honoring freedom and equality.</p>
-      </section>
+        <span className="complete-badge">July 4, 2026</span>
+        <h2 className="complete-title">Happy Independence Day</h2>
+        <p className="complete-subtitle">Honoring freedom and independence.</p>
+      </div>
     );
   }
 
   return (
-    <section
+    <div
       className="countdown"
       role="timer"
       aria-live="polite"
@@ -67,15 +60,15 @@ function Countdown({ targetDate })
       {UNITS.map(({ key, label }) => (
         <div
           key={key}
-          className={`time-unit ${isTicking ? "tick" : ""}`}
+          className="time-unit"
         >
-          <span className="time-value">
+          <span key={`${key}-${pulse}`} className="time-value">
             {String(timeLeft[key]).padStart(2, "0")}
           </span>
           <span className="time-label">{label}</span>
         </div>
       ))}
-    </section>
+    </div>
   );
 }
 

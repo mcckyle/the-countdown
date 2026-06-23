@@ -1,39 +1,40 @@
 /* Filename: src/App.css */
 
 /* ====================================
-   App Shell Styles.
+   Application Shell Styles.
 ======================================= */
-.app
+.app-shell
 {
     position: relative;
     min-height: 100dvh;
     width: 100%;
     display: flex;
-    justify-content: center;
-    padding: clamp(1.25rem, 4vw, 3rem);
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(1.5rem, 5vw, 4rem);
     overflow: hidden;
 }
 
 /* ====================================
-   App Ambient Atmosphere Styles.
+   App Ambient Independence Atmosphere Styles.
 ======================================= */
-.app::before
+.app-shell::before
 {
     content: "";
     position: absolute;
-    inset: -20%;
-    background: radial-gradient(circle at 50% 0%, rgba(185, 28, 45, 0.22), transparent 38%),
-                radial-gradient(circle at 85% 40%, rgba(59, 130, 246, 0.14), transparent 35%);
+    inset: -25%;
+    background: radial-gradient(circle at 50% 0%, rgba(185, 28, 45, 0.25), transparent 35%),
+                radial-gradient(circle at 85% 50%, rgba(59, 130, 246, 0.18), transparent 35%);
 
-    filter: blur(90px);
+    filter: blur(100px);
     pointer-events: none;
 }
 
 
 /* ====================================
-   App Background Grid Styles.
+   App Subtle Star Grid Styles.
 ======================================= */
-.app::after
+.app-shell::after
 {
     content: "";
     position: absolute;
@@ -48,41 +49,26 @@
         rgba(255, 255, 255, 0.025) 1px,
         transparent 1px
     );
-    background-size: 80px 80px;
+    background-size: 90px 90px;
     mask-image: radial-gradient(circle, black, transparent 75%);
     opacity: 0.35;
     pointer-events: none;
 }
 
 /* ====================================
-   App Layout Container Styles.
-======================================= */
-.app-shell
-{
-    position: relative;
-    z-index: 1;
-    width: min(100%, 960px);
-    min-height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between; /* Important for spacing purposes. */
-    gap: clamp(2rem, 6vw, 5rem);
-}
-
-/* ====================================
-   App Main Content Styles.
+   App Main Layout Styles.
 ======================================= */
 .main
 {
-    width: 100%;
+    position: relative;
+    z-index: 1;
+    width: min(100%, 1100px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: clamp(2rem, 5vw, 4rem);
 
-    animation: fadeIn 0.7s ease both;
+    animation: fadeIn 0.8s ease both;
 }
 
 /* ====================================
@@ -90,11 +76,11 @@
 ======================================= */
 .countdown-section
 {
-    position: relative;
     width: 100%;
-    padding: clamp(1.5rem, 5vw, 4rem);
-    border-radius: var(--radius);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.035));
+    position: relative;
+    padding: clamp(2rem, 7vw, 5rem);
+    border-radius: clamp(1.5rem, 4vw, 3rem);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.035));
     border: 1px solid var(--color-border);
     backdrop-filter: blur(var(--glass-blur));
     box-shadow: var(--shadow-soft);
@@ -106,18 +92,18 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
-    opacity: 0.35;
+    opacity: 0.3;
 }
 
 /* ====================================
-   App Date Picker Section Styles.
+   App Date Selector Styles.
 ======================================= */
-.date-section { width: min(100%, 420px); display: flex; justify-content: center; }
+.date-section, .date-picker { width: min(100%, 420px); }
 
 /* ====================================
    App Hover Effects Styles.
 ======================================= */
-@media (hover: hover)
+/*@media (hover: hover)
 {
     .countdown-section
     {
@@ -129,14 +115,14 @@
         border-color: var(--color-border-strong);
         box-shadow: var(--shadow-raised);
     }
-}
+}*/
 
 /* ====================================
    App Media Query Styles.
  ======================================= */
 @media (max-width: 640px)
 {
-    .app { padding: 1rem; }
-    .app::after { background-size: 52px 52px; }
-    .countdown-section { padding: 1.25rem; border-radius: 1.4rem; }
+    .app-shell { padding: 1rem; }
+    .app-shell::after { background-size: 55px 55px; }
+    .countdown-section { padding: 1.5rem; }
 }

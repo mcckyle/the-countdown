@@ -1,17 +1,17 @@
 /* Filename: src/index.css */
 
 /* ====================================
-   Root Theme Variables.
+   Design Tokens.
 ======================================= */
 :root
 {
-    --color-bg: #070b14;
-    --color-bg-deep: #03050a;
+    --color-bg: #03050a;
+    --color-bg-soft: #070b14;
 
     --color-surface: rgba(255, 255, 255, 0.055);
 
-    --color-border: rgba(255, 255, 255, 0.09);
-    --color-border-strong: rgba(255, 255, 255, 0.16);
+    --color-border: rgba(255, 255, 255, 0.10);
+    --color-border-strong: rgba(255, 255, 255, 0.18);
 
     --color-text: #f8fafc;
     --color-text-muted: rgba(248, 250, 252, 0.68);
@@ -20,9 +20,9 @@
     --color-secondary: #3b82f6;
     --color-highlight: #ffffff;
 
-    --shadow-soft: 0 24px 70px rgba(0, 0, 0, 0.38);
+    --shadow-soft: 0 30px 90px rgba(0, 0, 0, 0.45);
     --shadow-raised: 0 32px 90px rgba(0, 0, 0, 0.48);
-    --glass-blur: 22px;
+    --glass-blur: 24px;
 
     --main-font: "Inter", system-ui, sans-serif;
     --heading-font: "Cormorant Garamond", Georgia, serif;
@@ -39,20 +39,14 @@
 /* ====================================
    Base Layout Styles.
 ======================================= */
-html { background: var(--color-bg); scroll-behavior: smooth; }
-body, #root { min-height: 100dvh; }
+html, body, #root { min-height: 100%; }
+html { background: var(--color-bg); }
 body
 {
     margin: 0;
     font-family: var(--main-font);
     color: var(--color-text);
-
-    background: radial-gradient(
-      circle at top,
-      rgba(255, 255, 255, 0.035),
-      transparent 45%
-    ),
-    linear-gradient(180deg, var(--color-bg-deep), var(--color-bg));
+    background: linear-gradient(180deg, var(--color-bg), var(--color-bg-soft));
 
     -webkit-font-smoothing: antialiased;
 }
@@ -62,6 +56,7 @@ body
 ======================================= */
 h1, h2, h3
 {
+    margin: 0;
     font-family: var(--heading-font);
     font-weight: 700;
     line-height: 1;
@@ -70,7 +65,7 @@ h1, h2, h3
 /* ====================================
    Interactive Styles.
 ======================================= */
-button, input, textarea, select { font: inherit; }
+button, input, select, textarea { font: inherit; }
 
 /* ====================================
    Links Styles.
@@ -99,7 +94,7 @@ a:hover { color: var(--color-accent); }
 ======================================= */
 @keyframes fadeIn
 {
-    from { opacity: 0; transform: translateY(14px); }
+    from { opacity: 0; transform: translateY(18px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
