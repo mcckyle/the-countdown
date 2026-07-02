@@ -6,12 +6,15 @@
 .app-shell
 {
     position: relative;
+    isolation: isolate;
+
     min-height: 100dvh;
     width: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: clamp(1.5rem, 5vw, 4rem);
+    padding: clamp(1rem, 4vw, 3rem);
     overflow: hidden;
 }
 
@@ -22,17 +25,16 @@
 {
     content: "";
     position: absolute;
-    inset: -25%;
-    background: radial-gradient(circle at 50% 0%, rgba(185, 28, 45, 0.25), transparent 35%),
-                radial-gradient(circle at 85% 50%, rgba(59, 130, 246, 0.18), transparent 35%);
+    inset: -20%;
+    background: radial-gradient(circle at 30% 20%, rgba(185, 28, 45, 0.22), transparent 35%),
+                radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.18), transparent 40%);
 
-    filter: blur(100px);
-    pointer-events: none;
+    filter: blur(90px);
+    z-index: -2;
 }
 
-
 /* ====================================
-   App Subtle Star Grid Styles.
+   App Subtle Background Texture Styles.
 ======================================= */
 .app-shell::after
 {
@@ -49,10 +51,11 @@
         rgba(255, 255, 255, 0.025) 1px,
         transparent 1px
     );
-    background-size: 90px 90px;
-    mask-image: radial-gradient(circle, black, transparent 75%);
-    opacity: 0.35;
+    background-size: 80px 80px;
+    mask-image: radial-gradient(circle, black, transparent 70%);
+    opacity: 0.25;
     pointer-events: none;
+    z-index: -1;
 }
 
 /* ====================================
@@ -60,13 +63,13 @@
 ======================================= */
 .main
 {
-    position: relative;
-    z-index: 1;
-    width: min(100%, 1100px);
+    width: min(100%, 1080px);
+    flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: clamp(2rem, 5vw, 4rem);
+    gap: clamp(2rem, 6vw, 4rem);
 
     animation: fadeIn 0.8s ease both;
 }
@@ -77,26 +80,17 @@
 .countdown-section
 {
     width: 100%;
-    position: relative;
-    padding: clamp(2rem, 7vw, 5rem);
-    border-radius: clamp(1.5rem, 4vw, 3rem);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.035));
+    padding: clamp(1.5rem, 6vw, 5rem);
+    border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.035));
     border: 1px solid var(--color-border);
     backdrop-filter: blur(var(--glass-blur));
     box-shadow: var(--shadow-soft);
     overflow: hidden;
 }
-.countdown-section::before
-{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
-    opacity: 0.3;
-}
 
 /* ====================================
-   App Date Selector Styles.
+   App Date Picker Width Styles.
 ======================================= */
 .date-section, .date-picker { width: min(100%, 420px); }
 
@@ -124,5 +118,4 @@
 {
     .app-shell { padding: 1rem; }
     .app-shell::after { background-size: 55px 55px; }
-    .countdown-section { padding: 1.5rem; }
 }

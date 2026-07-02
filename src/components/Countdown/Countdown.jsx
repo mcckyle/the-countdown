@@ -1,9 +1,9 @@
 //Filename: Countdown.jsx
 //Author: Kyle McColgan
-//Date: 22 June 2026
+//Date: 1 July 2026
 //Description: This file contains the parent component for the Countdown React project.
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { getTimeRemaining } from "../../utils/timeUtils";
 
 import "./Countdown.css"
@@ -18,7 +18,6 @@ const UNITS = [
 function Countdown({ targetDate })
 {
   const [timeLeft, setTimeLeft] = useState(getTimeRemaining(targetDate));
-  const [pulse, setPulse] = useState(0);
 
   useEffect(() =>
   {
@@ -26,7 +25,6 @@ function Countdown({ targetDate })
     {
       const remaining = getTimeRemaining(targetDate);
       setTimeLeft(remaining);
-      setPulse(value => value + 1);
     };
 
     update();
@@ -40,35 +38,32 @@ function Countdown({ targetDate })
   if (complete)
   {
     return (
-      <div
-        className="countdown complete"
+      <section
+        className="countdown countdown-complete"
         aria-live="polite"
       >
-        <span className="complete-badge">July 4, 2026</span>
+        <p className="complete-date">July 4, 2026</p>
         <h2 className="complete-title">Happy Independence Day</h2>
         <p className="complete-subtitle">Honoring freedom and independence.</p>
-      </div>
+      </section>
     );
   }
 
   return (
-    <div
+    <section
       className="countdown"
       role="timer"
       aria-live="polite"
     >
       {UNITS.map(({ key, label }) => (
-        <div
-          key={key}
-          className="time-unit"
-        >
-          <span key={`${key}-${pulse}`} className="time-value">
+        <div key={key} className="time-unit">
+          <span className="time-value">
             {String(timeLeft[key]).padStart(2, "0")}
           </span>
           <span className="time-label">{label}</span>
         </div>
       ))}
-    </div>
+    </section>
   );
 }
 

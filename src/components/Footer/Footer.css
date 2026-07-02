@@ -11,7 +11,7 @@
 
     display: flex;
     justify-content: center;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
 }
 
 /* ====================================
@@ -26,13 +26,12 @@
     flex-wrap: wrap;
     gap: 0.45rem;
 
-    font-size: 0.68rem;
-    letter-spacing: 0.18em;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--color-text-muted);
     text-align: center;
+    color: var(--color-text-muted);
 }
-.footer-muted { color: var(--color-text-muted); }
 
 /* ====================================
    Footer Link Styles.
@@ -40,9 +39,8 @@
 .footer-link
 {
     color: var(--color-text);
-    text-decoration: none;
 
-    transition: opacity var(--transition), color var(--transition);
+    transition: color var(--transition), opacity var(--transition);
 }
 
 /* ====================================
@@ -58,5 +56,5 @@
 ======================================= */
 @media (max-width: 640px)
 {
-    .footer-text { font-size: 0.58rem; letter-spacing: 0.12em; }
+    .footer-text { font-size: 0.58rem; letter-spacing: 0.14em; }
 }

@@ -8,7 +8,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: clamp(1rem, 4vw, 3rem);
+    gap: clamp(1rem, 5vw, 4rem);
     align-items: center;
 }
 
@@ -17,22 +17,10 @@
 ======================================= */
 .time-unit
 {
-    position: relative;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-}
-.time-unit:not(:last-child)::after
-{
-    content: "";
-    position: absolute;
-    right: -15%;
-    top: 20%;
-    height: 60%;
-    width: 1px;
-    background: rgba(255, 255, 255, 0.10);
 }
 
 /* ====================================
@@ -40,18 +28,17 @@
 ======================================= */
 .time-value
 {
-    display: block;
     font-family: var(--heading-font);
-    font-size: clamp(4rem, 12vw, 9rem);
+    font-size: clamp(4rem, 14vw, 10rem);
     font-weight: 700;
     font-variant-numeric: tabular-nums;
 
-    line-height: 0.8;
-    letter-spacing: -0.06em;
+    line-height: 0.85;
+    letter-spacing: -0.07em;
     color: var(--color-text);
-    text-shadow: 0 0 45px rgba(255, 255, 255, 0.12);
+    text-shadow: 0 0 60px rgba(255, 255, 255, 0.14);
 
-    animation: countdownPulse 0.25s ease both;
+    animation: countdownTick 400ms ease both;
 }
 
 /* ====================================
@@ -59,10 +46,10 @@
 ======================================= */
 .time-label
 {
-    margin-top: 1.25rem;
+    margin-top: 1rem;
     font-size: 0.7rem;
     font-weight: 700;
-    letter-spacing: 0.32em;
+    letter-spacing: 0.35em;
     text-transform: uppercase;
     color: var(--color-text-muted);
 }
@@ -79,21 +66,18 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 1.5rem;
+    gap: 1rem;
 }
-.complete-badge
+.complete-date
 {
-    padding: 0.55rem 1.2rem;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid var(--color-border);
-    font-size: 0.7rem;
-    letter-spacing: 0.24em;
+    margin: 0;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--color-text-muted);
 }
-.complete-title { font-size: clamp(3rem, 8vw, 6rem); letter-spacing: -0.05em; }
-.complete-subtitle { color: var(--color-text-muted); max-width: 34ch; }
+.complete-title { font-size: clamp(3rem, 9vw, 7rem); letter-spacing: -0.06em; }
+.complete-subtitle { margin: 0; color: var(--color-text-muted); max-width: 34ch; }
 
 /* ====================================
    Countdown Desktop Hover Styles.
@@ -107,10 +91,10 @@
 /* ====================================
    Countdown Animations Styles.
 ======================================= */
-@keyframes countdownPulse
+@keyframes countdownTick
 {
-    from { opacity: 0.65; transform: scale(0.96); }
-    to { opacity: 1; transform: scale(1); }
+    from { opacity: 0.6; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* ====================================
@@ -118,8 +102,7 @@
  ======================================= */
 @media (max-width: 760px)
 {
-    .countdown { grid-template-columns: repeat(2, 1fr); }
-    .time-unit:not(:last-child)::after { display: none; }
+    .countdown { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
 }
 @media (max-width: 420px)
 {
