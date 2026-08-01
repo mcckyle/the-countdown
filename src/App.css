@@ -14,22 +14,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: clamp(1rem, 4vw, 3rem);
+    padding: clamp(1rem, 2vw, 2rem) clamp(1rem, 5vw, 4rem) clamp(2rem, 4vw, 3rem);
     overflow: hidden;
 }
 
 /* ====================================
-   App Ambient Independence Atmosphere Styles.
+   App Ambient Atmosphere Styles.
 ======================================= */
 .app-shell::before
 {
     content: "";
     position: absolute;
     inset: -20%;
-    background: radial-gradient(circle at 30% 20%, rgba(185, 28, 45, 0.22), transparent 35%),
-                radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.18), transparent 40%);
+    background: radial-gradient(circle at 30% 20%, rgba(185, 28, 45, 0.18), transparent 35%),
+                radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.15), transparent 40%);
 
-    filter: blur(90px);
+    filter: blur(110px);
     z-index: -2;
 }
 
@@ -53,7 +53,7 @@
     );
     background-size: 80px 80px;
     mask-image: radial-gradient(circle, black, transparent 70%);
-    opacity: 0.25;
+    opacity: 0.16;
     pointer-events: none;
     z-index: -1;
 }
@@ -63,7 +63,7 @@
 ======================================= */
 .main
 {
-    width: min(100%, 1080px);
+    width: min(100%, 1200px);
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -80,36 +80,33 @@
 .countdown-section
 {
     width: 100%;
-    padding: clamp(1.5rem, 6vw, 5rem);
+    padding: clamp(2rem, 7vw, 6rem);
     border-radius: var(--radius);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.035));
-    border: 1px solid var(--color-border);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.03));
+    border: 1px solid rgba(255, 255, 255, 0.090);
     backdrop-filter: blur(var(--glass-blur));
     box-shadow: var(--shadow-soft);
     overflow: hidden;
+}
+.countdown-section::before
+{
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.080),
+        transparent 30%
+    );
+    opacity: 0.70;
 }
 
 /* ====================================
    App Date Picker Width Styles.
 ======================================= */
 .date-section, .date-picker { width: min(100%, 420px); }
-
-/* ====================================
-   App Hover Effects Styles.
-======================================= */
-/*@media (hover: hover)
-{
-    .countdown-section
-    {
-        transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
-    }
-    .countdown-section:hover
-    {
-        transform: translateY(-3px);
-        border-color: var(--color-border-strong);
-        box-shadow: var(--shadow-raised);
-    }
-}*/
 
 /* ====================================
    App Media Query Styles.

@@ -35,12 +35,15 @@
    Base Layout Styles.
 ======================================= */
 html, body, #root { min-height: 100%; }
-html { background: var(--color-bg); }
+#root { display: flex; }
+html { background: var(--color-bg); scroll-behavior: smooth; }
 body
 {
     margin: 0;
     font-family: var(--main-font);
     color: var(--color-text);
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
     background: linear-gradient(180deg, var(--color-bg), var(--color-bg-soft));
 
     -webkit-font-smoothing: antialiased;
@@ -77,7 +80,7 @@ a:hover { color: var(--color-accent); }
 /* ====================================
    Accessibility Styles.
 ======================================= */
-:focus-visible { outline: 2px solid white; outline-offset: 4px; }
+:focus-visible { outline: 2px solid var(--color-secondary); outline-offset: 3px; }
 
 /* ====================================
    Selection Styles.
@@ -98,9 +101,11 @@ a:hover { color: var(--color-accent); }
 ======================================= */
 @media (prefers-reduced-motion: reduce)
 {
+    html { scroll-behavior: auto; }
     *, *::before, *::after
     {
         transition-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
     }
 }

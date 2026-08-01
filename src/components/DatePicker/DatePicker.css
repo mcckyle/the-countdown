@@ -5,10 +5,10 @@
 ======================================= */
 .date-picker
 {
-    width: min(100%, 420px);
+    width: min(100%, 400px);
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1rem;
 }
 
 /* ====================================
@@ -32,9 +32,10 @@
     width: 100%;
     min-height: 3.5rem;
     padding: 0.85rem 1.25rem;
+    line-height: 1.2;
 
     color: var(--color-text);
-    background: rgba(255, 255, 255, 0.045);
+    background: rgba(255, 255, 255, 0.05);
 
     border: 1px solid var(--color-border);
     border-radius: 999px;
@@ -52,7 +53,7 @@
 {
     outline: none;
     border-color: var(--color-border-strong);
-    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.06);
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.18);
 }
 .date-help { margin: 0; text-align: center; font-size: 0.8rem; color: var(--color-text-muted); }
 
@@ -62,5 +63,8 @@
 .date-input::-webkit-calendar-picker-indicator
 {
     cursor: pointer;
-    opacity: 0.8;
+    opacity: 0.65;
+
+    transition: opacity var(--transition);
 }
+.date-input:hover::-webkit-calendar-picker-indicator { opacity: 0.90; }

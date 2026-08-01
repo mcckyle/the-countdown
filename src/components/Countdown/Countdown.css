@@ -7,8 +7,8 @@
 {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: clamp(1rem, 5vw, 4rem);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(1.25rem, 3vw, 3rem);
     align-items: center;
 }
 
@@ -17,10 +17,12 @@
 ======================================= */
 .time-unit
 {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding-inline: clamp(0.25rem, 1vw, 1rem);
 }
 
 /* ====================================
@@ -29,14 +31,15 @@
 .time-value
 {
     font-family: var(--heading-font);
-    font-size: clamp(4rem, 14vw, 10rem);
+    font-size: clamp(4.25rem, 13vw, 9rem);
     font-weight: 700;
+    font-feature-settings: "tnum";
     font-variant-numeric: tabular-nums;
 
     line-height: 0.85;
     letter-spacing: -0.07em;
     color: var(--color-text);
-    text-shadow: 0 0 60px rgba(255, 255, 255, 0.14);
+    text-shadow: 0 0 42px rgba(255, 255, 255, 0.12);
 
     animation: countdownTick 400ms ease both;
 }
@@ -47,9 +50,9 @@
 .time-label
 {
     margin-top: 1rem;
-    font-size: 0.7rem;
+    font-size: 0.72rem;
     font-weight: 700;
-    letter-spacing: 0.35em;
+    letter-spacing: 0.32em;
     text-transform: uppercase;
     color: var(--color-text-muted);
 }
@@ -57,16 +60,15 @@
 /* ====================================
    Countdown Completion State Styles.
 ======================================= */
-.countdown.complete
+.countdown-complete
 {
-    min-height: 260px;
-
+    min-height: 18rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 1rem;
+    gap: 1.25rem;
 }
 .complete-date
 {
@@ -80,20 +82,11 @@
 .complete-subtitle { margin: 0; color: var(--color-text-muted); max-width: 34ch; }
 
 /* ====================================
-   Countdown Desktop Hover Styles.
-======================================= */
-/*@media (hover: hover)
-{
-    .time-unit { transition: transform var(--transition); }
-    .time-unit:hover { transform: translateY(-4px); }
-}*/
-
-/* ====================================
    Countdown Animations Styles.
 ======================================= */
 @keyframes countdownTick
 {
-    from { opacity: 0.6; transform: translateY(4px); }
+    from { opacity: 0.72; transform: translateY(2px); }
     to { opacity: 1; transform: translateY(0); }
 }
 

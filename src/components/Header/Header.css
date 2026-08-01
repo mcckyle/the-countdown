@@ -12,9 +12,9 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: clamp(0.75rem, 2vw, 1.25rem);
+    gap: clamp(0.90rem, 2vw, 1.4rem);
 
-    animation: fadeIn 0.8s var(--transition) both;
+    animation: fadeIn 0.8s var(--transition) 0.08s both;
 }
 
 /* ====================================
@@ -38,11 +38,11 @@
     position: absolute;
     left: 50%;
     bottom: -0.55rem;
-    width: 2.5rem;
+    width: 3rem;
     height: 1px;
     transform: translateX(-50%);
     background: var(--color-accent);
-    opacity: 0.75;
+    opacity: 0.45;
 }
 
 /* ====================================
@@ -50,12 +50,12 @@
 ======================================= */
 .header-title
 {
-    max-width: 12ch;
-    font-size: clamp(3.5rem, 11vw, 7.5rem);
+    max-width: 14ch;
+    font-size: clamp(3.75rem, 10vw, 7rem);
     line-height: 0.88;
     letter-spacing: -0.07em;
     text-wrap: balance;
-    text-shadow: 0 0 60px rgba(255, 255, 255, 0.12);
+    text-shadow: 0 0 42px rgba(255, 255, 255, 0.10);
 }
 
 /* ====================================
@@ -64,35 +64,14 @@
 .header-subtitle
 {
     margin: 0;
-    max-width: 42ch;
+    max-width: 38ch;
     font-size: clamp(0.9rem, 2vw, 1rem);
-    line-height: 1.7;
+    line-height: 1.65;
+    letter-spacing: 0.01em;
 
     color: var(--color-text-muted);
     text-wrap: balance;
 }
-
-/* ====================================
-   Header Animations Styles.
-======================================= */
-/*@keyframes fadeInUp
-{
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes titlePop
-{
-    0% { opacity: 0; transform: scale(0.9); }
-    70% { opacity: 1; transform: scale(1.06); }
-    100% { transform: scale(1); }
-}
-
-@keyframes pulse
-{
-    0% { transform: translateY(-0.05em) scale(1); opacity: 0.75; }
-    100% { transform: translateY(-0.1em) scale(1.02); opacity: 0.85; }
-}*/
 
 /* ====================================
    Header Media Queries Styles.
