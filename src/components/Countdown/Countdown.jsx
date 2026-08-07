@@ -1,6 +1,6 @@
 //Filename: Countdown.jsx
 //Author: Kyle McColgan
-//Date: 1 August 2026
+//Date: 6 August 2026
 //Description: This file contains the parent component for the Countdown React project.
 
 import { useState, useEffect } from "react";
@@ -44,7 +44,7 @@ function Countdown({ targetDate })
       >
         <p className="complete-date">September 7, 2026</p>
         <h2 className="complete-title">Happy Labor Day</h2>
-        <p className="complete-subtitle">Honoring freedom and independence.</p>
+        <p className="complete-subtitle">Honoring the people whose work builds our communities.</p>
       </section>
     );
   }

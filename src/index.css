@@ -5,16 +5,16 @@
 ======================================= */
 :root
 {
-    --color-bg: #03050a;
-    --color-bg-soft: #070b14;
+    --color-bg: #05070b;
+    --color-bg-soft: #0b1017;
 
     --color-text: #f8fafc;
     --color-text-muted: rgba(248, 250, 252, 0.68);
-    --color-border: rgba(255, 255, 255, 0.10);
-    --color-border-strong: rgba(255, 255, 255, 0.18);
+    --color-border: rgba(255, 255, 255, 0.09);
+    --color-border-strong: rgba(255, 255, 255, 0.16);
 
-    --color-accent: #b91c2d;
-    --color-secondary: #3b82f6;
+    --color-accent: #c68b3c;
+    --color-secondary: #6ea6c8;
 
     --shadow-soft: 0 30px 90px rgba(0, 0, 0, 0.45);
     --glass-blur: 24px;

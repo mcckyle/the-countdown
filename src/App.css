@@ -26,8 +26,9 @@
     content: "";
     position: absolute;
     inset: -20%;
-    background: radial-gradient(circle at 30% 20%, rgba(185, 28, 45, 0.18), transparent 35%),
-                radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.15), transparent 40%);
+    background: radial-gradient(circle at 18% 18%, rgba(198, 139, 60, 0.16), transparent 38%),
+                radial-gradient(circle at 82% 74%, rgba(110, 166, 200, 0.10), transparent 42%),
+                radial-gradient(circle at 50% 100%, rgba(255, 181, 92, 0.06), transparent 60%);
 
     filter: blur(110px);
     z-index: -2;
@@ -82,7 +83,7 @@
     width: 100%;
     padding: clamp(2rem, 7vw, 6rem);
     border-radius: var(--radius);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.03));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(235, 220, 195, 0.025));
     border: 1px solid rgba(255, 255, 255, 0.090);
     backdrop-filter: blur(var(--glass-blur));
     box-shadow: var(--shadow-soft);
