@@ -5,16 +5,14 @@
 ======================================= */
 .header
 {
-    position: relative;
-    z-index: 1;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: clamp(0.90rem, 2vw, 1.4rem);
+    gap: clamp(0.75rem, 1.5vw, 1.15rem);
 
-    animation: fadeIn 0.8s var(--transition) 0.08s both;
+    animation: fadeIn 700ms var(--ease-out) 80ms both;
 }
 
 /* ====================================
@@ -22,27 +20,14 @@
 ======================================= */
 .header-eyebrow
 {
-    position: relative;
     margin: 0;
-    padding-inline: 0.75rem;
-
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.38em;
-    text-transform: uppercase;
     color: var(--color-text-muted);
-}
-.header-eyebrow::after
-{
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -0.55rem;
-    width: 3rem;
-    height: 1px;
-    transform: translateX(-50%);
-    background: var(--color-accent);
-    opacity: 0.45;
+
+    font-size: 0.66rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.30em;
+    text-transform: uppercase;
 }
 
 /* ====================================
@@ -51,11 +36,11 @@
 .header-title
 {
     max-width: 14ch;
-    font-size: clamp(3.75rem, 10vw, 7rem);
-    line-height: 0.88;
-    letter-spacing: -0.07em;
+    color: var(--color-text);
+    font-size: clamp(4rem, 9vw, 7rem);
+    letter-spacing: -0.065em;
     text-wrap: balance;
-    text-shadow: 0 0 42px rgba(255, 255, 255, 0.10);
+    text-shadow: 0 0 40px rgba(255, 255, 255, 0.07);
 }
 
 /* ====================================
@@ -65,11 +50,10 @@
 {
     margin: 0;
     max-width: 38ch;
-    font-size: clamp(0.9rem, 2vw, 1rem);
-    line-height: 1.65;
-    letter-spacing: 0.01em;
 
     color: var(--color-text-muted);
+    font-size: clamp(0.85rem, 1.5vw, 0.98rem);
+    line-height: 1.6;
     text-wrap: balance;
 }
 
@@ -78,5 +62,8 @@
 ======================================= */
 @media (max-width: 640px)
 {
-    .header-eyebrow { font-size: 0.62rem; letter-spacing: 0.26em; }
+    .header { gap: 0.80rem; }
+    .header-eyebrow { font-size: 0.60rem; letter-spacing: 0.24em; }
+    .header-title { font-size: clamp(3.5rem, 16vw, 5rem); }
+    .header-subtitle { max-width: 32ch; font-size: 0.82rem; }
 }

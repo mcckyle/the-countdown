@@ -5,11 +5,13 @@
 ======================================= */
 .countdown
 {
+    position: relative;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: clamp(1.25rem, 3vw, 3rem);
-    align-items: center;
+    align-items: end;
+    padding: clamp(1.5rem, 4vw, 3rem) 0;
+    border-block: 1px solid var(--color-border);
 }
 
 /* ====================================
@@ -17,31 +19,34 @@
 ======================================= */
 .time-unit
 {
-    position: relative;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-inline: clamp(0.25rem, 1vw, 1rem);
+    padding-inline: clamp(0.5rem, 2vw, 1.5rem);
 }
+.time-unit + .time-unit { border-left: 1px solid var(--color-border); }
 
 /* ====================================
    Countdown Numbers Styles.
 ======================================= */
 .time-value
 {
-    font-family: var(--heading-font);
-    font-size: clamp(4.25rem, 13vw, 9rem);
-    font-weight: 700;
-    font-feature-settings: "tnum";
-    font-variant-numeric: tabular-nums;
-
-    line-height: 0.85;
-    letter-spacing: -0.07em;
+    display: block;
     color: var(--color-text);
-    text-shadow: 0 0 42px rgba(255, 255, 255, 0.12);
+    font-family: var(--font-display);
+    font-size: clamp(4.5rem, 11vw, 9.5rem);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
 
-    animation: countdownTick 400ms ease both;
+    line-height: 0.82;
+    letter-spacing: -0.065em;
+
+    text-shadow: 0 0 40px rgba(255, 255, 255, 0.08);
+
+    animation: countdown-tick 350ms var(--ease-out) both;
 }
 
 /* ====================================
@@ -49,12 +54,13 @@
 ======================================= */
 .time-label
 {
-    margin-top: 1rem;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
+    margin-top: clamp(1rem, 2vw, 1.5rem);
     color: var(--color-text-muted);
+    font-size: 0.68rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
 }
 
 /* ====================================
@@ -62,31 +68,33 @@
 ======================================= */
 .countdown-complete
 {
-    min-height: 18rem;
+    min-height: clamp(18rem, 35vw, 26rem);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 1.25rem;
+    gap: 1rem;
+    padding: 2rem;
 }
 .complete-date
 {
-    margin: 0;
-    font-size: 0.75rem;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
     color: var(--color-text-muted);
+    font-size: 0.68rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
 }
-.complete-title { font-size: clamp(3rem, 9vw, 7rem); letter-spacing: -0.06em; }
-.complete-subtitle { margin: 0; color: var(--color-text-muted); max-width: 34ch; }
+.complete-title { max-width: 12ch; color: var(--color-text); font-size: clamp(3.5rem, 8vw, 7rem); letter-spacing: -0.065em; }
+.complete-subtitle { max-width: 36ch; color: var(--color-text-muted); font-size: 0.90rem; }
 
 /* ====================================
    Countdown Animations Styles.
 ======================================= */
-@keyframes countdownTick
+@keyframes countdown-tick
 {
-    from { opacity: 0.72; transform: translateY(2px); }
+    from { opacity: 0.72; transform: translateY(3px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
@@ -95,9 +103,16 @@
  ======================================= */
 @media (max-width: 760px)
 {
-    .countdown { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+    .countdown { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 2.5rem; }
+    .time-unit:nth-child(3) { border-left: 0; }
+    .time-unit:nth-child(n + 3) { padding-top: 0.50rem; }
+    .time-value { font-size: clamp(4rem, 17vw, 6.5rem); }
 }
 @media (max-width: 420px)
 {
-    .time-value { font-size: 3.5rem; }
+    .countdown { row-gap: 2rem; padding-block: 1.25rem; }
+    .time-unit { padding-inline: 0.25rem; }
+    .time-value { font-size: clamp(3.25rem, 18vw, 4.5rem); }
+    .time-label { margin-top: 0.85rem; font-size: 0.60rem; letter-spacing: 0.22em; }
+    .complete-title { font-size: clamp(3rem, 15vw, 4.5rem); }
 }

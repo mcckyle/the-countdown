@@ -1,6 +1,6 @@
 //Filename: App.jsx
 //Author: Kyle McColgan
-//Date: 1 August 2026
+//Date: 20 August 2026
 //Description: This file contains the entry component for the Countdown React project.
 
 import { useState } from "react";
@@ -11,10 +11,12 @@ import Footer from "./components/Footer/Footer.jsx";
 
 import "./App.css";
 
+const INITIAL_TARGET_DATE = "2026-09-07T00:00:00"
+
 function App()
 {
   //Target date: Labor Day 2026 (September 7, 2026).
-  const [targetDate, setTargetDate] = useState("2026-09-07T00:00:00");
+  const [targetDate, setTargetDate] = useState(INITIAL_TARGET_DATE);
   const today = new Date().toISOString().split("T")[0];
 
   const handleDateChange = ({ target }) =>
