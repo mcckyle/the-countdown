@@ -1,6 +1,6 @@
 #File name: ci.yml
 #Author: Kyle McColgan
-#Date: 1 August 2026
+#Date: 1 October 2026
 #Description: This file contains the GitHub Actions Workflow and GitHub Pages deployment processes for the Countdown React project.
 
 name: CI and Deploy
@@ -14,7 +14,12 @@ on:
       - main
 
 permissions:
-  contents: write
+  contents: write  # For push to the gh-pages branch...
+
+#Prevents multiple concurrent deployments from stepping on each other...
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build-and-deploy:
@@ -22,10 +27,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v7
 
     - name: Set up Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v7
       with:
         node-version: '24'
 
@@ -36,7 +41,8 @@ jobs:
       run: npm run build
 
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist
+        branch: gh-pages           # The branch to push to.
+        folder: dist               # Vite's build folder is dist.
+        token: ${{ secrets.GH_TOKEN }}  # Using the PAT secret for deployment.

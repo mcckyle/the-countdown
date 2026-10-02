@@ -1,48 +1,84 @@
+[![CI and Deploy](https://github.com/mcckyle/the-countdown/actions/workflows/ci.yml/badge.svg)](https://github.com/mcckyle/the-countdown/actions/workflows/ci.yml)
+[![License](https://img.shields.io/badge/License-MIT-blue)](./LICENSE)
 # The Countdown
 
-A simple, modern, and seasonal countdown experience built with **React** and **Vite**, designed to bring a touch of festive spirit to your browser.
+A modern, seasonal countdown built with React and Vite.
 
-## 🎯 Overview
+The Countdown provides a focused way to count down to meaningful dates, with live time updates and support for selecting future dates.
 
-The Countdown app provides a simple, modern interface that updates in real time as you approach a meaningful seasonal date. Originally created for Halloween, this countdown is designed to support effortless transitions into other themes - such as Thanksgiving, Christmas, New Year, or any special occasion.
+## Overview
 
-## ✨ Features
+The project is designed around a small, reusable React component structure and an intentionally restrained visual system.
 
-- 🎄 **Simple, modern UI** with subtle animations and gradients.
-- ⏳ **Live countdown** updating every second.
-- 📅 **Date selection support** (for flexible future use).
-- 💻 **Fast development workflow** powered by Vite.
-- 🔧 **Lightweight, clean React component structure.**
+Seasonal content can be updated without changing the application's underlying countdown functionality, allowing the experience to evolve throughout the year.
 
-## 🚀 Getting Started
+## Features
+
+- Live countdown updated every second.
+- Future date selection with a native date control.
+- Responsive layout for desktop and mobile screens.
+- Accessible semantic markup and keyboard-friendly controls.
+- Lightweight styling built with modern CSS.
+- Seasonal presentation built around reusable components.
+
+## Tech Stack
+
+| Technology | Purpose |
+| --- | --- |
+| [React](https://react.dev/) | User interface and component architecture |
+| [Vite](https://vite.dev/) | Development server and production build |
+| JavaScript | Application logic |
+| CSS | Layout, responsive design, animation, and theming |
+| ESLint | Code quality and consistency |
+
+## Getting Started
 
 ### Prerequisites
 
-Ensure you have **Node.js** and **npm** installed on your machine.
+- Node.js
+- npm
 
 ### Installation
 
+Clone the repository and install its dependencies:
+
 ```bash
+git clone https://github.com/mcckyle/the-countdown.git
+cd the-countdown
 npm install
 ```
 
-### Run the Development Server
+### Development
+
+Start the Vite development server:
 
 ```bash
 npm run dev
 ```
 
-### Build for Production
+### Production Build
+
+Create an optimized production build:
 
 ```bash
 npm run build
 ```
 
-## 📁 Architecture
+### Preview
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Project Structure
 
 ```
 the-countdown/
-├── public/               # Static assets (served as-is).
+├── public/
+│   └── images/           # Static assets (served as-is).
+│
 ├── src/                  # Application Source code.
 │   ├── components/       # Reusable React components.
 │   │   ├── Countdown/
@@ -67,7 +103,7 @@ the-countdown/
 │   ├── App.jsx           # Main React application component.
 │   ├── main.jsx          # React DOM entry point.
 │   ├── App.css           # Styles specific to App.jsx.
-│   └── index.css         # Global styles and Tailwind imports.
+│   └── index.css         # Global styles.
 │
 ├── .gitignore            # Specifies intentionally untracked files and folders to ignore.
 ├── README.md             # Project overview, instructions, and documentation.
@@ -78,21 +114,57 @@ the-countdown/
 └── package-lock.json     # Exact versions of installed dependencies.
 ```
 
-## 🎨 Theming
+## Design
 
-The app uses a simple, extensible design system based on CSS variables. You can easily adjust color palettes, animations, and layout values in the global stylesheet.
+The interface uses a small CSS design system built around shared variables for typography, color, spacing, borders, motion, and responsive behavior.
 
-## 🌱 Future Enhancements
+The visual language intentionally favors:
 
-- Theme switching (Fall, Winter, Holiday variants).
-- Custom countdown events.
-- Shareable countdown links.
-- Background seasonal animations.
+- Editorial typography.
+- Spacious layouts.
+- Restrained color and atmosphere.
+- Subtle motion.
+- Clear visual hierarchy.
 
-## 🧑‍💻 Author
+Seasonal themes can be created by adjusting the design tokens and content without restructuring the application.
 
-Designed in **Saint Louis, Missouri** by **Kyle McColgan**.
+## Customizing the Countdown
 
-## 📝 License
+The default event is configured in `App.jsx`:
 
-This project is open source and available under the MIT License.
+```bash
+const INITIAL_TARGET_DATE = "2026-10-12T00:00:00";
+```
+
+Update this value to establish a different initial countdown date.
+
+The event title, date, supporting copy, and completion messages can be updated through the `Header` and `Countdown` components.
+
+## Accessibility
+
+The Countdown is designed with accessibility in mind, including:
+
+- Semantic HTML
+- Descriptive labels for countdown values.
+- Keyboard-accessible form controls.
+- Visible focus states.
+- Reduced-motion support.
+- Responsive text and layout behavior.
+
+Seasonal themes can be created by adjusting the design tokens and content without restructuring the application.
+
+## Deployment
+
+The project is configured for production builds with Vite and can be deployed to static hosting platforms that support client-side applications.
+
+The repository's GitHub Actions workflow handles continuous intergration and deployment.
+
+## Author
+
+Designed in Saint Louis, Missouri by **Kyle McColgan**.
+
+[Portfolio](https://mcckyle.github.io/) · [GitHub](https://github.com/mcckyle)
+
+## License
+
+This Countdown is open source software released under the [MIT License](./LICENSE).

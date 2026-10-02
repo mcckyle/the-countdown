@@ -10,9 +10,9 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: clamp(0.75rem, 1.5vw, 1.15rem);
+    gap: clamp(0.80rem, 1.6vw, 1.2rem);
 
-    animation: fadeIn 700ms var(--ease-out) 80ms both;
+    animation: fade-in 700ms var(--ease-out) 80ms both;
 }
 
 /* ====================================
@@ -23,7 +23,7 @@
     margin: 0;
     color: var(--color-text-muted);
 
-    font-size: 0.66rem;
+    font-size: 0.64rem;
     font-weight: 700;
     line-height: 1;
     letter-spacing: 0.30em;
@@ -40,7 +40,6 @@
     font-size: clamp(4rem, 9vw, 7rem);
     letter-spacing: -0.065em;
     text-wrap: balance;
-    text-shadow: 0 0 40px rgba(255, 255, 255, 0.07);
 }
 
 /* ====================================
@@ -63,7 +62,7 @@
 @media (max-width: 640px)
 {
     .header { gap: 0.80rem; }
-    .header-eyebrow { font-size: 0.60rem; letter-spacing: 0.24em; }
-    .header-title { font-size: clamp(3.5rem, 16vw, 5rem); }
+    .header-eyebrow { font-size: 0.58rem; letter-spacing: 0.24em; }
+    .header-title { max-width: 12ch; font-size: clamp(3.5rem, 16vw, 5rem); }
     .header-subtitle { max-width: 32ch; font-size: 0.82rem; }
 }

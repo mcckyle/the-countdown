@@ -37,7 +37,6 @@
     min-height: 3.25rem;
     padding: 0.75rem 1.15rem;
 
-
     background: var(--color-surface);
     color: var(--color-text);
 
@@ -45,21 +44,11 @@
     border-radius: 999px;
     color-scheme: dark;
 
-    transition: border-color var(--transition),
-                background-color var(--transition),
-                box-shadow var(--transition);
+    transition: background-color var(--transition),
+                border-color var(--transition);
 }
 .date-input:hover { background: var(--color-surface-strong); border-color: var(--color-border-strong); }
-
-/* ====================================
-   DatePicker Focus State Styles.
-======================================= */
-.date-input:focus
-{
-    outline: none;
-    border-color: var(--color-secondary);
-    box-shadow: 0 0 0 3px rgba(110, 166, 200, 0.14);
-}
+.date-input:focus-visible { border-color: var(--color-secondary); }
 
 /* ====================================
    DatePicker Calendar Icon Styles.
@@ -72,7 +61,7 @@
     transition: opacity var(--transition-fast);
 }
 .date-input:hover::-webkit-calendar-picker-indicator,
-.date-input:focus::-webkit-calendar-picker-indicator { opacity: 0.90; }
+.date-input:focus-visible::-webkit-calendar-picker-indicator { opacity: 0.90; }
 
 /* ====================================
    DatePicker Help Text Styles.

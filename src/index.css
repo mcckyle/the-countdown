@@ -5,33 +5,25 @@
 ======================================= */
 :root
 {
-    --color-bg: #05070b;
-    --color-bg-soft: #0b1017;
+    --color-bg: #070908;
+    --color-bg-soft: #0b1010;
 
     --color-surface: rgba(255, 255, 255, 0.045);
     --color-surface-strong: rgba(255, 255, 255, 0.07);
 
-    --color-text: #f8fafc;
-    --color-text-muted: rgba(248, 250, 252, 0.64);
-    --color-text-subtle: rgba(248, 250, 252, 0.42);
+    --color-text: #f7f7f4;
+    --color-text-muted: rgba(247, 247, 244, 0.64);
+    --color-text-subtle: rgba(247, 247, 244, 0.40);
 
     --color-border: rgba(255, 255, 255, 0.09);
     --color-border-strong: rgba(255, 255, 255, 0.15);
 
-    --color-accent: #c68b3c;
-    --color-accent-soft: rgba(198, 139, 60, 0.16);
-    --color-secondary: #6ea6c8;
-
-    --shadow-soft: 0 24px 70px rgba(0, 0, 0, 0.38);
-    --shadow-strong: 0 40px 120px rgba(0, 0, 0, 0.48);
-    --blur: 20px;
+    --color-accent: #a97855;
+    --color-accent-soft: rgba(169, 120, 85, 0.16);
+    --color-secondary: #7f9b91;
 
     --font-body: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     --font-display: "Cormorant Garamond", Georgia, serif;
-
-    --radius-sm: 0.75rem;
-    --radius-md: 1.25rem;
-    --radius-lg: 1.75rem;
 
     --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
     --transition: 260ms var(--ease-out);
@@ -103,7 +95,7 @@ a:hover { color: var(--color-accent); }
 /* ====================================
    Shared Animations Styles.
 ======================================= */
-@keyframes fadeIn
+@keyframes fade-in
 {
     from { opacity: 0; transform: translateY(12px); }
     to { opacity: 1; transform: translateY(0); }

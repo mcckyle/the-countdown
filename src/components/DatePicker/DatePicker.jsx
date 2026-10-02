@@ -1,6 +1,6 @@
 //Filename: DatePicker.jsx
 //Author: Kyle McColgan
-//Date: 20 August 2026
+//Date: 1 October 2026
 //Description: This file contains the entry component for the Countdown React project.
 
 import "./DatePicker.css";
@@ -8,7 +8,7 @@ import "./DatePicker.css";
 export default function DatePicker ({ value, minDate, onChange })
 {
   return (
-    <section className="date-picker" aria-labelledby="countdown-date-label">
+    <div className="date-picker" aria-labelledby="countdown-date-label">
       <label id="countdown-date-label" className="date-label" htmlFor="countdown-date">
         Countdown Date
       </label>
@@ -26,6 +26,6 @@ export default function DatePicker ({ value, minDate, onChange })
       <p id="countdown-date-help" className="date-help">
         Choose a future celebration date.
       </p>
-    </section>
+    </div>
   );
 };
