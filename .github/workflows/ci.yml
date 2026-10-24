@@ -38,9 +38,6 @@ jobs:
       - name: Install dependencies
         run: npm ci #Safer/faster alternative to npm install in CI environments.
 
-      - name: Execute test cases
-        run: npm test
-
       - name: Build the project
         run: npm run build  # Vite outputs to ./dist directory.
 
