@@ -10,7 +10,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: clamp(0.80rem, 1.6vw, 1.2rem);
+    gap: clamp(0.85rem, 1.8vw, 1.2rem);
 
     animation: fade-in 700ms var(--ease-out) 80ms both;
 }
@@ -20,13 +20,11 @@
 ======================================= */
 .header-eyebrow
 {
-    margin: 0;
     color: var(--color-text-muted);
-
     font-size: 0.64rem;
     font-weight: 700;
     line-height: 1;
-    letter-spacing: 0.30em;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
 }
 
@@ -37,8 +35,10 @@
 {
     max-width: 14ch;
     color: var(--color-text);
-    font-size: clamp(4rem, 9vw, 7rem);
+    font-size: clamp(4.5rem, 9vw, 7.5rem);
+    font-weight: 600;
     letter-spacing: -0.065em;
+    text-shadow: 0 0 48px rgba(196, 122, 69, 0.055);
     text-wrap: balance;
 }
 
@@ -47,12 +47,10 @@
 ======================================= */
 .header-subtitle
 {
-    margin: 0;
     max-width: 38ch;
-
     color: var(--color-text-muted);
     font-size: clamp(0.85rem, 1.5vw, 0.98rem);
-    line-height: 1.6;
+    line-height: 1.65;
     text-wrap: balance;
 }
 
@@ -61,8 +59,8 @@
 ======================================= */
 @media (max-width: 640px)
 {
-    .header { gap: 0.80rem; }
+    .header { gap: 0.9rem; }
     .header-eyebrow { font-size: 0.58rem; letter-spacing: 0.24em; }
-    .header-title { max-width: 12ch; font-size: clamp(3.5rem, 16vw, 5rem); }
-    .header-subtitle { max-width: 32ch; font-size: 0.82rem; }
+    .header-title { font-size: clamp(3.5rem, 15vw, 5.5rem); }
+    .header-subtitle { max-width: 32ch; font-size: 0.84rem; }
 }

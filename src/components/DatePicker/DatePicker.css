@@ -5,10 +5,10 @@
 ======================================= */
 .date-picker
 {
-    width: min(100%, 360px);
+    width: min(100%, 330px);
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.8rem;
     margin-inline: auto;
 }
 
@@ -19,7 +19,7 @@
 {
     color: var(--color-text-muted);
 
-    font-size: 0.65rem;
+    font-size: 0.64rem;
     font-weight: 700;
     line-height: 1;
 
@@ -35,9 +35,9 @@
 {
     width: 100%;
     min-height: 3.25rem;
-    padding: 0.75rem 1.15rem;
+    padding: 0.75rem 1.1rem;
 
-    background: var(--color-surface);
+    background: rgba(255, 255, 255, 0.035);
     color: var(--color-text);
 
     border: 1px solid var(--color-border);
@@ -47,8 +47,8 @@
     transition: background-color var(--transition),
                 border-color var(--transition);
 }
-.date-input:hover { background: var(--color-surface-strong); border-color: var(--color-border-strong); }
-.date-input:focus-visible { border-color: var(--color-secondary); }
+.date-input:hover { background: var(--color-surface); border-color: var(--color-border-strong); }
+.date-input:focus-visible { border-color: var(--color-accent); }
 
 /* ====================================
    DatePicker Calendar Icon Styles.
@@ -56,17 +56,17 @@
 .date-input::-webkit-calendar-picker-indicator
 {
     cursor: pointer;
-    opacity: 0.55;
+    opacity: 0.65;
 
     transition: opacity var(--transition-fast);
 }
 .date-input:hover::-webkit-calendar-picker-indicator,
-.date-input:focus-visible::-webkit-calendar-picker-indicator { opacity: 0.90; }
+.date-input:focus-visible::-webkit-calendar-picker-indicator { opacity: 1; }
 
 /* ====================================
    DatePicker Help Text Styles.
 ======================================= */
-.date-help { margin: 0; color: var(--color-text-subtle); font-size: 0.75rem; line-height: 1.4; text-align: center; }
+.date-help { color: var(--color-text-subtle); font-size: 0.74rem; line-height: 1.5; text-align: center; }
 
 /* ====================================
    DatePicker Media Query Styles.

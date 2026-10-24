@@ -1,6 +1,6 @@
 //Filename: Countdown.jsx
 //Author: Kyle McColgan
-//Date: 1 October 2026
+//Date: 23 October 2026
 //Description: This file contains the parent component for the Countdown React project.
 
 import { useState, useEffect } from "react";
@@ -28,20 +28,32 @@ function Countdown({ targetDate })
     };
 
     update();
-    const timer = setInterval(update, 1000);
+    const timer = window.setInterval(update, 1000);
 
-    return () => clearInterval(timer);
+    return () => window.clearInterval(timer);
   }, [targetDate]);
 
   const complete = Object.values(timeLeft).every(value => value <= 0);
+  const formattedDate = new Date(targetDate).toLocaleDateString(
+    "en-US",
+    {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    }
+  );
 
   if (complete)
   {
     return (
-      <section className="countdown countdown-complete" aria-live="polite">
-        <p className="complete-date">October 12, 2026</p>
-        <h2 className="complete-title">Happy Indigenous Peoples' Day</h2>
-        <p className="complete-subtitle">Honoring Indigenous peoples and their cultures.</p>
+      <section
+        className="countdown countdown-complete"
+        aria-live="polite"
+        aria-labelledby="complete-title"
+      >
+        <p className="complete-date">{formattedDate}</p>
+        <h2 id="complete-title" className="complete-title">Happy Halloween</h2>
+        <p className="complete-subtitle">Celebrating the ancient traditions of All Hallows' Eve.</p>
       </section>
     );
   }
@@ -51,7 +63,7 @@ function Countdown({ targetDate })
       className="countdown"
       role="timer"
       aria-live="off"
-      aria-label="Time remaining until the selected date"
+      aria-label={`Time remaining until the ${formattedDate}`}
     >
       {UNITS.map(({ key, label }) => (
         <article

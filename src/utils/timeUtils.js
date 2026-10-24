@@ -1,6 +1,6 @@
 //Filename: timeUtils.js
 //Author: Kyle McColgan
-//Date: 13 April 2026
+//Date: 23 October 2026
 //Description: This file contains a helper function for the Countdown React project.
 
 export function getTimeRemaining(targetDate)
@@ -13,4 +13,13 @@ export function getTimeRemaining(targetDate)
     const days = Math.floor(clamped / (1000 * 60 * 60 * 24));
 
     return { total: clamped, days, hours, minutes, seconds };
+}
+
+export function getLocalDateString(date = new Date())
+{
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+
+    return `${year}-${month}-${day}`;
 }
