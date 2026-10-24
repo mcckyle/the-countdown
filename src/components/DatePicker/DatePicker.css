@@ -3,75 +3,85 @@
 /* ====================================
    DatePicker Container Styles.
 ======================================= */
-.date-picker
-{
-    width: min(100%, 330px);
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    margin-inline: auto;
+.date-picker {
+  width: min(100%, 330px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-inline: auto;
 }
 
 /* ====================================
    DatePicker Label Styles.
 ======================================= */
-.date-label
-{
-    color: var(--color-text-muted);
+.date-label {
+  color: var(--color-text-muted);
 
-    font-size: 0.64rem;
-    font-weight: 700;
-    line-height: 1;
+  font-size: 0.64rem;
+  font-weight: 700;
+  line-height: 1;
 
-    letter-spacing: 0.26em;
-    text-align: center;
-    text-transform: uppercase;
+  letter-spacing: 0.26em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* ====================================
    DatePicker Custom Date Input Field Styles.
 ======================================= */
-.date-input
-{
-    width: 100%;
-    min-height: 3.25rem;
-    padding: 0.75rem 1.1rem;
+.date-input {
+  width: 100%;
+  min-height: 3.25rem;
+  padding: 0.75rem 1.1rem;
 
-    background: rgba(255, 255, 255, 0.035);
-    color: var(--color-text);
+  background: rgba(255, 255, 255, 0.035);
+  color: var(--color-text);
 
-    border: 1px solid var(--color-border);
-    border-radius: 999px;
-    color-scheme: dark;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color-scheme: dark;
 
-    transition: background-color var(--transition),
-                border-color var(--transition);
+  transition:
+    background-color var(--transition),
+    border-color var(--transition);
 }
-.date-input:hover { background: var(--color-surface); border-color: var(--color-border-strong); }
-.date-input:focus-visible { border-color: var(--color-accent); }
+.date-input:hover {
+  background: var(--color-surface);
+  border-color: var(--color-border-strong);
+}
+.date-input:focus-visible {
+  border-color: var(--color-accent);
+}
 
 /* ====================================
    DatePicker Calendar Icon Styles.
 ======================================= */
-.date-input::-webkit-calendar-picker-indicator
-{
-    cursor: pointer;
-    opacity: 0.65;
+.date-input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.65;
 
-    transition: opacity var(--transition-fast);
+  transition: opacity var(--transition-fast);
 }
 .date-input:hover::-webkit-calendar-picker-indicator,
-.date-input:focus-visible::-webkit-calendar-picker-indicator { opacity: 1; }
+.date-input:focus-visible::-webkit-calendar-picker-indicator {
+  opacity: 1;
+}
 
 /* ====================================
    DatePicker Help Text Styles.
 ======================================= */
-.date-help { color: var(--color-text-subtle); font-size: 0.74rem; line-height: 1.5; text-align: center; }
+.date-help {
+  color: var(--color-text-subtle);
+  font-size: 0.74rem;
+  line-height: 1.5;
+  text-align: center;
+}
 
 /* ====================================
    DatePicker Media Query Styles.
 ======================================== */
-@media (max-width: 420px)
-{
-    .date-picker { width: 100%; }
+@media (max-width: 420px) {
+  .date-picker {
+    width: 100%;
+  }
 }
