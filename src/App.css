@@ -3,59 +3,72 @@
 /* ====================================
    Application Shell Styles.
 ======================================= */
-.app-shell
-{
-    position: relative;
-    isolation: isolate;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
-    padding: clamp(1.5rem, 3vh, 2.5rem) clamp(1rem, 5vw, 4rem) clamp(1.5rem, 3vh, 2.25rem);
-    overflow: hidden;
+.app-shell {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: clamp(1.5rem, 3vh, 2.5rem) clamp(1rem, 5vw, 4rem)
+    clamp(1.5rem, 3vh, 2.25rem);
+  overflow: hidden;
 }
 
 /* ====================================
    App Ambient Atmosphere Styles.
 ======================================= */
-.app-shell::before
-{
-    content: "";
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    pointer-events: none;
-    background:
-      radial-gradient(ellipse at 18% 12%, rgba(137, 75, 40, 0.11), transparent 38%),
-      radial-gradient(ellipse at 86% 68%, rgba(91, 49, 68, 0.09), transparent 35%),
-      radial-gradient(ellipse at 50% 100%, rgba(116, 67, 39, 0.055), transparent 42%);
+.app-shell::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      ellipse at 18% 12%,
+      rgba(137, 75, 40, 0.11),
+      transparent 38%
+    ),
+    radial-gradient(
+      ellipse at 86% 68%,
+      rgba(91, 49, 68, 0.09),
+      transparent 35%
+    ),
+    radial-gradient(
+      ellipse at 50% 100%,
+      rgba(116, 67, 39, 0.055),
+      transparent 42%
+    );
 }
 
 /* ====================================
    App Main Layout Styles.
 ======================================= */
-.main
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: clamp(2.75rem, 5vh, 4rem);
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(2.75rem, 5vh, 4rem);
 
-    width: min(100%, 1100px);
-    flex: 1;
-    margin-inline: auto;
+  width: min(100%, 1100px);
+  flex: 1;
+  margin-inline: auto;
 
-    animation: fade-in 700ms var(--ease-out) both;
+  animation: fade-in 700ms var(--ease-out) both;
 }
 
 /* ====================================
    App Media Query Styles.
  ======================================= */
-@media (max-width: 640px)
-{
-    .app-shell { padding: 1.5rem 1rem 1.25rem; }
-    .main { gap: clamp(2.5rem, 6vh, 3.5rem); }
+@media (max-width: 640px) {
+  .app-shell {
+    padding: 1.5rem 1rem 1.25rem;
+  }
+  .main {
+    gap: clamp(2.5rem, 6vh, 3.5rem);
+  }
 }

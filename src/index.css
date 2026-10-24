@@ -3,117 +3,159 @@
 /* ====================================
    Design Tokens.
 ======================================= */
-:root
-{
-    color-scheme: dark;
-    --color-bg: #090807;
-    --color-bg-soft: #100c0b;
-    --color-surface: #151211;
-    --color-surface-hover: #1c1614;
+:root {
+  color-scheme: dark;
+  --color-bg: #090807;
+  --color-bg-soft: #100c0b;
+  --color-surface: #151211;
+  --color-surface-hover: #1c1614;
 
-    --color-text: #f5f0e9;
-    --color-text-muted: #a59b93;
-    --color-text-subtle: #706760;
+  --color-text: #f5f0e9;
+  --color-text-muted: #a59b93;
+  --color-text-subtle: #706760;
 
-    --color-border: rgba(245, 240, 233, 0.1);
-    --color-border-strong: rgba(245, 240, 233, 0.19);
+  --color-border: rgba(245, 240, 233, 0.1);
+  --color-border-strong: rgba(245, 240, 233, 0.19);
 
-    --color-accent: #c47a45;
-    --color-accent-bright: #e3a16a;
-    --color-accent-soft: rgba(196, 122, 69, 0.12);
-    --color-secondary: #a58a9c;
+  --color-accent: #c47a45;
+  --color-accent-bright: #e3a16a;
+  --color-accent-soft: rgba(196, 122, 69, 0.12);
+  --color-secondary: #a58a9c;
 
-    --font-body: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body:
+    "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  --font-display: "Cormorant Garamond", Georgia, serif;
 
-    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-    --transition: 260ms var(--ease-out);
-    --transition-fast: 160ms var(--ease-out);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition: 260ms var(--ease-out);
+  --transition-fast: 160ms var(--ease-out);
 }
 
 /* ====================================
    Global Reset Styles.
 ======================================= */
-*, *::before, *::after { box-sizing: border-box; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 /* ====================================
    Base Layout Styles.
 ======================================= */
-html, body, #root { min-width: 320px; min-height: 100%; }
-#root { display: flex; width: 100%; }
-html { background: var(--color-bg); scroll-behavior: smooth; }
-body
-{
-    min-height: 100vh;
-    margin: 0;
-    background: linear-gradient(180deg, var(--color-bg) 0%, #0b0908 48%, var(--color-bg-soft) 100%);
-    color: var(--color-text);
-    font-family: var(--font-body);
-    line-height: 1.5;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+html,
+body,
+#root {
+  min-width: 320px;
+  min-height: 100%;
+}
+#root {
+  display: flex;
+  width: 100%;
+}
+html {
+  background: var(--color-bg);
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(
+    180deg,
+    var(--color-bg) 0%,
+    #0b0908 48%,
+    var(--color-bg-soft) 100%
+  );
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ====================================
    Headings Styles.
 ======================================= */
-h1, h2, h3
-{
-    margin: 0;
-    font-family: var(--font-display);
-    font-weight: 600;
-    line-height: 0.95;
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 0.95;
 }
-p { margin: 0; }
+p {
+  margin: 0;
+}
 
 /* ====================================
    Interactive Styles.
 ======================================= */
-button, input, select, textarea { font: inherit; }
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
 
 /* ====================================
    Links Styles.
 ======================================= */
-a
-{
-    color: inherit;
-    text-decoration: none;
+a {
+  color: inherit;
+  text-decoration: none;
 
-    transition: color var(--transition);
+  transition: color var(--transition);
 }
-a:hover { color: var(--color-accent-bright); }
+a:hover {
+  color: var(--color-accent-bright);
+}
 
 /* ====================================
    Accessibility Styles.
 ======================================= */
-:focus-visible { outline: 2px solid var(--color-accent-bright); outline-offset: 4px; }
+:focus-visible {
+  outline: 2px solid var(--color-accent-bright);
+  outline-offset: 4px;
+}
 
 /* ====================================
    Selection Styles.
 ======================================= */
-::selection { background: var(--color-accent); color: #090807; }
+::selection {
+  background: var(--color-accent);
+  color: #090807;
+}
 
 /* ====================================
    Shared Animations Styles.
 ======================================= */
-@keyframes fade-in
-{
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ====================================
    Reduced Motion Styles.
 ======================================= */
-@media (prefers-reduced-motion: reduce)
-{
-    html { scroll-behavior: auto; }
-    *, *::before, *::after
-    {
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-    }
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
